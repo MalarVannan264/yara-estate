@@ -1,0 +1,479 @@
+/* ─────────────────────────────────────────────────────────
+   ContactExperience — editorial luxury consultation section
+   Palette: beige #E8E0D4 | form #F5F1EC | dark #1D1B19
+   ───────────────────────────────────────────────────────── */
+
+/* ── Section ─────────────────────────────────────────────── */
+.ce-section {
+  background-color: #e8e0d4;
+  padding: var(--sp-section, 7.5rem) 0;        /* 120px — aligned with site rhythm */
+}
+
+/* ── Container ───────────────────────────────────────────── */
+.ce-container {
+  width: min(100%, 1280px);                     /* aligned to site container standard */
+  margin: 0 auto;
+  padding: 0 4.375rem;
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+.ce-anim {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: ceRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.ce-anim--1 { animation-delay: 0.10s; }
+.ce-anim--2 { animation-delay: 0.22s; }
+.ce-anim--3 { animation-delay: 0.34s; }
+.ce-anim--4 { animation-delay: 0.46s; }
+.ce-anim--5 { animation-delay: 0.30s; }
+.ce-anim--6 { animation-delay: 0.60s; }
+
+@keyframes ceRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Main Grid ───────────────────────────────────────────── */
+.ce-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── Left Column ─────────────────────────────────────────── */
+.ce-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Eyebrow */
+.ce-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.ce-eyebrow__line {
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: var(--color-gold-muted, #8b6548);
+  flex-shrink: 0;
+}
+
+.ce-eyebrow p {
+  margin: 0;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.6875rem;                        /* --type-eyebrow */
+  font-weight: 500;
+  letter-spacing: 0.36em;                      /* px → em */
+  text-transform: uppercase;
+  color: var(--color-gold-muted, #8b6548);
+}
+
+/* Heading */
+.ce-heading {
+  margin: 0 0 2.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 0.02em;                     /* px → em */
+  color: var(--color-text, #1d1b19);
+}
+
+/* Description */
+.ce-description {
+  margin: 0;
+  max-width: 500px;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.82;
+  color: var(--color-muted, #6f665c);
+}
+
+/* Image */
+.ce-image-wrap {
+  margin-top: 3.5rem;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.ce-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s ease;
+}
+
+.ce-image-wrap:hover .ce-image {
+  transform: scale(1.025);
+}
+
+/* ── Form Card ───────────────────────────────────────────── */
+.ce-form-card {
+  background: #f5f1ec;
+  border: 1px solid rgba(58, 41, 34, 0.12);
+  padding: 3.5rem;
+  border-radius: 2px;
+}
+
+/* Form header */
+.ce-form-header {
+  margin-bottom: 2.75rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(58, 41, 34, 0.10);
+}
+
+.ce-form-title {
+  margin: 0 0 0.625rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text, #1d1b19);
+  text-align: center;
+}
+
+.ce-form-sub {
+  margin: 0;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8125rem;
+  color: #8a8176;                              /* aligned to --color-muted-light */
+  text-align: center;
+  letter-spacing: normal;                      /* removed stray 0.5px */
+}
+
+/* Form */
+.ce-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+/* Row */
+.ce-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+/* Field */
+.ce-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.ce-label {
+  display: block;
+  margin-bottom: 0.875rem;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.6875rem;                        /* --type-label */
+  font-weight: 500;
+  letter-spacing: 0.26em;                      /* px → em */
+  text-transform: uppercase;
+  color: var(--color-gold-muted, #8b6548);
+}
+
+/* Input */
+.ce-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(58, 41, 34, 0.16);
+  border-radius: 0;
+  outline: none;
+  padding: 0 0 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0625rem;
+  color: #2b241f;
+  transition: border-color 260ms ease;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.ce-input::placeholder {
+  color: rgba(128, 111, 94, 0.72);             /* aligned to site placeholder style */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0625rem;
+}
+
+.ce-input:focus {
+  border-bottom-color: var(--color-gold, #c8a86b);  /* unified gold */
+}
+
+/* Select */
+.ce-field--select {
+  position: relative;
+}
+
+.ce-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ce-select {
+  cursor: pointer;
+  flex: 1;
+  padding-right: 1.75rem;
+}
+
+.ce-select-icon {
+  position: absolute;
+  right: 2px;
+  bottom: 1.125rem;
+  color: var(--color-gold-muted, #8b6548);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Time display */
+.ce-time-display {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(58, 41, 34, 0.16);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0625rem;
+  color: #2b241f;
+}
+
+.ce-time-dot {
+  color: var(--color-gold, #c8a86b);           /* unified gold */
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Divider */
+.ce-form-divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(58, 41, 34, 0.10);
+  margin: 0.25rem 0;
+}
+
+/* Submit button — warm dark tone aligned with rest of site */
+.ce-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--btn-h-lg, 4rem);              /* standardised button height */
+  padding: 0 1.75rem;
+  background: var(--color-brown, #3a2922);    /* warm dark, site-consistent */
+  color: #f7f3ec;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.75rem;                          /* --type-button */
+  font-weight: 600;
+  letter-spacing: 0.28em;                      /* px → em */
+  text-transform: uppercase;
+  transition:
+    background-color 260ms ease,
+    transform 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.ce-submit:hover {
+  background: #2d211b;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(58, 41, 34, 0.16);
+}
+
+.ce-submit:hover svg {
+  color: var(--color-gold, #c8a86b);          /* unified gold */
+  transition: color 260ms ease;
+}
+
+/* ── Info Cards ──────────────────────────────────────────── */
+.ce-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+}
+
+.ce-card {
+  background: #f4eee8;
+  border: 1px solid rgba(58, 41, 34, 0.12);
+  border-radius: 2px;
+  padding: 2.125rem;
+  transition: transform 0.45s ease;
+}
+
+.ce-card:hover {
+  transform: translateY(-4px);
+}
+
+.ce-card__icon-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.375rem;
+}
+
+.ce-card__icon {
+  color: var(--color-gold, #c8a86b);           /* unified gold */
+  flex-shrink: 0;
+}
+
+.ce-card__label {
+  font-family: 'Geist', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;                      /* px → em */
+  text-transform: uppercase;
+  color: var(--color-gold-muted, #8b6548);
+}
+
+.ce-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ce-card__line {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-text, #1d1b19);
+  line-height: 1.55;
+}
+
+/* ── Responsive — 1180px ─────────────────────────────────── */
+@media (max-width: 1180px) {
+  .ce-container {
+    padding: 0 3rem;
+  }
+
+  .ce-grid {
+    gap: 3rem;
+  }
+
+  .ce-form-card {
+    padding: 3rem 2.5rem;
+  }
+
+  .ce-heading {
+    font-size: clamp(3rem, 4.8vw, 5rem);
+    letter-spacing: -0.035em;
+  }
+
+  .ce-image-wrap {
+    height: 380px;
+  }
+}
+
+/* ── Responsive — 960px ──────────────────────────────────── */
+@media (max-width: 960px) {
+  .ce-section {
+    padding: 6rem 0;
+  }
+
+  .ce-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .ce-description {
+    max-width: 580px;
+  }
+
+  .ce-image-wrap {
+    height: 420px;
+    margin-top: 3rem;
+  }
+
+  .ce-form-card {
+    padding: 2.75rem 2.25rem;
+  }
+
+  .ce-cards {
+    margin-top: 3rem;
+  }
+}
+
+/* ── Responsive — 768px ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .ce-section {
+    padding: 5rem 0;
+  }
+
+  .ce-container {
+    padding: 0 1.5rem;
+  }
+
+  .ce-heading {
+    font-size: clamp(2.8rem, 10vw, 4rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+  }
+
+  .ce-description {
+    font-size: 0.9375rem;
+  }
+
+  .ce-image-wrap {
+    height: 300px;
+    margin-top: 2.5rem;
+  }
+
+  .ce-form-card {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .ce-form-title {
+    font-size: 1.55rem;
+  }
+
+  .ce-form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ce-submit {
+    height: 3.625rem;
+    font-size: 0.6875rem;
+  }
+
+  .ce-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .ce-card {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+/* ── Responsive — 480px ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .ce-heading {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+
+  .ce-eyebrow p {
+    font-size: 0.625rem;
+    letter-spacing: 0.28em;
+  }
+}

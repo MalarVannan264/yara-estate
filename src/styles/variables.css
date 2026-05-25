@@ -1,0 +1,107 @@
+/* ─────────────────────────────────────────────────────────
+   YARA Estates — Design Token System
+   Single source of truth for the entire design system.
+   ───────────────────────────────────────────────────────── */
+
+:root {
+
+  /* ─── Core Palette ─────────────────────────────────────── */
+  --color-bg:          #f7f3ec;
+  --color-surface:     #e8ded0;
+  --color-panel:       rgba(255, 255, 255, 0.80);
+  --color-gold:        #c8a86b;
+  --color-gold-soft:   #e0c48a;
+  --color-gold-dark:   #b08d57;
+  --color-gold-muted:  #8b6548;      /* eyebrow/label gold on beige */
+  --color-text:        #1d1b19;
+  --color-muted:       #6f665c;
+  --color-muted-light: #8a8176;
+  --color-border:      rgba(0, 0, 0, 0.08);
+  --color-brown:       #3a2922;
+
+  /* ─── Shadows ──────────────────────────────────────────── */
+  --shadow-luxe:  0 30px 100px rgba(58, 41, 34, 0.08);
+  --shadow-gold:  0 22px 46px  rgba(200, 168, 107, 0.22);
+  --shadow-card:  0 18px 36px  rgba(58, 41, 34, 0.06);
+
+  /* ─── Typography Scale (rem only) ─────────────────────── */
+  /* Display — hero headings */
+  --type-display:    clamp(5rem, 8vw, 8.5rem);
+
+  /* Hero — section hero titles  */
+  --type-hero:       clamp(4rem, 6.5vw, 7.5rem);
+
+  /* Section headings */
+  --type-section-xl: clamp(3.5rem, 5.5vw, 5.8rem);
+  --type-section:    clamp(3rem, 5vw, 5.5rem);
+  --type-section-sm: clamp(2.4rem, 3.5vw, 3.5rem);
+
+  /* Card / component headings */
+  --type-card-lg:    clamp(1.8rem, 2.8vw, 2.6rem);
+  --type-card:       clamp(1.6rem, 2.2vw, 2rem);
+
+  /* Body copy */
+  --type-body-lg:    1.0625rem;    /* 17px */
+  --type-body:       1rem;         /* 16px */
+  --type-body-sm:    0.9375rem;    /* 15px */
+
+  /* UI labels */
+  --type-caption:    0.75rem;      /* 12px */
+  --type-eyebrow:    0.6875rem;    /* 11px */
+  --type-button:     0.75rem;      /* 12px */
+  --type-label:      0.6875rem;    /* 11px */
+
+  /* ─── Line Heights ─────────────────────────────────────── */
+  --lh-display:  0.94;
+  --lh-heading:  1.05;
+  --lh-body:     1.78;
+  --lh-relaxed:  1.85;
+
+  /* ─── Letter Spacing (em-based) ───────────────────────── */
+  --ls-eyebrow:  0.36em;
+  --ls-button:   0.28em;
+  --ls-label:    0.26em;
+  --ls-wide:     0.42em;
+
+  /* ─── Spacing (4px / 8px grid) ────────────────────────── */
+  --sp-1:   0.25rem;    /*  4px */
+  --sp-2:   0.5rem;     /*  8px */
+  --sp-3:   0.75rem;    /* 12px */
+  --sp-4:   1rem;       /* 16px */
+  --sp-5:   1.25rem;    /* 20px */
+  --sp-6:   1.5rem;     /* 24px */
+  --sp-8:   2rem;       /* 32px */
+  --sp-10:  2.5rem;     /* 40px */
+  --sp-12:  3rem;       /* 48px */
+  --sp-16:  4rem;       /* 64px */
+  --sp-20:  5rem;       /* 80px */
+  --sp-24:  6rem;       /* 96px */
+
+  /* Section-level vertical rhythm */
+  --sp-section:       7.5rem;   /* 120px — standard section pad */
+  --sp-section-lg:    8.75rem;  /* 140px — large editorial sections */
+
+  /* ─── Button Heights ───────────────────────────────────── */
+  --btn-h:    3.75rem;   /* 60px — standard */
+  --btn-h-lg: 4rem;      /* 64px — large/hero */
+
+  /* ─── Layout / Grid ────────────────────────────────────── */
+  --container:       1280px;   /* standard content container */
+  --container-wide:  1400px;   /* full-width editorial sections */
+  --container-text:  680px;    /* max readable text column */
+
+  /* ─── Motion ───────────────────────────────────────────── */
+  --ease-luxe:  cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out:   cubic-bezier(0.0, 0.0, 0.58, 1.0);
+  --dur-fast:   220ms;
+  --dur-base:   280ms;
+  --dur-slow:   500ms;
+  --dur-image:  1.2s;
+
+  /* ─── Borders ──────────────────────────────────────────── */
+  --radius-sm:   2px;
+  --radius-pill: 999px;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-warm:   rgba(58, 41, 34, 0.14);
+  --border-gold:   rgba(200, 168, 107, 0.45);
+}

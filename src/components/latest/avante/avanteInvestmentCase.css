@@ -1,0 +1,202 @@
+.avante-investment-case {
+  background: #fbf7f3;
+  color: #183323;
+  padding: 120px 0 130px;
+}
+
+.avante-investment-case__inner {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.avante-investment-case__eyebrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.avante-investment-case__eyebrow::before,
+.avante-investment-case__eyebrow::after {
+  width: 74px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.avante-investment-case__heading {
+  margin: 34px 0 0;
+  color: #183323;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.avante-investment-case__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 94px;
+}
+
+.avante-investment-case__stat {
+  position: relative;
+  padding: 0 46px;
+  transition:
+    transform 220ms ease,
+    color 220ms ease;
+}
+
+.avante-investment-case__stat:not(:first-child)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: rgba(24, 51, 35, 0.1);
+  content: '';
+}
+
+.avante-investment-case__stat:hover {
+  transform: translateY(-6px);
+}
+
+.avante-investment-case__stat:hover .avante-investment-case__value {
+  color: #b88e46;
+}
+
+.avante-investment-case__value {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 5.2vw, 5.4rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.avante-investment-case__label {
+  margin: 22px 0 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.avante-investment-case__description {
+  max-width: 220px;
+  margin: 26px 0 0;
+  color: rgba(24, 51, 35, 0.76);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.avante-investment-case__quote {
+  max-width: 980px;
+  margin: 124px auto 0;
+  color: rgba(24, 51, 35, 0.92);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.7rem, 4.9vw, 4.7rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .avante-investment-case__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 0;
+  }
+
+  .avante-investment-case__stat:nth-child(3)::before {
+    display: none;
+  }
+
+  .avante-investment-case__stat:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .avante-investment-case__stat:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .avante-investment-case__description {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .avante-investment-case {
+    padding: 96px 0 104px;
+  }
+
+  .avante-investment-case__inner {
+    width: min(100% - 24px, 1200px);
+  }
+
+  .avante-investment-case__eyebrow {
+    gap: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+  }
+
+  .avante-investment-case__eyebrow::before,
+  .avante-investment-case__eyebrow::after {
+    width: 34px;
+  }
+
+  .avante-investment-case__heading {
+    margin-top: 26px;
+    font-size: clamp(3rem, 12vw, 4.8rem);
+    line-height: 1;
+  }
+
+  .avante-investment-case__stats {
+    grid-template-columns: 1fr;
+    margin-top: 64px;
+    gap: 36px;
+  }
+
+  .avante-investment-case__stat {
+    padding: 0;
+  }
+
+  .avante-investment-case__stat::before {
+    display: none;
+  }
+
+  .avante-investment-case__value {
+    font-size: clamp(3.4rem, 12vw, 4.6rem);
+  }
+
+  .avante-investment-case__description {
+    max-width: none;
+    margin-top: 18px;
+    font-size: 0.94rem;
+  }
+
+  .avante-investment-case__quote {
+    margin-top: 88px;
+    font-size: clamp(2.2rem, 8.4vw, 3.5rem);
+    line-height: 1.18;
+  }
+}

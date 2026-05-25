@@ -1,0 +1,244 @@
+.avante-floorplan {
+  --avante-dark: #22251c;
+  width: 100%;
+  padding: 120px 0 130px;
+  background: var(--avante-dark);
+}
+
+.avante-floorplan__shell {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.avante-floorplan__header {
+  max-width: 920px;
+}
+
+.avante-floorplan__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.avante-floorplan__eyebrow::before {
+  width: 62px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.avante-floorplan__heading {
+  margin: 38px 0 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.avante-floorplan__visual {
+  width: min(100%, 1120px);
+  margin: 68px auto 0;
+  background: transparent;
+}
+
+.avante-floorplan__image {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  box-shadow: none;
+  filter: none;
+  transform-origin: center center;
+  animation: avanteFloorplanFloat 5.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.avante-floorplan__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 80px;
+  margin-top: 72px;
+}
+
+.avante-floorplan__stat {
+  flex: 1;
+  min-width: 0;
+}
+
+.avante-floorplan__stat--small {
+  text-align: left;
+}
+
+.avante-floorplan__stat--large {
+  text-align: center;
+}
+
+.avante-floorplan__stat-value {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 4.4vw, 4.6rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.avante-floorplan__stat-value--large {
+  font-size: clamp(3.5rem, 5vw, 5rem);
+}
+
+.avante-floorplan__stat-copy {
+  max-width: 300px;
+  margin: 14px 0 0;
+  color: rgba(247, 243, 236, 0.78);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.avante-floorplan__stat--large .avante-floorplan__stat-copy {
+  max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.avante-floorplan__checklist {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  max-width: 380px;
+  margin-left: auto;
+  padding-top: 6px;
+}
+
+.avante-floorplan__checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.avante-floorplan__check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8a86b;
+  flex-shrink: 0;
+  transform: translateY(2px);
+}
+
+.avante-floorplan__check-copy {
+  margin: 0;
+  color: rgba(247, 243, 236, 0.82);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.74;
+}
+
+@keyframes avanteFloorplanFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 1120px) {
+  .avante-floorplan {
+    padding: 104px 0 114px;
+  }
+
+  .avante-floorplan__footer {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .avante-floorplan__checklist {
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .avante-floorplan {
+    padding: 84px 0 94px;
+  }
+
+  .avante-floorplan__shell {
+    width: min(100% - 32px, 1280px);
+  }
+
+  .avante-floorplan__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .avante-floorplan__eyebrow::before {
+    width: 38px;
+  }
+
+  .avante-floorplan__heading {
+    margin-top: 30px;
+    font-size: clamp(2.9rem, 11.8vw, 4.9rem);
+    line-height: 1.02;
+  }
+
+  .avante-floorplan__visual {
+    margin-top: 46px;
+  }
+
+  .avante-floorplan__footer {
+    gap: 32px;
+    margin-top: 34px;
+  }
+
+  .avante-floorplan__stat {
+    padding: 20px 18px 22px;
+    border: 1px solid rgba(121, 144, 112, 0.14);
+    background: rgba(31, 35, 28, 0.54);
+  }
+
+  .avante-floorplan__stat--large {
+    text-align: left;
+  }
+
+  .avante-floorplan__stat--large .avante-floorplan__stat-copy {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .avante-floorplan__stat-copy {
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.68;
+  }
+
+  .avante-floorplan__checklist {
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .avante-floorplan__check-copy {
+    font-size: 0.96rem;
+    line-height: 1.68;
+  }
+}

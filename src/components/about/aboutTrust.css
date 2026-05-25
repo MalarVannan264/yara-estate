@@ -1,0 +1,337 @@
+.about-trust {
+  width: 100%;
+  padding: 150px 0;
+  background: #ece7e1;
+  overflow: hidden;
+}
+
+.about-trust__container {
+  max-width: 1280px;
+}
+
+.about-trust__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-trust__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.about-trust__eyebrow-line {
+  width: 2.7rem;
+  height: 1px;
+  background: rgba(184, 146, 94, 0.72);
+}
+
+.about-trust__eyebrow p {
+  margin: 0;
+  color: #b8925e;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.375rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-trust__title {
+  margin: 2.25rem 0 0;
+  max-width: 11.6ch;
+  color: #17120f;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.about-trust__intro {
+  max-width: 48rem;
+  margin: 2.45rem auto 0;
+  color: #6a5848;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.about-trust__cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  margin-top: 6.2rem;
+  border: 1px solid rgba(125, 102, 78, 0.22);
+  background: rgba(255, 252, 247, 0.2);
+}
+
+.about-trust__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  padding: 2.6rem 2rem 2.35rem;
+  border-right: 1px solid rgba(125, 102, 78, 0.22);
+  background: transparent;
+  transition:
+    transform 320ms ease,
+    background-color 320ms ease,
+    border-color 320ms ease;
+}
+
+.about-trust__card:last-child {
+  border-right: 0;
+}
+
+.about-trust__card:hover {
+  transform: translateY(-4px);
+  background: rgba(28, 20, 14, 0.03);
+}
+
+.about-trust__card--featured {
+  background: #151515;
+}
+
+.about-trust__card--featured:hover {
+  background: #1b1b1b;
+}
+
+.about-trust__card-top,
+.about-trust__card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-trust__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #75563a;
+}
+
+.about-trust__card--featured .about-trust__card-icon {
+  color: #c8a86b;
+}
+
+.about-trust__card-number {
+  margin: 1.95rem 0 0;
+  color: #c5af80;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.36rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-trust__card-title {
+  margin: 0;
+  max-width: 90%;
+  color: #1d1611;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 2vw, 3rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+.about-trust__card-description {
+  margin: 1.7rem 0 0;
+  max-width: 90%;
+  color: #665544;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.about-trust__card--featured .about-trust__card-number {
+  color: #b89b69;
+}
+
+.about-trust__card--featured .about-trust__card-title,
+.about-trust__card--featured .about-trust__card-description {
+  color: #f2ede4;
+}
+
+.about-trust__card--featured .about-trust__card-description {
+  color: rgba(242, 237, 228, 0.86);
+}
+
+.about-trust__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3.2vw, 3rem);
+  margin-top: 5.85rem;
+}
+
+.about-trust__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-trust__stat-value {
+  margin: 0;
+  color: #7a5d41;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.1rem, 5vw, 5.15rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.about-trust__stat-label {
+  margin: 0.85rem 0 0;
+  color: #7b654f;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.34rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1400px) {
+  .about-trust__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    border: 0;
+    background: transparent;
+  }
+
+  .about-trust__card {
+    min-height: 420px;
+    border: 1px solid rgba(125, 102, 78, 0.22);
+  }
+
+  .about-trust__card:last-child {
+    border-right: 1px solid rgba(125, 102, 78, 0.22);
+  }
+}
+
+@media (max-width: 992px) {
+  .about-trust {
+    padding: 120px 0;
+  }
+
+  .about-trust__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-trust__card {
+    min-height: 390px;
+  }
+
+  .about-trust__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-trust {
+    padding: 82px 0;
+  }
+
+  .about-trust__container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .about-trust__eyebrow {
+    gap: 0.8rem;
+  }
+
+  .about-trust__eyebrow-line {
+    width: 2rem;
+  }
+
+  .about-trust__eyebrow p {
+    font-size: 0.68rem;
+    letter-spacing: 0.34rem;
+  }
+
+  .about-trust__title {
+    margin-top: 1.8rem;
+    font-size: clamp(3rem, 12.5vw, 4.9rem);
+    line-height: 0.98;
+  }
+
+  .about-trust__intro {
+    margin-top: 1.8rem;
+    font-size: 0.98rem;
+    line-height: 1.76;
+  }
+
+  .about-trust__cards {
+    grid-template-columns: 1fr;
+    margin-top: 3.3rem;
+  }
+
+  .about-trust__card,
+  .about-trust__card--featured {
+    min-height: auto;
+    align-items: center;
+    padding: 1.8rem 1.45rem 1.9rem;
+    text-align: center;
+  }
+
+  .about-trust__card-top,
+  .about-trust__card-body {
+    align-items: center;
+  }
+
+  .about-trust__card-icon {
+    justify-content: center;
+  }
+
+  .about-trust__card-number {
+    margin-top: 1.5rem;
+  }
+
+  .about-trust__card-title,
+  .about-trust__card-description {
+    max-width: 100%;
+  }
+
+  .about-trust__card-title {
+    font-size: 2.35rem;
+    line-height: 1.04;
+  }
+
+  .about-trust__card-description {
+    margin-top: 1.25rem;
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .about-trust__stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3.8rem;
+  }
+
+  .about-trust__stat {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-trust__stat-value {
+    font-size: clamp(2.9rem, 16vw, 4.8rem);
+  }
+
+  .about-trust__stat-label {
+    margin-top: 0.65rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.28rem;
+  }
+}

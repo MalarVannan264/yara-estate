@@ -1,0 +1,308 @@
+.iconic-floor-plan {
+  background: #fbf7f3;
+  padding: 120px 0 130px;
+}
+
+.iconic-floor-plan__shell {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.iconic-floor-plan__heading-block {
+  max-width: 760px;
+}
+
+.iconic-floor-plan__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.iconic-floor-plan__eyebrow::before {
+  width: 62px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.iconic-floor-plan__heading {
+  margin: 40px 0 0;
+  color: #2a1608;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+}
+
+.iconic-floor-plan__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.7fr);
+  gap: 68px;
+  align-items: start;
+  margin-top: 62px;
+}
+
+.iconic-floor-plan__visual {
+  margin: 0;
+}
+
+.iconic-floor-plan__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.iconic-floor-plan__details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 6px;
+}
+
+.iconic-floor-plan__tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid rgba(200, 168, 107, 0.72);
+}
+
+.iconic-floor-plan__tab {
+  min-height: 62px;
+  border: 0;
+  border-right: 1px solid rgba(200, 168, 107, 0.32);
+  background: transparent;
+  color: #c8a86b;
+  cursor: pointer;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.iconic-floor-plan__tab:last-child {
+  border-right: 0;
+}
+
+.iconic-floor-plan__tab:hover {
+  background: rgba(200, 168, 107, 0.14);
+}
+
+.iconic-floor-plan__tab.is-active {
+  background: #c8a86b;
+  color: #2a1608;
+}
+
+.iconic-floor-plan__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.iconic-floor-plan__card {
+  padding: 28px 26px 24px;
+  border: 1px solid rgba(200, 168, 107, 0.72);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.iconic-floor-plan__room-label {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.iconic-floor-plan__room-title {
+  margin: 20px 0 0;
+  color: #2a1608;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.3rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.iconic-floor-plan__card-rule,
+.iconic-floor-plan__meta-rule,
+.iconic-floor-plan__rooms-rule {
+  height: 1px;
+  background: rgba(200, 168, 107, 0.72);
+}
+
+.iconic-floor-plan__card-rule {
+  width: 62px;
+  margin-top: 18px;
+}
+
+.iconic-floor-plan__room-description {
+  max-width: 460px;
+  margin: 22px 0 0;
+  color: rgba(42, 22, 8, 0.64);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.74;
+}
+
+.iconic-floor-plan__meta-rule {
+  width: 104px;
+  margin-top: 22px;
+}
+
+.iconic-floor-plan__stats {
+  display: flex;
+  gap: 28px;
+  margin-top: 18px;
+}
+
+.iconic-floor-plan__stat {
+  min-width: 0;
+}
+
+.iconic-floor-plan__stat-value {
+  margin: 0;
+  color: #2a1608;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.iconic-floor-plan__stat-label {
+  margin: 8px 0 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.iconic-floor-plan__rooms {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconic-floor-plan__rooms-label {
+  margin: 16px 0 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.iconic-floor-plan__rooms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.iconic-floor-plan__rooms-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  color: #2a1608;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.iconic-floor-plan__rooms-row span:last-child {
+  color: #c8a86b;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .iconic-floor-plan__layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconic-floor-plan {
+    padding: 92px 0 104px;
+  }
+
+  .iconic-floor-plan__shell {
+    width: min(100% - 24px, 1280px);
+  }
+
+  .iconic-floor-plan__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .iconic-floor-plan__eyebrow::before {
+    width: 38px;
+  }
+
+  .iconic-floor-plan__heading {
+    margin-top: 30px;
+    font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 1;
+  }
+
+  .iconic-floor-plan__layout {
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .iconic-floor-plan__tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .iconic-floor-plan__tab:nth-child(2) {
+    border-right: 0;
+  }
+
+  .iconic-floor-plan__tab:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(200, 168, 107, 0.32);
+  }
+
+  .iconic-floor-plan__card {
+    padding: 24px 18px 22px;
+  }
+
+  .iconic-floor-plan__room-title {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .iconic-floor-plan__room-description,
+  .iconic-floor-plan__rooms-row {
+    font-size: 0.94rem;
+  }
+
+  .iconic-floor-plan__stats {
+    gap: 18px;
+  }
+
+  .iconic-floor-plan__stat-value {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .iconic-floor-plan__rooms-list {
+    gap: 18px;
+  }
+}

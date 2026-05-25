@@ -1,0 +1,356 @@
+.about-philosophy {
+  width: 100%;
+  padding: 140px 0;
+  background: #eae2d7;
+}
+
+.about-philosophy__container {
+  max-width: 1280px;
+}
+
+.about-philosophy__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(500px, 0.95fr);
+  gap: clamp(3.5rem, 7vw, 7.25rem);
+  align-items: start;
+}
+
+.about-philosophy__content {
+  max-width: 40rem;
+  padding-top: 0.4rem;
+}
+
+.about-philosophy__eyebrow,
+.about-philosophy__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-philosophy__eyebrow p,
+.about-philosophy__label p {
+  margin: 0;
+  color: #5e4c3d;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.52em;
+  text-transform: uppercase;
+}
+
+.about-philosophy__eyebrow-line,
+.about-philosophy__label-line,
+.about-philosophy__divider {
+  display: inline-flex;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.95);
+}
+
+.about-philosophy__eyebrow-line {
+  width: 2.8rem;
+}
+
+.about-philosophy__title {
+  margin: 2.6rem 0 0;
+  color: #1b140f;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.97;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.about-philosophy__divider {
+  width: 5.8rem;
+  margin-top: 3rem;
+}
+
+.about-philosophy__paragraph,
+.about-philosophy__quote {
+  margin: 0;
+  color: #5e4c3d;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.about-philosophy__paragraph--lead {
+  margin-top: 3rem;
+  color: #2c221b;
+  font-size: 1.08rem;
+  line-height: 1.82;
+}
+
+.about-philosophy__paragraph + .about-philosophy__paragraph {
+  margin-top: 2rem;
+}
+
+.about-philosophy__quote {
+  margin-top: 2.85rem;
+  max-width: 34rem;
+  color: #4e3d30;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 2.4vw, 2.4rem);
+  line-height: 1.34;
+}
+
+.about-philosophy__label {
+  margin-top: 3.35rem;
+}
+
+.about-philosophy__label-line {
+  width: 3.6rem;
+}
+
+.about-philosophy__visual {
+  position: relative;
+  min-height: 50rem;
+}
+
+.about-philosophy__main-frame,
+.about-philosophy__overlay-frame,
+.about-philosophy__stat-card {
+  position: absolute;
+}
+
+.about-philosophy__main-frame {
+  top: 0;
+  right: 4.5rem;
+  width: min(100%, 33.5rem);
+}
+
+.about-philosophy__overlay-frame {
+  right: 0;
+  bottom: 6rem;
+  width: min(100%, 23rem);
+  transform: translate3d(var(--philosophy-float-x), var(--philosophy-float-y), 0);
+  transition: transform 280ms ease-out;
+  z-index: 2;
+}
+
+.about-philosophy__image-shell {
+  overflow: hidden;
+  background: #d9cebf;
+}
+
+.about-philosophy__image-shell--main {
+  aspect-ratio: 0.82;
+  box-shadow: 0 24px 64px rgba(64, 47, 32, 0.12);
+}
+
+.about-philosophy__image-shell--overlay {
+  aspect-ratio: 0.78;
+  border: 14px solid rgba(244, 238, 230, 0.92);
+  box-shadow: 0 18px 48px rgba(45, 32, 21, 0.16);
+}
+
+.about-philosophy__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.about-philosophy__main-frame:hover .about-philosophy__image,
+.about-philosophy__overlay-frame:hover .about-philosophy__image {
+  transform: scale(1.05);
+}
+
+.about-philosophy__stat-card {
+  right: 0.5rem;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15.5rem;
+  min-height: 12.75rem;
+  padding: 2rem 2.1rem;
+  background: #151515;
+  transform: translate3d(var(--philosophy-stat-x), var(--philosophy-stat-y), 0);
+  box-shadow: 0 28px 54px rgba(15, 15, 15, 0.2);
+  transition: transform 280ms ease-out;
+}
+
+.about-philosophy__stat-value,
+.about-philosophy__stat-label {
+  margin: 0;
+}
+
+.about-philosophy__stat-value {
+  color: #c8a86b;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 4.6vw, 4.2rem);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.about-philosophy__stat-label {
+  margin-top: 1rem;
+  color: #f5f1ea;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .about-philosophy__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
+    gap: 3.5rem;
+  }
+
+  .about-philosophy__visual {
+    min-height: 44rem;
+  }
+
+  .about-philosophy__main-frame {
+    right: 2.5rem;
+    width: min(100%, 29rem);
+  }
+
+  .about-philosophy__overlay-frame {
+    bottom: 5rem;
+    width: min(100%, 20rem);
+  }
+
+  .about-philosophy__stat-card {
+    width: 14rem;
+    min-height: 11.5rem;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .about-philosophy {
+    padding: 100px 0;
+  }
+
+  .about-philosophy__grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-philosophy__content {
+    max-width: 100%;
+  }
+
+  .about-philosophy__visual {
+    min-height: auto;
+    padding-right: 7rem;
+    padding-bottom: 8.5rem;
+  }
+
+  .about-philosophy__main-frame,
+  .about-philosophy__overlay-frame,
+  .about-philosophy__stat-card {
+    position: relative;
+  }
+
+  .about-philosophy__main-frame {
+    right: auto;
+    width: min(100%, 34rem);
+  }
+
+  .about-philosophy__overlay-frame {
+    right: auto;
+    bottom: auto;
+    width: min(62vw, 22rem);
+    margin-top: -10rem;
+    margin-left: auto;
+  }
+
+  .about-philosophy__stat-card {
+    right: auto;
+    bottom: auto;
+    margin-top: -2.5rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-philosophy {
+    padding: 78px 0;
+  }
+
+  .about-philosophy__container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .about-philosophy__eyebrow,
+  .about-philosophy__label {
+    gap: 0.8rem;
+  }
+
+  .about-philosophy__eyebrow p,
+  .about-philosophy__label p {
+    font-size: 0.68rem;
+    letter-spacing: 0.34em;
+  }
+
+  .about-philosophy__title {
+    margin-top: 1.9rem;
+    font-size: clamp(3rem, 13vw, 4.7rem);
+    line-height: 1;
+  }
+
+  .about-philosophy__divider {
+    width: 4.2rem;
+    margin-top: 2rem;
+  }
+
+  .about-philosophy__paragraph,
+  .about-philosophy__paragraph--lead {
+    font-size: 0.98rem;
+    line-height: 1.72;
+  }
+
+  .about-philosophy__paragraph--lead {
+    margin-top: 2.1rem;
+  }
+
+  .about-philosophy__quote {
+    margin-top: 2.2rem;
+    font-size: clamp(1.45rem, 6vw, 2rem);
+    line-height: 1.4;
+  }
+
+  .about-philosophy__label {
+    margin-top: 2.5rem;
+  }
+
+  .about-philosophy__visual {
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .about-philosophy__main-frame {
+    width: 100%;
+  }
+
+  .about-philosophy__overlay-frame {
+    width: min(82vw, 18.5rem);
+    margin-top: 1.1rem;
+  }
+
+  .about-philosophy__image-shell--overlay {
+    border-width: 10px;
+  }
+
+  .about-philosophy__stat-card {
+    width: min(100%, 13.5rem);
+    min-height: 10.5rem;
+    margin-top: 1rem;
+    padding: 1.45rem 1.5rem;
+  }
+
+  .about-philosophy__stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+  }
+}

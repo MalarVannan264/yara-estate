@@ -1,0 +1,62 @@
+@keyframes shimmer {
+  0% {
+    transform: translateX(-140%);
+  }
+
+  100% {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%231d1b19' fill-opacity='0.04'%3E%3Ccircle cx='8' cy='12' r='1'/%3E%3Ccircle cx='52' cy='20' r='1'/%3E%3Ccircle cx='97' cy='40' r='1'/%3E%3Ccircle cx='24' cy='72' r='1'/%3E%3Ccircle cx='78' cy='94' r='1'/%3E%3Ccircle cx='110' cy='14' r='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.gold-shimmer::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(224, 196, 138, 0.28) 50%,
+    transparent 100%
+  );
+  animation: shimmer 3.4s ease-in-out infinite;
+  content: '';
+}
+
+.floating-orb {
+  animation: drift 10s ease-in-out infinite;
+}
+
+.loader-ring::before {
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(224, 196, 138, 0.18);
+  border-radius: 999px;
+  animation: pulse-ring 1.8s ease-out infinite;
+  content: '';
+}

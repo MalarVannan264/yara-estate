@@ -1,0 +1,200 @@
+.yara-why {
+  width: 100%;
+  padding: 110px 0 120px;
+  background: #e8ded0;
+}
+
+.why-yara-shell {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.why-yara-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+}
+
+.why-yara-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #8b6548;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.why-yara-eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: #8b6548;
+  content: '';
+}
+
+.why-yara-heading {
+  margin: 34px 0 0;
+  color: #1d1b19;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+}
+
+.why-yara-description {
+  max-width: 760px;
+  margin: 20px 0 0;
+  color: #6f665c;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.why-yara-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 64px;
+}
+
+.why-yara-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  padding: 34px;
+  border: 1px solid rgba(58, 41, 34, 0.12);
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    background-color 280ms ease;
+}
+
+.why-yara-card.is-cream {
+  background: #f7f3ec;
+}
+
+.why-yara-card.is-dark {
+  background: #3a2922;
+}
+
+.why-yara-card:hover {
+  border-color: #c8a86b;
+  box-shadow: 0 24px 46px rgba(58, 41, 34, 0.12);
+}
+
+.why-yara-card.is-dark:hover {
+  box-shadow:
+    0 26px 52px rgba(58, 41, 34, 0.16),
+    inset 0 0 0 1px rgba(200, 168, 107, 0.08);
+}
+
+.why-yara-card-icon {
+  color: #c8a86b;
+  transition:
+    transform 280ms ease,
+    color 280ms ease;
+}
+
+.why-yara-card:hover .why-yara-card-icon {
+  transform: translateY(-4px) rotate(-6deg);
+}
+
+.why-yara-card-content {
+  margin-top: 64px;
+}
+
+.why-yara-card-title {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.why-yara-card.is-cream .why-yara-card-title {
+  color: #1d1b19;
+}
+
+.why-yara-card.is-dark .why-yara-card-title {
+  color: #f7f3ec;
+}
+
+.why-yara-card-copy {
+  margin: 16px 0 0;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.why-yara-card.is-cream .why-yara-card-copy {
+  color: #6f665c;
+}
+
+.why-yara-card.is-dark .why-yara-card-copy {
+  color: rgba(247, 243, 236, 0.78);
+}
+
+@media (max-width: 1120px) {
+  .yara-why {
+    padding: 94px 0 102px;
+  }
+
+  .why-yara-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .yara-why {
+    padding: 80px 0 88px;
+  }
+
+  .why-yara-shell {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .why-yara-heading {
+    margin-top: 28px;
+    font-size: clamp(2.7rem, 10vw, 4rem);
+  }
+
+  .why-yara-description {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .why-yara-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 48px;
+  }
+
+  .why-yara-card {
+    min-height: 220px;
+    padding: 28px;
+  }
+
+  .why-yara-card-content {
+    margin-top: 48px;
+  }
+
+  .why-yara-card-title {
+    font-size: 1.8rem;
+  }
+
+  .why-yara-card-copy {
+    font-size: 0.95rem;
+  }
+}

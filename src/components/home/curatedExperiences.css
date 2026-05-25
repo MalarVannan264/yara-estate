@@ -1,0 +1,258 @@
+.yara-curated-experiences {
+  width: 100%;
+  padding: 110px 0 120px;
+  background: #e8ded0;
+}
+
+.curated-experiences-shell {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.curated-experiences-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 56px;
+  align-items: center;
+}
+
+.curated-experiences-header-left {
+  min-width: 0;
+}
+
+.curated-experiences-header-right {
+  min-width: 0;
+  padding-top: 28px;
+}
+
+.curated-experiences-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #8b6548;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.curated-experiences-eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: #8b6548;
+  content: '';
+}
+
+.curated-experiences-heading {
+  margin: 34px 0 0;
+  color: #1d1b19;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+}
+
+.curated-experiences-description {
+  margin: 0;
+  color: #6f665c;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.78;
+}
+
+.curated-experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 64px;
+}
+
+.curated-experience-card {
+  --card-move-x: 0px;
+  --card-move-y: 0px;
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(200, 168, 107, 0.9);
+  background: #2d2621;
+  transition:
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    transform 280ms ease;
+}
+
+.curated-experience-card:hover {
+  border-color: #c8a86b;
+  box-shadow: 0 24px 48px rgba(58, 47, 40, 0.16);
+}
+
+.curated-experience-card-media,
+.curated-experience-card-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.curated-experience-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: translate3d(var(--card-move-x), var(--card-move-y), 0) scale(1);
+  transition:
+    transform 320ms ease,
+    filter 320ms ease;
+  will-change: transform, filter;
+}
+
+.curated-experience-card:hover .curated-experience-card-image {
+  transform: translate3d(var(--card-move-x), var(--card-move-y), 0) scale(1.06);
+  filter: brightness(1.02) saturate(1.04) sepia(0.04);
+}
+
+.curated-experience-card-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(21, 18, 16, 0.12) 0%,
+      rgba(21, 18, 16, 0.2) 34%,
+      rgba(21, 18, 16, 0.52) 68%,
+      rgba(21, 18, 16, 0.76) 100%
+    );
+}
+
+.curated-experience-card-box {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  min-height: 208px;
+  padding: 22px 24px 24px;
+  border: 1px solid rgba(216, 200, 178, 0.16);
+  background: rgba(58, 47, 40, 0.92);
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease;
+}
+
+.curated-experience-card:hover .curated-experience-card-box {
+  transform: translateY(-6px);
+  border-color: rgba(200, 168, 107, 0.38);
+}
+
+.curated-experience-card-label {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.curated-experience-card-title {
+  margin: 18px 0 0;
+  color: #fbfaf7;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.curated-experience-card-copy {
+  margin: 16px 0 0;
+  color: rgba(236, 228, 219, 0.82);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.curated-experience-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 22px;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.curated-experience-card-link span {
+  display: inline-flex;
+  transition: transform 260ms ease;
+}
+
+.curated-experience-card:hover .curated-experience-card-link span {
+  transform: translate3d(3px, -3px, 0);
+}
+
+@media (max-width: 1120px) {
+  .yara-curated-experiences {
+    padding: 94px 0 102px;
+  }
+
+  .curated-experiences-header {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .curated-experiences-header-right {
+    max-width: 720px;
+    padding-top: 0;
+  }
+
+  .curated-experiences-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .yara-curated-experiences {
+    padding: 80px 0 88px;
+  }
+
+  .curated-experiences-shell {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .curated-experiences-heading {
+    margin-top: 28px;
+    line-height: 1.02;
+  }
+
+  .curated-experiences-description {
+    font-size: 0.98rem;
+    line-height: 1.72;
+  }
+
+  .curated-experiences-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 46px;
+  }
+
+  .curated-experience-card {
+    height: 480px;
+  }
+
+  .curated-experience-card-box {
+    min-height: 198px;
+    padding: 20px 20px 22px;
+  }
+
+  .curated-experience-card-title {
+    font-size: 1.7rem;
+  }
+
+  .curated-experience-card-copy {
+    font-size: 0.95rem;
+  }
+}

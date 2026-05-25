@@ -1,0 +1,200 @@
+.yara-lifestyle-editorial {
+  --lifestyle-height: 720px;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: var(--lifestyle-height);
+  overflow: hidden;
+  background: #10151d;
+}
+
+.lifestyle-editorial-bg,
+.lifestyle-editorial-overlay,
+.lifestyle-editorial-spotlight {
+  position: absolute;
+  inset: 0;
+}
+
+.lifestyle-editorial-bg {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(var(--lifestyle-move-x), var(--lifestyle-move-y), 0)
+    scale(var(--lifestyle-scale, 1.03));
+  transform-origin: center center;
+  transition: transform 240ms ease-out;
+  will-change: transform;
+}
+
+.lifestyle-editorial-overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 16, 24, 0.72) 0%,
+      rgba(10, 16, 24, 0.48) 28%,
+      rgba(10, 16, 24, 0.22) 58%,
+      rgba(10, 16, 24, 0.16) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 12, 18, 0.18) 0%,
+      rgba(7, 12, 18, 0.12) 34%,
+      rgba(7, 12, 18, 0.52) 100%
+    );
+}
+
+.lifestyle-editorial-spotlight {
+  z-index: 2;
+  background:
+    radial-gradient(
+      circle at var(--lifestyle-mouse-x) var(--lifestyle-mouse-y),
+      rgba(200, 168, 107, 0.12),
+      transparent 32%
+    );
+  pointer-events: none;
+}
+
+.lifestyle-editorial-shell {
+  position: relative;
+  z-index: 3;
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.lifestyle-editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(0, 1fr);
+  min-height: var(--lifestyle-height);
+  gap: 70px;
+  align-items: center;
+}
+
+.lifestyle-editorial-copy {
+  padding: 98px 0 88px;
+}
+
+.lifestyle-editorial-eyebrow {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.lifestyle-editorial-heading {
+  margin: 26px 0 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.lifestyle-editorial-paragraph {
+  max-width: 560px;
+  margin: 28px 0 0;
+  color: rgba(247, 243, 236, 0.86);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.lifestyle-editorial-label {
+  margin: 30px 0 0;
+  color: rgba(247, 243, 236, 0.58);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.lifestyle-editorial-words {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 28px;
+  padding: 92px 0 72px;
+}
+
+.lifestyle-editorial-word {
+  margin: 0;
+  color: rgba(247, 243, 236, 0.86);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 2.5vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1;
+  text-align: right;
+  transition:
+    transform 260ms ease,
+    color 260ms ease;
+}
+
+.lifestyle-editorial-word:hover {
+  transform: translateX(10px);
+  color: #c8a86b;
+}
+
+@media (max-width: 1024px) {
+  .yara-lifestyle-editorial {
+    min-height: 700px;
+  }
+
+  .lifestyle-editorial-grid {
+    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  }
+}
+
+@media (max-width: 768px) {
+  .yara-lifestyle-editorial {
+    min-height: 720px;
+  }
+
+  .lifestyle-editorial-shell {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .lifestyle-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    min-height: 720px;
+  }
+
+  .lifestyle-editorial-copy {
+    padding: 82px 0 0;
+  }
+
+  .lifestyle-editorial-heading {
+    margin-top: 22px;
+    font-size: clamp(3rem, 11vw, 4.8rem);
+  }
+
+  .lifestyle-editorial-paragraph {
+    max-width: 100%;
+    margin-top: 22px;
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .lifestyle-editorial-label {
+    margin-top: 24px;
+    font-size: 0.66rem;
+  }
+
+  .lifestyle-editorial-words {
+    align-items: flex-start;
+    gap: 18px;
+    padding: 0 0 72px;
+  }
+
+  .lifestyle-editorial-word {
+    text-align: left;
+    font-size: clamp(1.5rem, 7.2vw, 2.1rem);
+  }
+}

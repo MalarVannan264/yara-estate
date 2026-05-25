@@ -1,0 +1,224 @@
+.iconic-grand-living {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #1f1209;
+}
+
+.iconic-grand-living__bg,
+.iconic-grand-living__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.iconic-grand-living__bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
+.iconic-grand-living__overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 14, 11, 0.92) 0%,
+      rgba(20, 14, 11, 0.76) 28%,
+      rgba(20, 14, 11, 0.42) 58%,
+      rgba(20, 14, 11, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(20, 14, 11, 0.14) 0%,
+      rgba(20, 14, 11, 0.56) 100%
+    );
+}
+
+.iconic-grand-living__shell {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: min(100% - 48px, 1280px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 88px 56px 44px;
+}
+
+.iconic-grand-living__tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.iconic-grand-living__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 56px;
+  padding: 0 22px;
+  border: 1px solid rgba(200, 168, 107, 0.65);
+  background: rgba(24, 18, 14, 0.52);
+  color: #f5efe7;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.iconic-grand-living__tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #c8a86b;
+}
+
+.iconic-grand-living__content-wrap {
+  display: flex;
+  align-items: flex-end;
+  min-height: 100%;
+  padding-bottom: 22px;
+}
+
+.iconic-grand-living__content {
+  width: min(100%, 560px);
+}
+
+.iconic-grand-living__top-line,
+.iconic-grand-living__bottom-line {
+  height: 1px;
+  background: rgba(245, 239, 231, 0.38);
+}
+
+.iconic-grand-living__top-line {
+  width: min(100vw, 1220px);
+  margin-bottom: 34px;
+}
+
+.iconic-grand-living__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.iconic-grand-living__eyebrow::before {
+  width: 70px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.iconic-grand-living__heading {
+  margin: 40px 0 0;
+  color: #f5efe7;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+}
+
+.iconic-grand-living__bottom-line {
+  width: 110px;
+  margin-top: 36px;
+  background: rgba(200, 168, 107, 0.88);
+}
+
+.iconic-grand-living__description {
+  margin: 42px 0 0;
+  color: rgba(245, 239, 231, 0.88);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.iconic-grand-living__counter {
+  margin: 92px 0 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 1024px) {
+  .iconic-grand-living__shell {
+    padding-top: 56px;
+  }
+
+  .iconic-grand-living__tags {
+    align-items: flex-start;
+  }
+
+  .iconic-grand-living__content-wrap {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconic-grand-living__shell {
+    width: min(100% - 24px, 1280px);
+    padding: 36px 16px 28px;
+  }
+
+  .iconic-grand-living__tags {
+    gap: 10px;
+  }
+
+  .iconic-grand-living__tag {
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+
+  .iconic-grand-living__top-line {
+    margin-bottom: 24px;
+  }
+
+  .iconic-grand-living__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .iconic-grand-living__eyebrow::before {
+    width: 42px;
+  }
+
+  .iconic-grand-living__heading {
+    margin-top: 30px;
+    font-size: clamp(3rem, 13vw, 5rem);
+    line-height: 1;
+  }
+
+  .iconic-grand-living__bottom-line {
+    width: 88px;
+    margin-top: 26px;
+  }
+
+  .iconic-grand-living__description {
+    margin-top: 28px;
+    font-size: 0.94rem;
+    line-height: 1.72;
+  }
+
+  .iconic-grand-living__counter {
+    margin-top: 46px;
+    font-size: 1.5rem;
+  }
+}

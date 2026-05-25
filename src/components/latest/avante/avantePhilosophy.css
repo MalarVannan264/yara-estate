@@ -1,0 +1,192 @@
+.avante-philosophy {
+  --avante-dark: #22251c;
+  position: relative;
+  z-index: 5;
+  display: grid;
+  width: 100%;
+  min-height: 760px;
+  margin-top: 0px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: transparent;
+}
+
+.avante-philosophy__panel {
+  position: relative;
+  min-width: 0;
+}
+
+.avante-philosophy__panel--visual {
+  overflow: hidden;
+  background: var(--avante-dark);
+}
+
+.avante-philosophy__visual-texture,
+.avante-philosophy__visual-glow {
+  position: absolute;
+  inset: 0;
+}
+
+.avante-philosophy__visual-texture {
+  background-color: var(--avante-dark);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.02);
+  transition: transform 0.7s ease, filter 0.7s ease;
+  opacity: 0.92;
+}
+
+.avante-philosophy__visual-glow {
+  background:
+    radial-gradient(circle at center, rgba(200, 168, 107, 0.12), transparent 44%);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.avante-logo-panel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.01);
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease,
+    box-shadow 0.7s ease;
+}
+
+.avante-philosophy__panel--visual:hover .avante-philosophy__visual-texture {
+  transform: scale(1.05);
+  filter: brightness(1.03);
+}
+
+.avante-philosophy__panel--visual:hover .avante-logo-panel {
+  transform: scale(1.03);
+  filter: brightness(1.02);
+}
+
+.avante-philosophy__panel--visual:hover .avante-philosophy__visual-glow {
+  opacity: 0.95;
+}
+
+.avante-philosophy__panel--content {
+  display: flex;
+  align-items: center;
+  background: #fbfaf7;
+  box-shadow: 0 28px 42px rgba(34, 37, 28, 0.08);
+}
+
+.avante-philosophy__content-inner {
+  width: min(100%, 720px);
+  margin: 0;
+  padding: 78px 82px;
+}
+
+.avante-philosophy__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.avante-philosophy__eyebrow::before {
+  width: 62px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.avante-philosophy__heading {
+  margin: 48px 0 0;
+  color: #183323;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.avante-philosophy__paragraph {
+  max-width: 780px;
+  margin: 38px 0 0;
+  color: #526b54;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.9;
+}
+
+.avante-philosophy__signature {
+  margin: 48px 0 0;
+  color: #183323;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 1080px) {
+  .avante-philosophy {
+    margin-top: -72px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .avante-philosophy__panel--visual {
+    min-height: 520px;
+  }
+
+  .avante-philosophy__content-inner {
+    width: min(100%, 860px);
+    padding: 72px 48px 84px;
+  }
+}
+
+@media (max-width: 768px) {
+  .avante-philosophy {
+    margin-top: 0;
+  }
+
+  .avante-philosophy__panel--visual {
+    min-height: 420px;
+  }
+
+  .avante-philosophy__content-inner {
+    padding: 56px 24px 64px;
+  }
+
+  .avante-philosophy__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .avante-philosophy__eyebrow::before {
+    width: 38px;
+  }
+
+  .avante-philosophy__heading {
+    margin-top: 32px;
+    font-size: clamp(2.9rem, 12vw, 4.6rem);
+    line-height: 1.02;
+  }
+
+  .avante-philosophy__paragraph {
+    margin-top: 26px;
+    font-size: 0.96rem;
+    line-height: 1.76;
+  }
+
+  .avante-philosophy__signature {
+    margin-top: 34px;
+    font-size: 1.55rem;
+  }
+}

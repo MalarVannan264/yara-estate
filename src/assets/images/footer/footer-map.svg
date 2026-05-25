@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" fill="none">
+  <rect width="900" height="500" fill="#E8DED0"/>
+  <path d="M96 340C180 210 274 182 356 210C460 244 560 188 676 128C730 98 782 82 820 90" stroke="#8C705D" stroke-width="10"/>
+  <circle cx="264" cy="242" r="14" fill="#C8A86B"/>
+  <circle cx="522" cy="216" r="14" fill="#C8A86B"/>
+  <circle cx="716" cy="124" r="14" fill="#C8A86B"/>
+  <text x="80" y="436" fill="#3A2922" font-family="Georgia, serif" font-size="48">Footer Placeholder</text>
+</svg>

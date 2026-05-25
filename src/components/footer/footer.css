@@ -1,0 +1,67 @@
+.yara-footer {
+  border-top: 1px solid var(--color-border);
+  background:
+    linear-gradient(180deg, rgba(232, 222, 208, 0.35), rgba(247, 243, 236, 0.96)),
+    var(--color-bg);
+}
+
+.yara-footer__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.yara-footer__logo {
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  letter-spacing: 0.08em;
+}
+
+.yara-footer__title {
+  margin-bottom: 1.125rem;
+  color: var(--color-text);
+  font-size: 0.6875rem;         /* --type-label */
+  font-weight: 600;
+  letter-spacing: 0.36em;       /* aligned to site-wide eyebrow/label tracking */
+  text-transform: uppercase;
+}
+
+.yara-footer__link {
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  text-decoration: none;
+  transition: color 280ms ease;
+}
+
+.yara-footer__link:hover {
+  color: var(--color-gold);
+}
+
+.yara-footer__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease,
+    background 0.28s ease;
+}
+
+.yara-footer__social:hover {
+  transform: translateY(-1px);
+  border-color: rgba(200, 168, 107, 0.45);
+  background: #fff;
+  color: var(--color-gold);
+}
+
+@media (min-width: 992px) {
+  .yara-footer__grid {
+    grid-template-columns: 1.3fr 0.7fr 0.7fr 0.9fr;
+  }
+}

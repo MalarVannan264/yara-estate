@@ -1,0 +1,254 @@
+.yara-immersive-gallery {
+  width: 100%;
+  padding: 110px 0 120px;
+  background: #fbfaf7;
+}
+
+.immersive-gallery-header-shell {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.immersive-gallery-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.immersive-gallery-header-copy {
+  min-width: 0;
+}
+
+.immersive-gallery-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #8b6548;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.immersive-gallery-eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: #8b6548;
+  content: '';
+}
+
+.immersive-gallery-heading {
+  margin: 34px 0 0;
+  color: #1d1b19;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+}
+
+.immersive-gallery-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.immersive-gallery-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(29, 27, 25, 0.12);
+  background: #f7f3ec;
+  color: #1d1b19;
+  transition:
+    transform 260ms ease,
+    background-color 260ms ease,
+    border-color 260ms ease,
+    color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.immersive-gallery-nav.is-dark {
+  background: #1d1b19;
+  border-color: #1d1b19;
+  color: #fbfaf7;
+}
+
+.immersive-gallery-nav:hover {
+  transform: translateY(-2px);
+  background: #c8a86b;
+  border-color: #c8a86b;
+  color: #1d1b19;
+  box-shadow: 0 16px 34px rgba(200, 168, 107, 0.18);
+}
+
+.immersive-gallery-slider-shell {
+  width: 100%;
+  margin-top: 56px;
+}
+
+.immersive-gallery-swiper {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.immersive-gallery-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.immersive-gallery-slide {
+  width: min(29vw, 420px);
+  flex-shrink: 0;
+}
+
+.immersive-gallery-slide.is-wide {
+  width: min(36vw, 520px);
+}
+
+.immersive-gallery-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  cursor: grab;
+  background: #ebe4da;
+}
+
+.immersive-gallery-card:active {
+  cursor: grabbing;
+}
+
+.immersive-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(0.94) contrast(1.03) saturate(0.96);
+  transform: scale(1);
+  transition:
+    transform 420ms ease,
+    filter 420ms ease;
+}
+
+.immersive-gallery-card:hover .immersive-gallery-image {
+  transform: scale(1.04);
+  filter: brightness(0.99) contrast(1.05) saturate(1);
+}
+
+.immersive-gallery-image-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 18, 17, 0.06) 0%,
+      rgba(20, 18, 17, 0.12) 42%,
+      rgba(20, 18, 17, 0.54) 100%
+    );
+}
+
+.immersive-gallery-caption {
+  position: absolute;
+  right: 26px;
+  bottom: 22px;
+  left: 26px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 320ms ease,
+    transform 320ms ease;
+}
+
+.immersive-gallery-card:hover .immersive-gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.immersive-gallery-caption p {
+  margin: 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.immersive-gallery-swiper .swiper-button-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .yara-immersive-gallery {
+    padding: 94px 0 104px;
+  }
+
+  .immersive-gallery-slide {
+    width: min(44vw, 420px);
+  }
+
+  .immersive-gallery-slide.is-wide {
+    width: min(52vw, 500px);
+  }
+}
+
+@media (max-width: 768px) {
+  .yara-immersive-gallery {
+    padding: 80px 0 90px;
+  }
+
+  .immersive-gallery-header-shell {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .immersive-gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .immersive-gallery-heading {
+    margin-top: 28px;
+    font-size: clamp(2.8rem, 10vw, 4.2rem);
+  }
+
+  .immersive-gallery-controls {
+    margin-top: 4px;
+  }
+
+  .immersive-gallery-slider-shell {
+    margin-top: 42px;
+  }
+
+  .immersive-gallery-swiper {
+    padding: 0 16px;
+  }
+
+  .immersive-gallery-slide,
+  .immersive-gallery-slide.is-wide {
+    width: 82vw;
+  }
+
+  .immersive-gallery-card {
+    height: 460px;
+  }
+
+  .immersive-gallery-caption {
+    right: 20px;
+    bottom: 18px;
+    left: 20px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .immersive-gallery-caption p {
+    font-size: 1.35rem;
+  }
+}

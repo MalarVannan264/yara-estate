@@ -1,0 +1,231 @@
+.avante-specifications {
+  width: 100%;
+  padding: 120px 0;
+  background: #fbfaf7;
+}
+
+.avante-specifications__shell {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.avante-specifications__header {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(0, 360px);
+  justify-content: space-between;
+  gap: 44px 72px;
+  align-items: end;
+}
+
+.avante-specifications__header-left {
+  max-width: 760px;
+}
+
+.avante-specifications__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.avante-specifications__eyebrow::before {
+  width: 62px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.avante-specifications__heading {
+  margin: 38px 0 0;
+  color: #183323;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.avante-specifications__description {
+  max-width: 360px;
+  margin: 0 0 8px;
+  color: #5f715f;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.avante-specifications__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 66px;
+  border-top: 1px solid rgba(24, 51, 35, 0.08);
+  border-left: 1px solid rgba(24, 51, 35, 0.08);
+}
+
+.avante-specifications__item {
+  min-height: 310px;
+  padding: 34px 30px 36px;
+  border-right: 1px solid rgba(24, 51, 35, 0.08);
+  border-bottom: 1px solid rgba(24, 51, 35, 0.08);
+  background: transparent;
+  transition:
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background-color 260ms ease,
+    transform 260ms ease;
+}
+
+.avante-specifications__item:hover {
+  border-color: rgba(200, 168, 107, 0.42);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 18px 38px rgba(24, 51, 35, 0.06);
+}
+
+.avante-specifications__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #274534;
+  transform: translateY(0);
+  animation: avanteSpecificationsIconFloat 4.2s ease-in-out infinite;
+  transition:
+    color 260ms ease,
+    transform 260ms ease;
+}
+
+.avante-specifications__item:hover .avante-specifications__item-icon {
+  color: #c8a86b;
+  transform: translateY(-3px);
+}
+
+.avante-specifications__item-number {
+  margin: 30px 0 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.avante-specifications__item-title {
+  margin: 18px 0 0;
+  color: #183323;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.032em;
+  transition:
+    transform 260ms ease,
+    color 260ms ease;
+}
+
+.avante-specifications__item:hover .avante-specifications__item-title {
+  transform: translateY(-3px);
+}
+
+.avante-specifications__item-copy {
+  margin: 18px 0 0;
+  color: #5f715f;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
+@keyframes avanteSpecificationsIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 1120px) {
+  .avante-specifications {
+    padding: 104px 0;
+  }
+
+  .avante-specifications__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .avante-specifications__description {
+    max-width: 620px;
+    margin-bottom: 0;
+  }
+
+  .avante-specifications__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .avante-specifications__item {
+    min-height: 286px;
+  }
+}
+
+@media (max-width: 768px) {
+  .avante-specifications {
+    padding: 84px 0 92px;
+  }
+
+  .avante-specifications__shell {
+    width: min(100% - 32px, 1280px);
+  }
+
+  .avante-specifications__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .avante-specifications__eyebrow::before {
+    width: 38px;
+  }
+
+  .avante-specifications__heading {
+    margin-top: 30px;
+    font-size: clamp(2.9rem, 11vw, 4.8rem);
+    line-height: 1.02;
+  }
+
+  .avante-specifications__description {
+    font-size: 0.96rem;
+    line-height: 1.74;
+  }
+
+  .avante-specifications__grid {
+    grid-template-columns: 1fr;
+    margin-top: 44px;
+  }
+
+  .avante-specifications__item {
+    min-height: auto;
+    padding: 28px 22px 30px;
+  }
+
+  .avante-specifications__item-number {
+    margin-top: 24px;
+  }
+
+  .avante-specifications__item-title {
+    font-size: 1.72rem;
+  }
+
+  .avante-specifications__item-copy {
+    font-size: 0.95rem;
+    line-height: 1.72;
+  }
+}

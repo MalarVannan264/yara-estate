@@ -1,0 +1,161 @@
+.iconic-kitchen-experience {
+  background: #fbf7f3;
+  padding: 120px 0 130px;
+}
+
+.iconic-kitchen-experience__shell {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.iconic-kitchen-experience__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  align-items: end;
+  gap: 36px 72px;
+}
+
+.iconic-kitchen-experience__header-left {
+  max-width: 760px;
+}
+
+.iconic-kitchen-experience__eyebrow {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.iconic-kitchen-experience__heading {
+  margin: 28px 0 0;
+  color: #2a1608;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.iconic-kitchen-experience__description {
+  max-width: 420px;
+  margin: 0 0 8px;
+  color: rgba(42, 22, 8, 0.72);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.iconic-kitchen-experience__visual {
+  position: relative;
+  margin: 64px 0 0;
+  overflow: hidden;
+  background: #ece2d4;
+}
+
+.iconic-kitchen-experience__image {
+  display: block;
+  width: 100%;
+  height: clamp(520px, 62vw, 760px);
+  object-fit: cover;
+}
+
+.iconic-kitchen-experience__tags {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.iconic-kitchen-experience__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 1px solid rgba(200, 168, 107, 0.42);
+  background: rgba(251, 247, 243, 0.94);
+  color: #2a1608;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+  box-shadow: 0 12px 28px rgba(42, 22, 8, 0.08);
+}
+
+.iconic-kitchen-experience__tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #c8a86b;
+}
+
+@media (max-width: 1080px) {
+  .iconic-kitchen-experience__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .iconic-kitchen-experience__description {
+    max-width: 620px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconic-kitchen-experience {
+    padding: 92px 0 104px;
+  }
+
+  .iconic-kitchen-experience__shell {
+    width: min(100% - 24px, 1280px);
+  }
+
+  .iconic-kitchen-experience__eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .iconic-kitchen-experience__heading {
+    margin-top: 24px;
+    font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 1;
+  }
+
+  .iconic-kitchen-experience__description {
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .iconic-kitchen-experience__visual {
+    margin-top: 42px;
+  }
+
+  .iconic-kitchen-experience__image {
+    height: 460px;
+  }
+
+  .iconic-kitchen-experience__tags {
+    top: 18px;
+    right: 18px;
+    left: 18px;
+    align-items: flex-start;
+  }
+
+  .iconic-kitchen-experience__tag {
+    min-height: 44px;
+    padding: 0 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+  }
+}

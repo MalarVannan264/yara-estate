@@ -1,0 +1,177 @@
+.iconic-why-eight {
+  background: #2a1608;
+  padding: 120px 0 130px;
+}
+
+.iconic-why-eight__shell {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.iconic-why-eight__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.iconic-why-eight__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.iconic-why-eight__eyebrow::before {
+  width: 62px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.88);
+  content: '';
+}
+
+.iconic-why-eight__heading {
+  margin: 34px 0 0;
+  color: #f4dfbf;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.iconic-why-eight__description {
+  max-width: 720px;
+  margin: 20px 0 0;
+  color: rgba(245, 239, 231, 0.82);
+  font-family: 'Geist', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+
+.iconic-why-eight__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 60px;
+}
+
+.iconic-why-eight__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  padding: 32px;
+  border: 1px solid rgba(200, 168, 107, 0.24);
+  background: rgba(43, 26, 15, 0.56);
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    background-color 280ms ease;
+}
+
+.iconic-why-eight__card:hover {
+  border-color: rgba(200, 168, 107, 0.6);
+  background: rgba(51, 31, 18, 0.68);
+  box-shadow:
+    0 24px 46px rgba(0, 0, 0, 0.16),
+    inset 0 0 0 1px rgba(200, 168, 107, 0.08);
+}
+
+.iconic-why-eight__card-number {
+  margin: 0;
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.iconic-why-eight__card-title {
+  margin: 64px 0 0;
+  color: #f5efe7;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.iconic-why-eight__card-copy {
+  margin: 16px 0 0;
+  color: rgba(245, 239, 231, 0.78);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+@media (max-width: 1120px) {
+  .iconic-why-eight {
+    padding: 104px 0 112px;
+  }
+
+  .iconic-why-eight__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .iconic-why-eight {
+    padding: 88px 0 96px;
+  }
+
+  .iconic-why-eight__shell {
+    width: min(100% - 24px, 1280px);
+  }
+
+  .iconic-why-eight__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .iconic-why-eight__eyebrow::before {
+    width: 38px;
+  }
+
+  .iconic-why-eight__heading {
+    margin-top: 28px;
+    font-size: clamp(3rem, 12vw, 4.8rem);
+    line-height: 1;
+  }
+
+  .iconic-why-eight__description {
+    margin-top: 18px;
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .iconic-why-eight__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 44px;
+  }
+
+  .iconic-why-eight__card {
+    min-height: 220px;
+    padding: 28px;
+  }
+
+  .iconic-why-eight__card-title {
+    margin-top: 48px;
+    font-size: 1.8rem;
+  }
+
+  .iconic-why-eight__card-copy {
+    font-size: 0.94rem;
+  }
+}

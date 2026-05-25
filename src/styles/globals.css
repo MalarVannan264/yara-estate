@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: var(--color-bg);
+  color-scheme: light;
+  scroll-behavior: auto;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at top, rgba(200, 168, 107, 0.16), transparent 24%),
+    linear-gradient(180deg, #faf7f1 0%, #f7f3ec 58%, #f0e8dc 100%);
+  color: var(--color-text);
+  font-family: 'Geist', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: rgba(200, 168, 107, 0.26);
+  color: var(--color-text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(29, 27, 25, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(200, 168, 107, 0.88), rgba(154, 122, 76, 0.88));
+  background-clip: content-box;
+}
+
+@layer base {
+  * {
+    @apply border-brand-border;
+  }
+
+  body,
+  button,
+  input,
+  textarea,
+  select {
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Playfair Display', serif;
+    @apply text-brand-text;
+  }
+
+  p {
+    @apply text-brand-muted;
+  }
+}
+
+@layer components {
+  /* Standard section spacing — 120px desktop, scales down */
+  .section-shell {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .luxury-panel {
+    @apply rounded-[1.9rem] border border-brand-border bg-white/80 shadow-luxe backdrop-blur-sm;
+  }
+
+  /* Unified eyebrow label — matches site-wide 0.36em letter-spacing */
+  .eyebrow {
+    @apply text-[0.6875rem] font-medium uppercase text-brand-gold;
+    letter-spacing: 0.36em;
+  }
+
+  .editorial-title {
+    @apply font-display text-4xl leading-[0.98] sm:text-5xl lg:text-6xl;
+  }
+
+  .copy-muted {
+    @apply text-[0.9375rem] leading-[1.82] text-brand-muted sm:text-base;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .page-gradient {
+    background:
+      radial-gradient(circle at top left, rgba(200, 168, 107, 0.12), transparent 26%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 239, 229, 0.85));
+  }
+
+  /* Shared luxury link style */
+  .link-gold {
+    @apply inline-flex items-center gap-2 text-brand-gold;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 260ms ease, transform 260ms ease;
+  }
+
+  .link-gold:hover {
+    color: var(--color-gold-dark, #b08d57);
+    transform: translateY(-1px);
+  }
+}

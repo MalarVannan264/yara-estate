@@ -1,0 +1,323 @@
+.about-who {
+  width: 100%;
+  padding: 1rem 0 140px;
+  background: #e9e1d8;
+}
+
+.about-who__container {
+  max-width: 1280px;
+}
+
+.about-who__intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-who__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-who__eyebrow-line {
+  width: 2.8rem;
+  height: 1px;
+  background: rgba(184, 148, 91, 0.9);
+}
+
+.about-who__eyebrow p {
+  margin: 0;
+  color: #6a5847;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.52em;
+  text-transform: uppercase;
+}
+
+.about-who__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(3.5rem, 7vw, 7.6rem);
+  align-items: start;
+  margin-top: 2.75rem;
+}
+
+.about-who__title {
+  margin: 0;
+  max-width: 9ch;
+  color: #111111;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+.about-who__copy {
+  max-width: 39rem;
+  padding-top: 0.7rem;
+}
+
+.about-who__paragraph {
+  margin: 0;
+  color: #5e4c3d;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.06rem;
+  font-weight: 400;
+  line-height: 1.95;
+}
+
+.about-who__paragraph--lead {
+  color: #2f261e;
+  font-size: 1.14rem;
+  line-height: 1.9;
+}
+
+.about-who__paragraph + .about-who__paragraph {
+  margin-top: 2rem;
+}
+
+.about-who__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2.5rem;
+}
+
+.about-who__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.65rem;
+  padding: 0 1.4rem;
+  border: 1px solid rgba(184, 148, 91, 0.6);
+  background: rgba(255, 252, 247, 0.32);
+  color: #6a5847;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    background-color 260ms ease,
+    color 260ms ease;
+}
+
+.about-who__tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 148, 91, 0.9);
+  background: rgba(255, 252, 247, 0.5);
+  color: #4e3d30;
+  box-shadow: 0 0 0 1px rgba(184, 148, 91, 0.12), 0 14px 28px rgba(184, 148, 91, 0.14);
+}
+
+.about-who__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.8rem;
+  margin-top: 5rem;
+}
+
+.about-who__card {
+  display: flex;
+  flex-direction: column;
+  min-height: 33rem;
+  padding: 2rem 2rem 2.25rem;
+  border: 1px solid rgba(184, 148, 91, 0.18);
+  background: rgba(250, 246, 240, 0.88);
+  box-shadow: 0 12px 28px rgba(70, 47, 29, 0.04);
+  transition:
+    transform 320ms ease,
+    box-shadow 320ms ease,
+    border-color 320ms ease,
+    background-color 320ms ease;
+}
+
+.about-who__card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(184, 148, 91, 0.34);
+  box-shadow: 0 24px 48px rgba(70, 47, 29, 0.1);
+}
+
+.about-who__card--featured {
+  background: #111111;
+  border-color: rgba(184, 148, 91, 0.28);
+  box-shadow: 0 24px 48px rgba(17, 17, 17, 0.16);
+}
+
+.about-who__card--featured:hover {
+  box-shadow: 0 28px 58px rgba(17, 17, 17, 0.24), 0 0 0 1px rgba(184, 148, 91, 0.1);
+}
+
+.about-who__card-number,
+.about-who__card-description {
+  margin: 0;
+}
+
+.about-who__card-number {
+  color: #b8945b;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.about-who__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-top: 2rem;
+  color: #7a5e44;
+}
+
+.about-who__card-title {
+  margin: 2rem 0 0;
+  color: #171310;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 2.2vw, 2.4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.about-who__card-description {
+  margin-top: 2rem;
+  color: #665344;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.about-who__card-line {
+  width: 3rem;
+  height: 1px;
+  margin-top: auto;
+  background: rgba(184, 148, 91, 0.9);
+}
+
+.about-who__card--featured .about-who__card-icon,
+.about-who__card--featured .about-who__card-number {
+  color: #b8945b;
+}
+
+.about-who__card--featured .about-who__card-title {
+  color: #f5f1ea;
+}
+
+.about-who__card--featured .about-who__card-description {
+  color: rgba(245, 241, 234, 0.8);
+}
+
+@media (max-width: 1200px) {
+  .about-who__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: 3.5rem;
+  }
+
+  .about-who__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .about-who {
+    padding: 0.5rem 0 100px;
+  }
+
+  .about-who__grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .about-who__copy {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .about-who__title {
+    max-width: 100%;
+  }
+
+  .about-who__cards {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-who {
+    padding: 0 0 78px;
+  }
+
+  .about-who__container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .about-who__eyebrow {
+    gap: 0.8rem;
+  }
+
+  .about-who__eyebrow p {
+    font-size: 0.68rem;
+    letter-spacing: 0.34em;
+  }
+
+  .about-who__title {
+    font-size: clamp(3.2rem, 13vw, 4.9rem);
+    line-height: 0.99;
+  }
+
+  .about-who__paragraph,
+  .about-who__paragraph--lead {
+    font-size: 0.98rem;
+    line-height: 1.72;
+  }
+
+  .about-who__tags {
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .about-who__tag {
+    min-height: 2.45rem;
+    padding-inline: 1.1rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .about-who__cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin-top: 3rem;
+  }
+
+  .about-who__card {
+    min-height: auto;
+    padding: 1.65rem 1.5rem 1.75rem;
+  }
+
+  .about-who__card-icon {
+    margin-top: 1.4rem;
+  }
+
+  .about-who__card-title {
+    margin-top: 1.4rem;
+    font-size: 2rem;
+  }
+
+  .about-who__card-description {
+    margin-top: 1.3rem;
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+
+  .about-who__card-line {
+    margin-top: 1.8rem;
+  }
+}

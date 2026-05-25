@@ -1,0 +1,202 @@
+.yara-philosophy {
+  width: 100%;
+  padding: 110px 0;
+  background: #e8ded0;
+}
+
+.philosophy-shell {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.philosophy-column-left {
+  padding-top: 2px;
+}
+
+.philosophy-column-right {
+  padding-top: 6px;
+}
+
+.philosophy-eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  color: #8b6548;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.philosophy-eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: #8b6548;
+  content: '';
+}
+
+.philosophy-heading {
+  margin: 34px 0 0;
+  color: #1d1b19;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 4.5vw, 5.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: .02em;
+}
+
+.philosophy-location {
+  margin: 34px 0 0;
+  color: rgba(111, 102, 92, 0.72);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.philosophy-copy {
+  max-width: 540px;
+}
+
+.philosophy-paragraph {
+  margin: 0;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.72;
+}
+
+.philosophy-paragraph-primary {
+  color: #1d1b19;
+}
+
+.philosophy-paragraph-secondary {
+  margin-top: 30px;
+  color: #6f665c;
+}
+
+.philosophy-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 540px;
+  margin-top: 76px;
+}
+
+.philosophy-stat {
+  min-width: 0;
+}
+
+.philosophy-stat-value {
+  margin: 0;
+  color: #7a4f36;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 4vw, 4.15rem);
+  font-weight: 500;
+  line-height: 0.96;
+  transition:
+    transform 260ms ease,
+    color 260ms ease;
+}
+
+.philosophy-stat-label {
+  margin: 12px 0 0;
+  color: #7d7369;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  transition: color 260ms ease;
+}
+
+.philosophy-stat:hover .philosophy-stat-value {
+  transform: translateY(-4px);
+  color: #c8a86b;
+}
+
+.philosophy-stat:hover .philosophy-stat-label {
+  color: #8b6548;
+}
+
+@media (max-width: 1024px) {
+  .yara-philosophy {
+    padding: 88px 0;
+  }
+
+  .philosophy-grid {
+    gap: 48px;
+  }
+
+  .philosophy-copy,
+  .philosophy-stats {
+    max-width: 100%;
+  }
+
+  .philosophy-stats {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .yara-philosophy {
+    padding: 72px 0;
+  }
+
+  .philosophy-shell {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .philosophy-heading {
+    margin-top: 26px;
+    line-height: 1.02;
+  }
+
+  .philosophy-location {
+    margin-top: 24px;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+  }
+
+  .philosophy-paragraph {
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
+  .philosophy-paragraph-secondary {
+    margin-top: 24px;
+  }
+
+  .philosophy-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+  }
+
+  .philosophy-stat-label {
+    font-size: 0.64rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 540px) {
+  .philosophy-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
