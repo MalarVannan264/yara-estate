@@ -123,7 +123,6 @@ const AboutSelectedWorks = () => (
         <div className="about-selected-works__header-grid">
           <motion.h2 className="about-selected-works__title" variants={itemVariants}>
             A Portfolio of
-            <br />
             Quiet Distinction.
           </motion.h2>
 

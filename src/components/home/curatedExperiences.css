@@ -50,7 +50,7 @@
   margin: 34px 0 0;
   color: #1d1b19;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 1.04;
   letter-spacing: 0.02em;

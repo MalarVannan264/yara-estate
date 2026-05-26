@@ -109,7 +109,7 @@
   margin: 48px 0 0;
   color: #183323;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.02em;

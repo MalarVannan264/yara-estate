@@ -53,7 +53,7 @@
   margin: 30px 0 0;
   color: #2a1608;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: 0.02em;
@@ -142,7 +142,6 @@
 
   .iconic-dining-experience__heading {
     margin-top: 24px;
-    font-size: clamp(3rem, 12vw, 4.8rem);
     line-height: 1;
   }
 

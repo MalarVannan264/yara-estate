@@ -48,7 +48,7 @@
   max-width: 9ch;
   color: #1b140f;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: 0.02em;
@@ -142,7 +142,7 @@
   margin: 2.6rem 0 0;
   color: inherit;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 6vw, 5.3rem);
+  font-size: clamp(2.4rem, 6vw, 5.3rem);
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: -0.045em;
@@ -302,7 +302,6 @@
   }
 
   .about-selected-works__title {
-    font-size: clamp(3.2rem, 13vw, 4.9rem);
     line-height: 0.98;
   }
 
@@ -337,7 +336,6 @@
 
   .about-selected-works__project-name {
     margin-top: 1.8rem;
-    font-size: clamp(3rem, 12vw, 4.3rem);
   }
 
   .about-selected-works__subtitle {

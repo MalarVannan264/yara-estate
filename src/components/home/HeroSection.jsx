@@ -1,155 +1,130 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { useCallback, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import heroImage from '../../assets/images/homepage/hero.jpeg'
+import { easeOutExpo } from '../../utils/motion'
 import './heroSection.css'
 
-const contentVariants = {
-  hidden: {},
+const heroVariants = {
+  hidden: { opacity: 0 },
   visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.14,
+      duration: 1.05,
+      ease: easeOutExpo,
+      staggerChildren: 0.14,
+      delayChildren: 0.18,
     },
   },
 }
 
-const itemVariants = {
+const eyebrowVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.82, ease: easeOutExpo },
+  },
+}
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 34 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: easeOutExpo },
+  },
+}
+
+const copyVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, ease: easeOutExpo },
+  },
+}
+
+const actionVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.86,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.88, delay: 0.12, ease: easeOutExpo },
   },
 }
 
 const HeroSection = () => {
   const heroRef = useRef(null)
-  const frameRef = useRef(0)
-  const pointerStateRef = useRef({
-    moveX: '0px',
-    moveY: '0px',
-    mouseX: '50%',
-    mouseY: '50%',
+  const prefersReducedMotion = useReducedMotion()
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
   })
-
-  const flushPointerState = useCallback(() => {
-    frameRef.current = 0
-
-    if (!heroRef.current) {
-      return
-    }
-
-    const { moveX, moveY, mouseX, mouseY } = pointerStateRef.current
-
-    heroRef.current.style.setProperty('--move-x', moveX)
-    heroRef.current.style.setProperty('--move-y', moveY)
-    heroRef.current.style.setProperty('--mouse-x', mouseX)
-    heroRef.current.style.setProperty('--mouse-y', mouseY)
-  }, [])
-
-  const queuePointerState = useCallback(
-    (moveX, moveY, mouseX, mouseY) => {
-      pointerStateRef.current = { moveX, moveY, mouseX, mouseY }
-
-      if (!frameRef.current) {
-        frameRef.current = window.requestAnimationFrame(flushPointerState)
-      }
-    },
-    [flushPointerState],
+  const backgroundY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, prefersReducedMotion ? 0 : 96],
   )
-
-  const handleMouseMove = useCallback(
-    (event) => {
-      if (!heroRef.current) {
-        return
-      }
-
-      const bounds = heroRef.current.getBoundingClientRect()
-      const x = (event.clientX - bounds.left) / bounds.width
-      const y = (event.clientY - bounds.top) / bounds.height
-
-      const moveX = `${((x - 0.5) * 18).toFixed(2)}px`
-      const moveY = `${((y - 0.5) * 14).toFixed(2)}px`
-      const mouseX = `${(x * 100).toFixed(2)}%`
-      const mouseY = `${(y * 100).toFixed(2)}%`
-
-      queuePointerState(moveX, moveY, mouseX, mouseY)
-    },
-    [queuePointerState],
-  )
-
-  const handleMouseLeave = useCallback(() => {
-    queuePointerState('0px', '0px', '50%', '50%')
-  }, [queuePointerState])
-
-  useEffect(
-    () => () => {
-      if (frameRef.current) {
-        window.cancelAnimationFrame(frameRef.current)
-      }
-    },
-    [],
-  )
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, prefersReducedMotion ? 0 : -52])
 
   return (
-    <section
-      className="yara-hero"
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-      ref={heroRef}
-      style={{
-        '--move-x': '0px',
-        '--move-y': '0px',
-        '--mouse-x': '50%',
-        '--mouse-y': '50%',
-      }}
-    >
+    <section className="yara-hero" ref={heroRef}>
       <motion.div
-        animate={{ '--hero-scale': '1.03' }}
-        className="hero-bg"
-        initial={{ '--hero-scale': '1.085' }}
-        style={{ backgroundImage: `url(${heroImage})` }}
-        transition={{ duration: 1.9, ease: [0.22, 1, 0.36, 1] }}
-      />
+        className="hero-media"
+        style={prefersReducedMotion ? undefined : { y: backgroundY }}
+      >
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          className="hero-background-shell"
+          initial={{ opacity: 0, scale: 1.08 }}
+          transition={{ duration: 1.8, ease: easeOutExpo }}
+        >
+          <div
+            className="hero-background"
+            style={{ backgroundImage: `url(${heroImage})` }}
+          />
+        </motion.div>
+      </motion.div>
+
       <div aria-hidden="true" className="hero-overlay" />
-      <div aria-hidden="true" className="hero-spotlight" />
+      <div aria-hidden="true" className="hero-noise" />
 
       <motion.div
         animate="visible"
         className="hero-content"
         initial="hidden"
-        variants={contentVariants}
+        style={prefersReducedMotion ? undefined : { y: contentY }}
+        variants={heroVariants}
       >
-        <motion.p className="hero-eyebrow" variants={itemVariants}>
+        <motion.p className="hero-eyebrow" variants={eyebrowVariants}>
           YARA ESTATES · CHENNAI
         </motion.p>
 
-        <motion.h1 variants={itemVariants}>
-          Curated Spaces for <br />
+        <motion.h1 variants={headingVariants}>
+          Curated Spaces for
+          <br />
           Elevated Living.
         </motion.h1>
 
-        <motion.p className="hero-description" variants={itemVariants}>
-          A boutique collection of architecturally crafted villas, premium plots,
-          and future-ready investments across Chennai&apos;s most desirable destinations.
+        <motion.p className="hero-description" variants={copyVariants}>
+          A boutique collection of architecturally crafted villas, premium plots, and
+          future-ready investments across Chennai&apos;s most desirable destinations.
         </motion.p>
 
-        <motion.div className="hero-actions" variants={itemVariants}>
-          <Link className="hero-button btn-primary" to="/collections">
-            Explore Projects <span aria-hidden="true">→</span>
+        <motion.div className="hero-actions" variants={actionVariants}>
+          <Link className="hero-button hero-button--primary" to="/collections">
+            EXPLORE PROJECTS <span aria-hidden="true">↓</span>
           </Link>
-          <Link className="hero-button btn-secondary" to="/contact">
-            Schedule Consultation
+
+          <Link className="hero-button hero-button--secondary" to="/contact">
+            SCHEDULE CONSULTATION <span aria-hidden="true">↗</span>
           </Link>
         </motion.div>
 
-        <motion.div className="hero-scroll" variants={itemVariants}>
-          <span aria-hidden="true" />
-          Scroll to Experience
+        <motion.div className="hero-scroll" variants={actionVariants}>
+          <span aria-hidden="true" className="hero-scroll__dot" />
+          SCROLL TO EXPERIENCE
         </motion.div>
       </motion.div>
     </section>

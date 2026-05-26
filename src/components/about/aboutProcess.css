@@ -48,7 +48,7 @@
   max-width: 10.25ch;
   color: #17120f;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: 0.02em;
@@ -217,7 +217,6 @@
 
   .about-process__title {
     max-width: 100%;
-    font-size: clamp(3.2rem, 13vw, 4.9rem);
     line-height: 0.98;
   }
 

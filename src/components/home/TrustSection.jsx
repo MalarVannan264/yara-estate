@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Container from '../common/Container'
 import { fadeUp, staggerContainer } from '../../utils/motion'
+import './trustSection.css'
 
 const trustItems = [
   'Prime Locations',
@@ -13,40 +14,39 @@ const trustItems = [
 
 const TrustSection = () => (
   <section className="section-shell">
-    <Container className="space-y-12">
+    <Container className="trust-container">
       <motion.div
-        className="space-y-4 text-center"
+        className="trust-header"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-        <motion.p className="eyebrow" variants={fadeUp}>
+        <motion.p className="trust-eyebrow" variants={fadeUp}>
           Why YARA
         </motion.p>
-        <motion.h2 className="editorial-title mx-auto max-w-3xl" variants={fadeUp}>
+        <motion.h2 className="trust-title" variants={fadeUp}>
           Crafted Beyond Real Estate.
         </motion.h2>
-        <motion.p className="copy-muted mx-auto max-w-2xl" variants={fadeUp}>
+        <motion.p className="trust-copy" variants={fadeUp}>
           This section keeps the trust-building card rhythm from the reference without
           overbuilding it before your final content arrives.
         </motion.p>
       </motion.div>
-
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="trust-grid">
         {trustItems.map((item, index) => (
           <motion.div
             key={item}
-            className={`border px-6 py-7 ${index % 2 === 0 ? 'border-brand-border bg-white text-brand-text' : 'border-[#4e3c33] bg-[#4e3c33] text-white'}`}
+            className={`trust-card ${index % 2 === 0 ? '' : 'trust-card--alt'}`}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeUp}
           >
-            <p className="text-[0.68rem] uppercase tracking-[0.28em] opacity-70">
+            <p className="trust-card__label">
               Signature value
             </p>
-            <h3 className="mt-5 font-display text-3xl leading-tight">{item}</h3>
+            <h3 className="trust-card__title">{item}</h3>
           </motion.div>
         ))}
       </div>

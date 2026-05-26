@@ -39,7 +39,7 @@
   margin: 38px 0 0;
   color: #f7f3ec;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: 0.02em;
@@ -179,7 +179,7 @@
 
 @media (max-width: 768px) {
   .avante-floorplan {
-    padding: 84px 0 94px;
+    padding: 72px 0 80px;
   }
 
   .avante-floorplan__shell {
@@ -197,24 +197,32 @@
   }
 
   .avante-floorplan__heading {
-    margin-top: 30px;
-    font-size: clamp(2.9rem, 11.8vw, 4.9rem);
+    margin-top: 26px;
     line-height: 1.02;
   }
 
   .avante-floorplan__visual {
-    margin-top: 46px;
+    margin-top: 36px;
   }
 
   .avante-floorplan__footer {
-    gap: 32px;
-    margin-top: 34px;
+    gap: 16px;
+    margin-top: 28px;
   }
 
   .avante-floorplan__stat {
-    padding: 20px 18px 22px;
+    width: 100%;
+    padding: 18px 16px 20px;
     border: 1px solid rgba(121, 144, 112, 0.14);
     background: rgba(31, 35, 28, 0.54);
+  }
+
+  .avante-floorplan__stat-value {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+
+  .avante-floorplan__stat-value--large {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
   }
 
   .avante-floorplan__stat--large {

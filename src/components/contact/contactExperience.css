@@ -82,7 +82,7 @@
 .ce-heading {
   margin: 0 0 2.25rem;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0.02em;                     /* px → em */
@@ -374,7 +374,6 @@
   }
 
   .ce-heading {
-    font-size: clamp(3rem, 4.8vw, 5rem);
     letter-spacing: -0.035em;
   }
 

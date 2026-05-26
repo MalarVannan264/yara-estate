@@ -126,7 +126,7 @@
   margin: 40px 0 0;
   color: #f5efe7;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: 0.02em;
@@ -202,7 +202,6 @@
 
   .iconic-grand-living__heading {
     margin-top: 30px;
-    font-size: clamp(3rem, 13vw, 5rem);
     line-height: 1;
   }
 

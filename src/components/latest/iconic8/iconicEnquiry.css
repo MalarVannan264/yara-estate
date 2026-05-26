@@ -45,7 +45,7 @@
   margin: 44px 0 0;
   color: #2a1608;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: 0.02em;
@@ -221,7 +221,6 @@
 
   .iconic-enquiry__heading {
     margin-top: 30px;
-    font-size: clamp(3rem, 12vw, 4.8rem);
   }
 
   .iconic-enquiry__paragraph {

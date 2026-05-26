@@ -88,7 +88,7 @@
   margin: 26px 0 0;
   color: #f7f3ec;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: 0.02em;
@@ -172,7 +172,6 @@
 
   .lifestyle-editorial-heading {
     margin-top: 22px;
-    font-size: clamp(3rem, 11vw, 4.8rem);
   }
 
   .lifestyle-editorial-paragraph {

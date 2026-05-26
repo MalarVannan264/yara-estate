@@ -1,152 +1,139 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { useCallback, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import avanteHeroImage from '../../../assets/images/projects/avante/avante-hero.jpg'
+import { easeOutExpo } from '../../../utils/motion'
 import './avanteHero.css'
 
-const containerVariants = {
-  hidden: {},
+const heroVariants = {
+  hidden: { opacity: 0 },
   visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.12,
+      duration: 1.05,
+      ease: easeOutExpo,
+      staggerChildren: 0.14,
+      delayChildren: 0.18,
     },
   },
 }
 
-const itemVariants = {
+const eyebrowVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.82, ease: easeOutExpo },
+  },
+}
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 34 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: easeOutExpo },
+  },
+}
+
+const copyVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, ease: easeOutExpo },
+  },
+}
+
+const actionVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.86,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.88, delay: 0.12, ease: easeOutExpo },
+  },
+}
+
+const footerVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, delay: 0.5, ease: easeOutExpo },
   },
 }
 
 const AvanteHero = () => {
   const heroRef = useRef(null)
-  const frameRef = useRef(0)
-  const pointerStateRef = useRef({
-    moveX: '0px',
-    moveY: '0px',
-    mouseX: '50%',
-    mouseY: '50%',
+  const prefersReducedMotion = useReducedMotion()
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
   })
-
-  const flushPointerState = useCallback(() => {
-    frameRef.current = 0
-
-    if (!heroRef.current) {
-      return
-    }
-
-    const { moveX, moveY, mouseX, mouseY } = pointerStateRef.current
-
-    heroRef.current.style.setProperty('--avante-move-x', moveX)
-    heroRef.current.style.setProperty('--avante-move-y', moveY)
-    heroRef.current.style.setProperty('--avante-mouse-x', mouseX)
-    heroRef.current.style.setProperty('--avante-mouse-y', mouseY)
-  }, [])
-
-  const queuePointerState = useCallback(
-    (moveX, moveY, mouseX, mouseY) => {
-      pointerStateRef.current = { moveX, moveY, mouseX, mouseY }
-
-      if (!frameRef.current) {
-        frameRef.current = window.requestAnimationFrame(flushPointerState)
-      }
-    },
-    [flushPointerState],
+  const backgroundY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, prefersReducedMotion ? 0 : 96],
   )
-
-  const handleMouseMove = useCallback(
-    (event) => {
-      if (!heroRef.current) {
-        return
-      }
-
-      const bounds = heroRef.current.getBoundingClientRect()
-      const x = (event.clientX - bounds.left) / bounds.width
-      const y = (event.clientY - bounds.top) / bounds.height
-
-      const moveX = `${((x - 0.5) * 18).toFixed(2)}px`
-      const moveY = `${((y - 0.5) * 14).toFixed(2)}px`
-      const mouseX = `${(x * 100).toFixed(2)}%`
-      const mouseY = `${(y * 100).toFixed(2)}%`
-
-      queuePointerState(moveX, moveY, mouseX, mouseY)
-    },
-    [queuePointerState],
-  )
-
-  const handleMouseLeave = useCallback(() => {
-    queuePointerState('0px', '0px', '50%', '50%')
-  }, [queuePointerState])
-
-  useEffect(
-    () => () => {
-      if (frameRef.current) {
-        window.cancelAnimationFrame(frameRef.current)
-      }
-    },
-    [],
-  )
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, prefersReducedMotion ? 0 : -52])
 
   return (
-    <section
-      className="avante-hero"
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-      ref={heroRef}
-      style={{
-        '--avante-move-x': '0px',
-        '--avante-move-y': '0px',
-        '--avante-mouse-x': '50%',
-        '--avante-mouse-y': '50%',
-      }}
-    >
+    <section className="avante-hero" ref={heroRef}>
       <motion.div
-        animate={{ '--avante-scale': '1.03' }}
-        className="avante-hero__bg"
-        initial={{ '--avante-scale': '1.085' }}
-        style={{ backgroundImage: `url(${avanteHeroImage})` }}
-        transition={{ duration: 1.9, ease: [0.22, 1, 0.36, 1] }}
-      />
+        className="avante-hero__media"
+        style={prefersReducedMotion ? undefined : { y: backgroundY }}
+      >
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          className="avante-hero__background-shell"
+          initial={{ opacity: 0, scale: 1.08 }}
+          transition={{ duration: 1.8, ease: easeOutExpo }}
+        >
+          <div
+            className="avante-hero__background"
+            style={{ backgroundImage: `url(${avanteHeroImage})` }}
+          />
+        </motion.div>
+      </motion.div>
+
       <div aria-hidden="true" className="avante-hero__overlay" />
-      <div aria-hidden="true" className="avante-hero__spotlight" />
+      <div aria-hidden="true" className="avante-hero__noise" />
 
       <motion.div
         animate="visible"
         className="avante-hero__content"
         initial="hidden"
-        variants={containerVariants}
+        style={prefersReducedMotion ? undefined : { y: contentY }}
+        variants={heroVariants}
       >
-        <motion.p className="avante-hero__eyebrow" variants={itemVariants}>
+        <motion.p className="avante-hero__eyebrow" variants={eyebrowVariants}>
           BOUTIQUE RESIDENCES — ADYAR
         </motion.p>
 
-        <motion.h1 className="avante-hero__heading" variants={itemVariants}>
+        <motion.h1 className="avante-hero__title" variants={headingVariants}>
           The Height
           <br />
           of Living.
         </motion.h1>
 
-        <motion.div className="avante-hero__rule" variants={itemVariants} />
-
-        <motion.p className="avante-hero__description" variants={itemVariants}>
-          Boutique residences crafted for modern families in the tree-lined heart
-          of Adyar — where heritage meets the rare luxury of restraint.
+        <motion.p className="avante-hero__description" variants={copyVariants}>
+          Boutique residences crafted for modern families in the tree-lined heart of Adyar
+          — where heritage meets the rare luxury of restraint.
         </motion.p>
 
-        <motion.div className="avante-hero__actions" variants={itemVariants}>
-          <Link className="avante-hero__button avante-hero__button--primary" to="/latest/avante#residences">
-            EXPLORE RESIDENCES
+        <motion.div className="avante-hero__actions" variants={actionVariants}>
+          <Link
+            className="avante-hero__button avante-hero__button--primary"
+            to="/latest/avante#residences"
+          >
+            EXPLORE RESIDENCES <span aria-hidden="true">↓</span>
           </Link>
-          <Link className="avante-hero__button avante-hero__button--secondary" to="/contact">
-            SCHEDULE A PRIVATE VISIT
+
+          <Link
+            className="avante-hero__button avante-hero__button--secondary"
+            to="/contact"
+          >
+            SCHEDULE PRIVATE VISIT <span aria-hidden="true">↗</span>
           </Link>
         </motion.div>
       </motion.div>
@@ -155,17 +142,17 @@ const AvanteHero = () => {
         animate="visible"
         className="avante-hero__footer"
         initial="hidden"
-        variants={containerVariants}
+        variants={footerVariants}
       >
-        <motion.div className="avante-hero__tag" variants={itemVariants}>
+        <div className="avante-hero__tag">
           <span aria-hidden="true" className="avante-hero__tag-dot" />
           INVITATIONS NOW OPEN — LIMITED RESIDENCES
-        </motion.div>
+        </div>
 
-        <motion.div className="avante-hero__scroll" variants={itemVariants}>
+        <div className="avante-hero__scroll">
           <span aria-hidden="true" className="avante-hero__scroll-line" />
           SCROLL
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   )

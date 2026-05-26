@@ -1,181 +1,150 @@
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { useCallback, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import iconicHeroImage from '../../../assets/images/projects/iconic8/iconic8-hero.jpg'
+import { easeOutExpo } from '../../../utils/motion'
 import './iconicHero.css'
 
-const containerVariants = {
-  hidden: {},
+const heroVariants = {
+  hidden: { opacity: 0 },
   visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.12,
+      duration: 1.05,
+      ease: easeOutExpo,
+      staggerChildren: 0.14,
+      delayChildren: 0.18,
     },
   },
 }
 
-const itemVariants = {
+const eyebrowVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.82, ease: easeOutExpo },
+  },
+}
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 34 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: easeOutExpo },
+  },
+}
+
+const copyVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, ease: easeOutExpo },
+  },
+}
+
+const actionVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.86,
-      ease: [0.22, 1, 0.36, 1],
-    },
+    transition: { duration: 0.88, delay: 0.12, ease: easeOutExpo },
+  },
+}
+
+const footerVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.9, delay: 0.52, ease: easeOutExpo },
   },
 }
 
 const stats = [
-  {
-    value: '8',
-    label: 'RESIDENCES',
-  },
-  {
-    value: '5,400+',
-    label: 'SQ.FT. CARPET',
-  },
-  {
-    value: 'G + 2 + T',
-    label: 'FLOOR PROGRAM',
-  },
+  { value: '8', label: 'RESIDENCES' },
+  { value: '5,400+', label: 'SQ.FT. CARPET' },
+  { value: 'G + 2 + T', label: 'FLOOR PROGRAM' },
 ]
 
 const IconicHero = () => {
   const heroRef = useRef(null)
-  const frameRef = useRef(0)
-  const pointerStateRef = useRef({
-    moveX: '0px',
-    moveY: '0px',
-    mouseX: '50%',
-    mouseY: '50%',
+  const prefersReducedMotion = useReducedMotion()
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start'],
   })
-
-  const flushPointerState = useCallback(() => {
-    frameRef.current = 0
-
-    if (!heroRef.current) {
-      return
-    }
-
-    const { moveX, moveY, mouseX, mouseY } = pointerStateRef.current
-    heroRef.current.style.setProperty('--iconic-move-x', moveX)
-    heroRef.current.style.setProperty('--iconic-move-y', moveY)
-    heroRef.current.style.setProperty('--iconic-mouse-x', mouseX)
-    heroRef.current.style.setProperty('--iconic-mouse-y', mouseY)
-  }, [])
-
-  const queuePointerState = useCallback(
-    (moveX, moveY, mouseX, mouseY) => {
-      pointerStateRef.current = { moveX, moveY, mouseX, mouseY }
-
-      if (!frameRef.current) {
-        frameRef.current = window.requestAnimationFrame(flushPointerState)
-      }
-    },
-    [flushPointerState],
+  const backgroundY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, prefersReducedMotion ? 0 : 96],
   )
-
-  const handleMouseMove = useCallback(
-    (event) => {
-      if (!heroRef.current) {
-        return
-      }
-
-      const bounds = heroRef.current.getBoundingClientRect()
-      const x = (event.clientX - bounds.left) / bounds.width
-      const y = (event.clientY - bounds.top) / bounds.height
-
-      const moveX = `${((x - 0.5) * 16).toFixed(2)}px`
-      const moveY = `${((y - 0.5) * 12).toFixed(2)}px`
-      const mouseX = `${(x * 100).toFixed(2)}%`
-      const mouseY = `${(y * 100).toFixed(2)}%`
-
-      queuePointerState(moveX, moveY, mouseX, mouseY)
-    },
-    [queuePointerState],
-  )
-
-  const handleMouseLeave = useCallback(() => {
-    queuePointerState('0px', '0px', '50%', '50%')
-  }, [queuePointerState])
-
-  useEffect(
-    () => () => {
-      if (frameRef.current) {
-        window.cancelAnimationFrame(frameRef.current)
-      }
-    },
-    [],
-  )
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, prefersReducedMotion ? 0 : -52])
 
   return (
-    <section
-      className="iconic-hero"
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-      ref={heroRef}
-      style={{
-        '--iconic-move-x': '0px',
-        '--iconic-move-y': '0px',
-        '--iconic-mouse-x': '50%',
-        '--iconic-mouse-y': '50%',
-      }}
-    >
+    <section className="iconic-hero" ref={heroRef}>
       <motion.div
-        animate={{ '--iconic-scale': '1.03' }}
-        className="iconic-hero__bg"
-        initial={{ '--iconic-scale': '1.085' }}
-        style={{ backgroundImage: `url(${iconicHeroImage})` }}
-        transition={{ duration: 1.9, ease: [0.22, 1, 0.36, 1] }}
-      />
+        className="iconic-hero__media"
+        style={prefersReducedMotion ? undefined : { y: backgroundY }}
+      >
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          className="iconic-hero__background-shell"
+          initial={{ opacity: 0, scale: 1.08 }}
+          transition={{ duration: 1.8, ease: easeOutExpo }}
+        >
+          <div
+            className="iconic-hero__background"
+            style={{ backgroundImage: `url(${iconicHeroImage})` }}
+          />
+        </motion.div>
+      </motion.div>
+
       <div aria-hidden="true" className="iconic-hero__overlay" />
-      <div aria-hidden="true" className="iconic-hero__spotlight" />
+      <div aria-hidden="true" className="iconic-hero__noise" />
 
       <motion.div
         animate="visible"
         className="iconic-hero__content"
         initial="hidden"
-        variants={containerVariants}
+        style={prefersReducedMotion ? undefined : { y: contentY }}
+        variants={heroVariants}
       >
-        <motion.p className="iconic-hero__eyebrow" variants={itemVariants}>
+        <motion.p className="iconic-hero__eyebrow" variants={eyebrowVariants}>
           ONLY EIGHT RESIDENCES — NEELANKARAI
         </motion.p>
 
-        <motion.p className="iconic-hero__label" variants={itemVariants}>
-          YARA ESTATES
-        </motion.p>
-
-        <motion.h1 className="iconic-hero__heading" variants={itemVariants}>
+        <motion.h1 className="iconic-hero__title" variants={headingVariants}>
           ICONIC 8
         </motion.h1>
 
-        <motion.h2 className="iconic-hero__subheading" variants={itemVariants}>
+        <motion.p className="iconic-hero__subtitle" variants={copyVariants}>
           Private tropical-modern villas
           <br />
           crafted for elevated living.
-        </motion.h2>
-
-        <motion.div className="iconic-hero__rule" variants={itemVariants} />
-
-        <motion.p className="iconic-hero__description" variants={itemVariants}>
-          An ultra-exclusive collection of eight architecturally crafted
-          residences in Neelankarai, designed for families who seek privacy,
-          timeless design, and curated luxury.
         </motion.p>
 
-        <motion.div className="iconic-hero__actions" variants={itemVariants}>
+        <motion.p className="iconic-hero__description" variants={copyVariants}>
+          An ultra-exclusive collection of eight architecturally crafted residences in
+          Neelankarai, designed for families who seek privacy, timeless design, and curated
+          luxury.
+        </motion.p>
+
+        <motion.div className="iconic-hero__actions" variants={actionVariants}>
           <Link
             className="iconic-hero__button iconic-hero__button--primary"
             to="/latest/iconic-8#residences"
           >
-            EXPLORE RESIDENCES
+            EXPLORE RESIDENCES <span aria-hidden="true">↓</span>
           </Link>
+
           <Link
             className="iconic-hero__button iconic-hero__button--secondary"
             to="/contact"
           >
-            SCHEDULE PRESENTATION
+            SCHEDULE PRESENTATION <span aria-hidden="true">↗</span>
           </Link>
         </motion.div>
       </motion.div>
@@ -184,21 +153,21 @@ const IconicHero = () => {
         animate="visible"
         className="iconic-hero__footer"
         initial="hidden"
-        variants={containerVariants}
+        variants={footerVariants}
       >
         <div className="iconic-hero__stats">
           {stats.map((stat) => (
-            <motion.div className="iconic-hero__stat" key={stat.label} variants={itemVariants}>
+            <div className="iconic-hero__stat" key={stat.label}>
               <p className="iconic-hero__stat-value">{stat.value}</p>
               <p className="iconic-hero__stat-label">{stat.label}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div className="iconic-hero__scroll" variants={itemVariants}>
+        <div className="iconic-hero__scroll">
           <span aria-hidden="true" className="iconic-hero__scroll-dot" />
           SCROLL TO EXPLORE ↓
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   )

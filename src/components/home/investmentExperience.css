@@ -43,7 +43,7 @@
   margin: 34px 0 0;
   color: #f7f3ec;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(4rem, 4vw, 4rem);
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: 0.02em;
@@ -160,7 +160,6 @@
 
   .investment-experience-heading {
     margin-top: 28px;
-    font-size: clamp(2.7rem, 10vw, 4.2rem);
   }
 
   .investment-experience-description {

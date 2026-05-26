@@ -1,0 +1,93 @@
+/* Styles for TrustSection component (replaces inline Tailwind) */
+.trust-container {
+  display: block;
+  gap: 3rem;
+}
+
+.trust-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.trust-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto 0.5rem;
+  color: #8b6548;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.trust-eyebrow::before,
+.trust-eyebrow::after {
+  width: 28px;
+  height: 1px;
+  background: #8b6548;
+  content: '';
+}
+
+.trust-title {
+  margin: 28px 0 0;
+  color: #1d1b19;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.trust-copy {
+  color: var(--muted, #6b6b6b);
+  max-width: 40rem;
+  margin: 0.5rem auto 0;
+}
+
+.trust-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.trust-card {
+  border: 1px solid var(--brand-border, #e6e6e6);
+  padding: 1.75rem 1.5rem;
+  background: #ffffff;
+  color: var(--brand-text, #1f1f1f);
+}
+
+.trust-card--alt {
+  border-color: #4e3c33;
+  background: #4e3c33;
+  color: #ffffff;
+}
+
+.trust-card__label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  opacity: 0.7;
+}
+
+.trust-card__title {
+  margin-top: 1.25rem;
+  font-family: var(--font-display, inherit);
+  font-size: 1.75rem;
+  line-height: 1.05;
+}
