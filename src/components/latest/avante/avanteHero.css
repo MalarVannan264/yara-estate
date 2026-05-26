@@ -40,16 +40,14 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.38),
-      rgba(0, 0, 0, 0.72)
+      rgba(35, 37, 29, 0.279),
+      rgba(35, 37, 29, 0.349),
+      rgb(35, 37, 29)
     ),
     linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.45),
-      transparent 28%,
-      transparent 72%,
-      rgba(0, 0, 0, 0.45)
+      to top right,
+      rgba(35, 37, 29, 0.704) 0%,
+      transparent 100%
     );
 }
 
@@ -57,8 +55,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 18%, rgba(201, 168, 106, 0.13), transparent 32%),
-    linear-gradient(180deg, transparent 0%, rgba(5, 5, 5, 0.12) 74%, rgba(5, 5, 5, 0.28) 100%);
+    radial-gradient(circle at 50% 18%, rgba(35, 37, 29, 0.474), transparent 32%),
+    linear-gradient(to top right, rgb(35, 37, 29) 0%, transparent 100%);
   content: '';
 }
 
@@ -352,6 +350,27 @@
 
 /* ── Responsive — 1024px ─────────────────────────────────── */
 @media (max-width: 1024px) {
+  .avante-hero__overlay {
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(35, 37, 29, 0.279),
+      rgba(35, 37, 29, 0.349),
+      rgb(35, 37, 29)
+    ),
+    linear-gradient(
+      to top right,
+      rgba(35, 37, 29, 0.704) 0%,
+      transparent 100%
+    );
+  }
+
+  .avante-hero__overlay::after {
+    background:
+    radial-gradient(circle at 50% 18%, rgba(35, 37, 29, 0.474), transparent 32%),
+    linear-gradient(to top right, rgb(35, 37, 29) 0%, transparent 0%);
+  }
+
   .avante-hero__title {
     font-size: clamp(3.6rem, 10vw, 6.8rem);
   }
@@ -363,6 +382,27 @@
 
 /* ── Responsive — 768px ──────────────────────────────────── */
 @media (max-width: 768px) {
+  .avante-hero__overlay {
+    background:
+    linear-gradient(
+      to bottom,
+      rgba(35, 37, 29, 0.279),
+      rgba(35, 37, 29, 0.349),
+      rgb(35, 37, 29)
+    ),
+    linear-gradient(
+      to top right,
+      rgba(35, 37, 29, 0.704) 0%,
+      transparent 100%
+    );
+  }
+
+  .avante-hero__overlay::after {
+    background:
+    radial-gradient(circle at 50% 18%, rgba(35, 37, 29, 0.474), transparent 32%),
+    linear-gradient(to top right, rgb(35, 37, 29) 0%, transparent 0%);
+  }
+
   .avante-hero__content {
     padding-top: 7.4rem;
     padding-bottom: 8.5rem;
@@ -424,24 +464,35 @@
 
 /* ── Responsive — 540px ──────────────────────────────────── */
 @media (max-width: 540px) {
+  .avante-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
   .avante-hero__overlay {
     background:
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.46),
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.78)
-      ),
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.54),
-        transparent 20%,
-        transparent 80%,
-        rgba(0, 0, 0, 0.54)
-      );
+    linear-gradient(
+      to top,
+      #23251D 0%,
+      rgba(35, 37, 29, 0.349),
+      rgba(35, 37, 29, 0.16)
+    ),
+    linear-gradient(
+      to bottom left,
+      rgba(35, 37, 29, 0.5) 0%,
+      transparent 100%
+    );
+  }
+
+  .avante-hero__overlay::after {
+    background:
+    radial-gradient(circle at 50% 82%, rgba(35, 37, 29, 0.474), transparent 32%),
+    linear-gradient(to bottom left, #23251D 0%, transparent 100%);
   }
 
   .avante-hero__content {
+    min-height: 100vh;
+    min-height: 100svh;
     padding-right: 1.1rem;
     padding-left: 1.1rem;
   }
@@ -455,5 +506,115 @@
     padding: 0 1.5rem;
     font-size: 0.71rem;
     letter-spacing: 0.24em;
+  }
+}
+
+/* ── Responsive — 480px (Ultra Mobile) ──────────────────── */
+@media (max-width: 480px) {
+  .avante-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .avante-hero__overlay {
+    background:
+      linear-gradient(
+        to top,
+        #23251D 0%,
+        rgba(35, 37, 29, 0.28),
+        rgba(35, 37, 29, 0.24)
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.42),
+        transparent 16%,
+        transparent 84%,
+        rgba(0, 0, 0, 0.42)
+      );
+  }
+
+  .avante-hero__overlay::after {
+    background:
+    radial-gradient(circle at 50% 82%, rgba(35, 37, 29, 0.32), transparent 42%),
+    linear-gradient(to bottom left, #23251D 0%, transparent 100%);
+  }
+
+  .avante-hero__content {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: clamp(4.5rem, 8vw, 5.5rem) clamp(1rem, 3vw, 1.1rem) clamp(5rem, 8vw, 6rem);
+  }
+
+  .avante-hero__eyebrow {
+    gap: 0.7rem;
+    margin-bottom: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+  }
+
+  .avante-hero__eyebrow::before,
+  .avante-hero__eyebrow::after {
+    width: clamp(1.5rem, 8vw, 2.5rem);
+    height: 0.7px;
+  }
+
+  .avante-hero__title {
+    font-size: clamp(2.8rem, 16vw, 4.4rem);
+    line-height: 0.88;
+    letter-spacing: 0.01em;
+  }
+
+  .avante-hero__description {
+    max-width: 100%;
+    margin-top: clamp(1rem, 1.5vw, 1.3rem);
+    font-size: 0.88rem;
+    line-height: 1.68;
+  }
+
+  .avante-hero__actions {
+    gap: 0.8rem;
+    margin-top: clamp(1.4rem, 2.5vw, 1.8rem);
+  }
+
+  .avante-hero__button {
+    min-height: 52px;
+    padding: 0 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+
+  .avante-hero__button span {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .avante-hero__footer {
+    right: clamp(1rem, 3vw, 1.5rem);
+    bottom: clamp(1.5rem, 2.5vw, 2rem);
+    left: clamp(1rem, 3vw, 1.5rem);
+    gap: 12px;
+  }
+
+  .avante-hero__tag {
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+  }
+
+  .avante-hero__tag-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .avante-hero__scroll {
+    gap: 8px;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+  }
+
+  .avante-hero__scroll-line {
+    width: 0.8px;
+    height: 40px;
   }
 }
