@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import './avantePrivatePresentation.css'
@@ -92,12 +93,18 @@ const AvantePrivatePresentation = () => {
             </p>
 
             <div className="avante-private-presentation__meta">
-              <p className="avante-private-presentation__contact">
-                +91 44 4000 3030 — Mon to Sat, 10 to 7
-              </p>
-              <p className="avante-private-presentation__address">
-                Plot 21, Sastri Nagar, Adyar, Chennai 600020
-              </p>
+              <div className="avante-private-presentation__meta-item">
+                <Phone className="avante-private-presentation__meta-icon" size={15} strokeWidth={1.7} />
+                <span>9994392444 — Mon to Sat, 10 to 7</span>
+              </div>
+              <div className="avante-private-presentation__meta-item">
+                <Mail className="avante-private-presentation__meta-icon" size={15} strokeWidth={1.7} />
+                <span>info@yaraestates.com</span>
+              </div>
+              <div className="avante-private-presentation__meta-item">
+                <MapPin className="avante-private-presentation__meta-icon" size={15} strokeWidth={1.7} />
+                <span>First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020</span>
+              </div>
             </div>
           </motion.div>
 

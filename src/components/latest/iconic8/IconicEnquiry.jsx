@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import './iconicEnquiry.css'
@@ -84,12 +85,18 @@ const IconicEnquiry = () => {
             </p>
 
             <div className="iconic-enquiry__meta">
-              <p className="iconic-enquiry__contact">
-                +91 44 4000 8800 — Mon to Sat, 10 to 7
-              </p>
-              <p className="iconic-enquiry__address">
-                Plot 8, ECR, Neelankarai, Chennai 600115
-              </p>
+              <div className="iconic-enquiry__meta-item">
+                <Phone className="iconic-enquiry__meta-icon" size={15} strokeWidth={1.7} />
+                <span>9994392444 — Mon to Sat, 10 to 7</span>
+              </div>
+              <div className="iconic-enquiry__meta-item">
+                <Mail className="iconic-enquiry__meta-icon" size={15} strokeWidth={1.7} />
+                <span>info@yaraestates.com</span>
+              </div>
+              <div className="iconic-enquiry__meta-item">
+                <MapPin className="iconic-enquiry__meta-icon" size={15} strokeWidth={1.7} />
+                <span>First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020</span>
+              </div>
             </div>
           </motion.div>
 

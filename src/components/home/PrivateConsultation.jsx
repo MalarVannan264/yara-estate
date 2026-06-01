@@ -55,17 +55,17 @@ const timeOptions = [
 const contactItems = [
   {
     icon: Phone,
-    label: '+91 44 4567 8910',
-    href: 'tel:+914445678910',
+    label: '9994392444',
+    href: 'tel:9994392444',
   },
   {
     icon: Mail,
-    label: 'private@yaraestates.in',
-    href: 'mailto:private@yaraestates.in',
+    label: 'info@yaraestates.com',
+    href: 'mailto:info@yaraestates.com',
   },
   {
     icon: MapPin,
-    label: 'YARA Studio · Boat Club Road, Chennai',
+    label: 'First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020',
   },
 ]
 

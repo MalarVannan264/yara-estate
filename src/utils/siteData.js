@@ -43,7 +43,7 @@ export const featuredProjects = [
       'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80',
     tag: 'Oceanfront living',
     link: '/latest/avante',
-    stats: ['Sea-facing villas', 'Wellness pavilion'],
+    stats: ['Sea-facing apartments', 'Wellness pavilion'],
   },
   {
     title: 'Collections',
@@ -159,7 +159,7 @@ export const cinematicGallery = [
 export const contactStudios = [
   {
     title: 'Design Atelier',
-    detail: 'Nungambakkam, Chennai',
+    detail: 'First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020',
     copy: 'Private presentations, material reviews, and collection previews by appointment.',
   },
   {
@@ -169,7 +169,7 @@ export const contactStudios = [
   },
   {
     title: 'Concierge Desk',
-    detail: '+91 44 4000 2088',
+    detail: '9994392444',
     copy: 'For residence briefings, site visits, and curated investor conversations.',
   },
 ]
@@ -177,13 +177,13 @@ export const contactStudios = [
 export const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com/yaraestates' },
   { label: 'LinkedIn', href: 'https://linkedin.com/company/yara-estates' },
-  { label: 'Email', href: 'mailto:concierge@yaraestates.com' },
+  { label: 'Email', href: 'mailto:info@yaraestates.com' },
 ]
 
 export const footerContact = [
-  { label: 'Phone', value: '+91 44 4000 2088' },
-  { label: 'Email', value: 'concierge@yaraestates.com' },
-  { label: 'Visit', value: 'Nungambakkam, Chennai' },
+  { label: 'Phone', value: '9994392444' },
+  { label: 'Email', value: 'info@yaraestates.com' },
+  { label: 'Visit', value: 'First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020' },
 ]
 
 export const developments = {
@@ -237,7 +237,7 @@ export const developments = {
       'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80',
     metrics: [
       { value: 'ECR', label: 'Oceanfront setting' },
-      { value: '22', label: 'Private villas and sky suites' },
+      { value: '22', label: 'Private apartments and sky suites' },
       { value: 'Sunrise', label: 'Front-row sea horizon' },
     ],
     story:
@@ -250,7 +250,7 @@ export const developments = {
     ],
     residences: [
       {
-        title: 'Sea Villas',
+        title: 'Sea Apartments',
         detail: 'Private courtyards with elevated decks and plunge pools',
         image:
           'https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1200&q=80',

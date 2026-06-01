@@ -1,3 +1,4 @@
+/* ─── Section shell ────────────────────────────────────────── */
 .about-trust {
   width: 100%;
   padding: 150px 0;
@@ -9,6 +10,7 @@
   max-width: 1280px;
 }
 
+/* ─── Header ───────────────────────────────────────────────── */
 .about-trust__header {
   display: flex;
   flex-direction: column;
@@ -62,20 +64,30 @@
   text-align: center;
 }
 
+/* ─── Cards grid — 3-col bento ─────────────────────────────── */
+/*
+  Layout:
+  ┌───────┬───────┬────────────┐
+  │  01   │  02   │            │
+  ├───────┼───────┤  03 (dark) │
+  │  04   │  05   │            │
+  └───────┴───────┴────────────┘
+*/
 .about-trust__cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   align-items: stretch;
   margin-top: 6.2rem;
 }
 
+/* ─── Base card ─────────────────────────────────────────────── */
 .about-trust__card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 420px;
-  padding: 2.6rem 2rem 2.35rem;
+  min-height: 320px;
+  padding: 2.4rem 2rem 2.2rem;
   border: 1px solid rgba(125, 102, 78, 0.22);
   background: transparent;
   transition:
@@ -84,46 +96,28 @@
     border-color 320ms ease;
 }
 
-/* Last card — full width, horizontal layout */
-.about-trust__card:last-child {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: clamp(2.5rem, 5vw, 5rem);
-  min-height: 200px;
-  padding: 2.4rem clamp(2rem, 4vw, 3.5rem);
-}
-
-.about-trust__card:last-child .about-trust__card-body {
-  flex: 1;
-}
-
-.about-trust__card:last-child .about-trust__card-number {
-  margin-top: 0.85rem;
-}
-
-.about-trust__card:last-child .about-trust__card-title {
-  max-width: 100%;
-}
-
-.about-trust__card:last-child .about-trust__card-description {
-  max-width: 68ch;
-}
-
 .about-trust__card:hover {
   transform: translateY(-4px);
   background: rgba(28, 20, 14, 0.03);
 }
 
+/* ─── Featured card — column 3, spans both rows ─────────────── */
 .about-trust__card--featured {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  min-height: auto;
   background: #151515;
+  border-color: transparent;
+  justify-content: space-between;
+  padding: 2.8rem 2.2rem;
 }
 
 .about-trust__card--featured:hover {
   background: #1b1b1b;
+  transform: translateY(-4px);
 }
 
+/* ─── Card internals ────────────────────────────────────────── */
 .about-trust__card-top,
 .about-trust__card-body {
   display: flex;
@@ -142,52 +136,59 @@
 }
 
 .about-trust__card-number {
-  margin: 1.95rem 0 0;
+  margin: 1.6rem 0 0;
   color: #c5af80;
   font-family: 'Geist', sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.36rem;
   line-height: 1;
   text-transform: uppercase;
 }
 
+/* Card title — tighter for 3-column layout */
 .about-trust__card-title {
   margin: 0;
-  max-width: 90%;
+  max-width: 100%;
   color: #1d1611;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(1.25rem, 1.55vw, 1.72rem);
   font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Featured card title gets more room — bigger type */
+.about-trust__card--featured .about-trust__card-title {
+  font-size: clamp(1.9rem, 2.4vw, 2.9rem);
   line-height: 1.06;
   letter-spacing: -0.03em;
-  overflow-wrap: break-word;
-  text-wrap: balance;
-  word-break: keep-all;
+  color: #f2ede4;
 }
 
 .about-trust__card-description {
-  margin: 1.7rem 0 0;
-  max-width: 90%;
+  margin: 1.2rem 0 0;
+  max-width: 100%;
   color: #665544;
   font-family: 'Geist', sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.9;
+  font-size: 0.95rem;
+  line-height: 1.85;
 }
 
 .about-trust__card--featured .about-trust__card-number {
   color: #b89b69;
 }
 
-.about-trust__card--featured .about-trust__card-title,
 .about-trust__card--featured .about-trust__card-description {
-  color: #f2ede4;
+  margin-top: 1.4rem;
+  font-size: 1rem;
+  line-height: 1.88;
+  color: rgba(242, 237, 228, 0.82);
+  max-width: 36ch;
 }
 
-.about-trust__card--featured .about-trust__card-description {
-  color: rgba(242, 237, 228, 0.86);
-}
-
+/* ─── Stats row ─────────────────────────────────────────────── */
 .about-trust__stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -222,43 +223,48 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1400px) {
+/* ─── Responsive ────────────────────────────────────────────── */
+
+/* Tablet landscape — 2+1 stack, featured still full-right */
+@media (max-width: 1024px) {
   .about-trust__cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    border: 0;
-    background: transparent;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: unset;
+  }
+
+  .about-trust__card--featured {
+    grid-column: 1 / -1;   /* full width */
+    grid-row: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+    min-height: 220px;
+    padding: 2.4rem clamp(2rem, 4vw, 3rem);
+    justify-content: flex-start;
+  }
+
+  .about-trust__card--featured .about-trust__card-body {
+    flex: 1;
+  }
+
+  .about-trust__card--featured .about-trust__card-title {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  }
+
+  .about-trust__card--featured .about-trust__card-description {
+    max-width: 56ch;
+  }
+
+  .about-trust__card--featured .about-trust__card-number {
+    margin-top: 0.8rem;
   }
 
   .about-trust__card {
-    min-height: 420px;
-    border: 1px solid rgba(125, 102, 78, 0.22);
-  }
-
-  .about-trust__card:last-child {
-    border-right: 1px solid rgba(125, 102, 78, 0.22);
+    min-height: 300px;
   }
 }
 
-@media (max-width: 992px) {
-  .about-trust {
-    padding: 120px 0;
-  }
-
-  .about-trust__cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-trust__card {
-    min-height: 390px;
-  }
-
-  .about-trust__stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 2.5rem;
-  }
-}
-
+/* Tablet portrait */
 @media (max-width: 768px) {
   .about-trust {
     padding: 82px 0;
@@ -300,50 +306,67 @@
 
   .about-trust__card,
   .about-trust__card--featured {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2rem;           /* uniform gap between card-top and card-body for ALL cards */
     min-height: auto;
-    align-items: center;
     padding: 1.8rem 1.45rem 1.9rem;
-    text-align: center;
+    text-align: left;
+  }
+
+  .about-trust__card--featured {
+    grid-column: auto;
+    grid-row: auto;
+    flex: 0 0 auto;      /* reset flex: 1 inherited from tablet card-body rule */
+  }
+
+  /* reset the flex: 1 that was set on featured card-body at tablet */
+  .about-trust__card--featured .about-trust__card-body {
+    flex: 0 0 auto;
   }
 
   .about-trust__card-top,
   .about-trust__card-body {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .about-trust__card-icon {
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .about-trust__card-number {
-    margin-top: 1.5rem;
-  }
-
-  .about-trust__card-title,
-  .about-trust__card-description {
-    max-width: 100%;
+    margin-top: 1rem;
   }
 
   .about-trust__card-title {
-    font-size: 2.35rem;
-    line-height: 1.04;
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+  }
+
+  .about-trust__card--featured .about-trust__card-title {
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
   }
 
   .about-trust__card-description {
-    margin-top: 1.25rem;
-    font-size: 0.96rem;
+    margin-top: 1rem;
+    font-size: 0.93rem;
     line-height: 1.72;
   }
 
+  .about-trust__card--featured .about-trust__card-description {
+    max-width: 100%;
+  }
+
   .about-trust__stats {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.5rem;
     margin-top: 3.8rem;
   }
 
   .about-trust__stat {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
   }
 
   .about-trust__stat-value {
@@ -354,5 +377,18 @@
     margin-top: 0.65rem;
     font-size: 0.72rem;
     letter-spacing: 0.28rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-trust__stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-trust__stat {
+    align-items: center;
+    text-align: center;
   }
 }

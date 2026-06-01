@@ -6,12 +6,12 @@ const infoCards = [
   {
     icon: MapPin,
     label: 'Visit Us',
-    lines: ['YARA ESTATES', 'Chennai, Tamil Nadu'],
+    lines: ['First Floor, Door No.60, 3rd Main Road', 'Kasturba Nagar, Adyar, Chennai 600020'],
   },
   {
     icon: Phone,
     label: 'Call Us',
-    lines: ['+91 98765 43210'],
+    lines: ['9994392444'],
   },
   {
     icon: Mail,

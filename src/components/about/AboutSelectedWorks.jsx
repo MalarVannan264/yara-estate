@@ -66,7 +66,7 @@ const projects = [
       'A refined residential experience blending modern tropical architecture with elegant interior sophistication.',
     details: [
       { label: 'LOCATION', value: 'ECR, Chennai' },
-      { label: 'UNITS', value: '24 Villas' },
+      { label: 'UNITS', value: '24 Apartments' },
       { label: 'STATUS', value: 'Now Selling' },
     ],
     href: '/latest/avante',

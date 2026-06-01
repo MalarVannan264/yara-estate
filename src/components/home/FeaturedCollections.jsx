@@ -52,7 +52,7 @@ const imageRevealVariants = {
 }
 
 const avanteDetails = [
-  { label: 'Typology', value: 'Premium Villas' },
+  { label: 'Typology', value: 'Premium Apartments' },
   { label: 'Status', value: 'Phase II · 2026' },
   { label: 'Location', value: 'Medavakkam' },
   { label: 'Footprint', value: '3,200 – 4,800 sqft' },
@@ -131,7 +131,7 @@ const FeaturedCollections = () => (
               Crafted for Tomorrow.
             </motion.h4>
             <motion.p className="featured-project-description" variants={itemVariants}>
-              A composition of premium villas where contemporary architecture meets
+              A composition of premium apartments where contemporary architecture meets
               the rhythms of tropical living — engineered for privacy, light, and
               the inhabitants of tomorrow.
             </motion.p>

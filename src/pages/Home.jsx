@@ -9,7 +9,6 @@ import LocationsSection from '../components/home/LocationsSection'
 import PrivateConsultation from '../components/home/PrivateConsultation'
 import Testimonials from '../components/home/Testimonials'
 import WhyYARA from '../components/home/WhyYARA'
-
 const Home = () => (
   <>
     <HeroSection />

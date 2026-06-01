@@ -67,17 +67,25 @@
   border-top: 1px solid rgba(200, 168, 107, 0.24);
 }
 
-.iconic-enquiry__contact,
-.iconic-enquiry__address {
-  margin: 0;
+.iconic-enquiry__meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
   color: #1d1b19;
   font-family: 'Geist', sans-serif;
-  font-size: 1rem;
-  line-height: 1.72;
+  font-size: 0.93rem;
+  line-height: 1.68;
 }
 
-.iconic-enquiry__address {
-  margin-top: 10px;
+.iconic-enquiry__meta-item:first-child {
+  margin-top: 0;
+}
+
+.iconic-enquiry__meta-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #c8a86b;
 }
 
 .iconic-enquiry__card {

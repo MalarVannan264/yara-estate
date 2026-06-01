@@ -71,17 +71,25 @@
   border-top: 1px solid rgba(24, 51, 35, 0.12);
 }
 
-.avante-private-presentation__contact,
-.avante-private-presentation__address {
-  margin: 0;
+.avante-private-presentation__meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
   color: #183323;
   font-family: 'Geist', sans-serif;
-  font-size: 1rem;
-  line-height: 1.72;
+  font-size: 0.93rem;
+  line-height: 1.68;
 }
 
-.avante-private-presentation__address {
-  margin-top: 10px;
+.avante-private-presentation__meta-item:first-child {
+  margin-top: 0;
+}
+
+.avante-private-presentation__meta-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #2e6b4a;
 }
 
 .avante-private-presentation__card {

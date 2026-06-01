@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
-import chennaiMap from '../../assets/images/homepage/chennai-map.jpg'
 import './locationsSection.css'
+
+const MAPS_EMBED =
+  'https://maps.google.com/maps?q=Kasturba+Nagar,+Adyar,+Chennai+600020&z=15&output=embed&t=m'
 
 const headerVariants = {
   hidden: { opacity: 0, y: 28 },
@@ -107,11 +108,15 @@ const LocationsSection = () => (
         variants={bodyVariants}
       >
         <motion.figure className="locations-section-map-wrap" variants={mapVariants}>
-          <span className="locations-section-map-label">CHENNAI · TAMIL NADU</span>
-          <img
-            alt="Map of Chennai premium addresses"
+          <iframe
+            allowFullScreen
+            aria-label="YARA Estates location map"
             className="locations-section-map"
-            src={chennaiMap}
+            frameBorder="0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src={MAPS_EMBED}
+            title="YARA Estates — Kasturba Nagar, Adyar, Chennai"
           />
         </motion.figure>
 
@@ -136,9 +141,6 @@ const LocationsSection = () => (
                 </div>
               </div>
 
-              <span aria-hidden="true" className="locations-section-item-arrow">
-                <ArrowUpRight size={18} strokeWidth={1.9} />
-              </span>
             </motion.article>
           ))}
         </motion.div>

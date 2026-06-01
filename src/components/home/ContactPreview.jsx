@@ -26,15 +26,15 @@ const ContactPreview = () => (
           <div className="space-y-4 text-sm text-brand-text">
             <div className="flex items-start gap-3">
               <MapPin className="mt-1 text-brand-gold" size={16} />
-              <span>Boat Club Road, Chennai</span>
+              <span>First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020</span>
             </div>
             <div className="flex items-start gap-3">
               <Mail className="mt-1 text-brand-gold" size={16} />
-              <span>concierge@yaraestates.com</span>
+              <span>info@yaraestates.com</span>
             </div>
             <div className="flex items-start gap-3">
               <Phone className="mt-1 text-brand-gold" size={16} />
-              <span>+91 44 4000 2088</span>
+              <span>9994392444</span>
             </div>
           </div>
 

@@ -95,10 +95,10 @@ const ContactStudio = () => (
               </Button>
               <a
                 className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.24em] text-brand-muted transition hover:text-brand-text"
-                href="mailto:concierge@yaraestates.com"
+                href="mailto:info@yaraestates.com"
               >
                 <Mail size={16} />
-                concierge@yaraestates.com
+                info@yaraestates.com
               </a>
             </div>
           </GlassCard>

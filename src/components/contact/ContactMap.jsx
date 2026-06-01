@@ -2,10 +2,10 @@ import { ArrowUpRight, Compass, MapPin } from 'lucide-react'
 import './contactMap.css'
 
 const MAPS_EMBED =
-  'https://maps.google.com/maps?q=12.9565933,80.2542236&z=15&output=embed&t=m'
+  'https://maps.google.com/maps?q=Kasturba+Nagar,+Adyar,+Chennai+600020&z=15&output=embed&t=m'
 
 const MAPS_LINK =
-  'https://www.google.com/maps/search/yara+estates/@12.9565933,80.2542236,14z'
+  'https://www.google.com/maps/search/?api=1&query=Door+No+60,+3rd+Main+Road,+Kasturba+Nagar,+Adyar,+Chennai+600020'
 
 const ContactMap = () => {
   return (
@@ -84,7 +84,7 @@ const ContactMap = () => {
             size={13}
             strokeWidth={1.7}
           />
-          <span className="cmap-card__addr-text">Neelankarai, Chennai – 600 041</span>
+          <span className="cmap-card__addr-text">First Floor, Door No.60, 3rd Main Road, Kasturba Nagar, Adyar, Chennai 600020</span>
         </div>
 
         <a
