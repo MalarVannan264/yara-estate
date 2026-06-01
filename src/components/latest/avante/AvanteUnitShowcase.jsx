@@ -52,6 +52,21 @@ const highlights = [
 const AvanteUnitShowcase = () => (
   <section className="avante-unit-showcase">
     <div className="avante-unit-showcase__shell">
+      <motion.div
+        className="avante-unit-showcase__header"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.28 }}
+        whileInView="visible"
+        variants={contentVariants}
+      >
+        <motion.p className="avante-unit-showcase__eyebrow" variants={itemVariants}>
+          UNIT A — NORTH WING
+        </motion.p>
+        <motion.h2 className="avante-unit-showcase__heading" variants={itemVariants}>
+          The Garden Residence
+        </motion.h2>
+      </motion.div>
+
       <motion.figure
         className="avante-unit-showcase__visual"
         initial="hidden"
@@ -75,14 +90,6 @@ const AvanteUnitShowcase = () => (
         whileInView="visible"
         variants={contentVariants}
       >
-        <motion.p className="avante-unit-showcase__eyebrow" variants={itemVariants}>
-          UNIT A — NORTH WING
-        </motion.p>
-
-        <motion.h2 className="avante-unit-showcase__heading" variants={itemVariants}>
-          The Garden Residence
-        </motion.h2>
-
         <motion.p className="avante-unit-showcase__description" variants={itemVariants}>
           A north-facing four-bedroom home opening onto a wraparound balcony that
           overlooks the residence garden. Crafted to hold the soft Chennai

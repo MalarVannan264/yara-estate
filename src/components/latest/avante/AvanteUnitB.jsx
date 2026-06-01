@@ -53,20 +53,43 @@ const AvanteUnitB = () => (
   <section className="avante-unit-b">
     <div className="avante-unit-b__shell">
       <motion.div
-        className="avante-unit-b__content"
+        className="avante-unit-b__header"
         initial="hidden"
-        viewport={{ once: true, amount: 0.22 }}
+        viewport={{ once: true, amount: 0.28 }}
         whileInView="visible"
         variants={contentVariants}
       >
         <motion.p className="avante-unit-b__eyebrow" variants={itemVariants}>
           UNIT B — SOUTH WING
         </motion.p>
-
         <motion.h2 className="avante-unit-b__heading" variants={itemVariants}>
           The Sunset Residence
         </motion.h2>
+      </motion.div>
 
+      <motion.figure
+        className="avante-unit-b__visual"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.2 }}
+        whileInView="visible"
+        variants={imageVariants}
+      >
+        <motion.img
+          alt="Avante Unit B floor plan"
+          className="avante-unit-b__image"
+          src={unitBImage}
+          transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ scale: 1.02 }}
+        />
+      </motion.figure>
+
+      <motion.div
+        className="avante-unit-b__content"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.22 }}
+        whileInView="visible"
+        variants={contentVariants}
+      >
         <motion.p className="avante-unit-b__description" variants={itemVariants}>
           A south-facing home designed to catch the long, slow Adyar afternoon.
           Vaulted ceilings in the living room rise to twelve feet; a private den
@@ -93,22 +116,6 @@ const AvanteUnitB = () => (
           </ul>
         </motion.div>
       </motion.div>
-
-      <motion.figure
-        className="avante-unit-b__visual"
-        initial="hidden"
-        viewport={{ once: true, amount: 0.2 }}
-        whileInView="visible"
-        variants={imageVariants}
-      >
-        <motion.img
-          alt="Avante Unit B floor plan"
-          className="avante-unit-b__image"
-          src={unitBImage}
-          transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1] }}
-          whileHover={{ scale: 1.02 }}
-        />
-      </motion.figure>
     </div>
   </section>
 )

@@ -176,7 +176,8 @@ export const contactStudios = [
 
 export const socialLinks = [
   { label: 'Instagram', href: 'https://instagram.com/yaraestates' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/yara-estates' },
+  { label: 'Facebook', href: 'https://facebook.com/yaraestates' },
+  { label: 'Twitter', href: 'https://twitter.com/yaraestates' },
   { label: 'Email', href: 'mailto:info@yaraestates.com' },
 ]
 
