@@ -5,6 +5,19 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/free-mode'
+import gallery1 from '../../assets/images/homepage/gallery1.jpg'
+import gallery2 from '../../assets/images/homepage/gallery2.jpg'
+import gallery3 from '../../assets/images/homepage/gallery3.jpg'
+import gallery4 from '../../assets/images/homepage/gallery4.jpeg'
+import gallery5 from '../../assets/images/homepage/gallery5.jpeg'
+import gallery6 from '../../assets/images/homepage/gallery6.jpeg'
+import gallery7 from '../../assets/images/homepage/gallery7.jpeg'
+import gallery8 from '../../assets/images/homepage/gallery8.jpeg'
+import gallery9 from '../../assets/images/homepage/gallery9.jpeg'
+import gallery10 from '../../assets/images/homepage/gallery10.jpeg'
+import gallery11 from '../../assets/images/homepage/gallery11.jpeg'
+import gallery12 from '../../assets/images/homepage/gallery12.jpeg'
+import gallery13 from '../../assets/images/homepage/gallery13.jpeg'
 import './immersiveGallery.css'
 
 const headerVariants = {
@@ -33,42 +46,19 @@ const sliderVariants = {
 }
 
 const galleryImages = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
-    title: 'Warm Interior Details',
-    wide: false,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
-    title: 'Sculptural Lighting',
-    wide: false,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-5',
-    title: 'Courtyard Dining',
-    wide: true,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=80&hue=10',
-    title: 'Stone Bath Suite',
-    wide: false,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1400&q=80',
-    title: 'Tropical Residence',
-    wide: true,
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80',
-    title: 'Wood and Light',
-    wide: false,
-  },
+  { image: gallery1,  title: 'Natural Light',       wide: false },
+  { image: gallery2,  title: 'Modern Living',        wide: true  },
+  { image: gallery3,  title: 'Architectural Detail', wide: false },
+  { image: gallery4,  title: 'Elevated Spaces',      wide: false },
+  { image: gallery5,  title: 'Interior Craft',       wide: true  },
+  { image: gallery6,  title: 'Stone & Timber',       wide: false },
+  { image: gallery7,  title: 'Private Retreat',      wide: false },
+  { image: gallery8,  title: 'Curated Living',       wide: true  },
+  { image: gallery9,  title: 'Refined Details',      wide: false },
+  { image: gallery10, title: 'Tropical Modern',      wide: false },
+  { image: gallery11, title: 'Sky Terrace',          wide: true  },
+  { image: gallery12, title: 'Evening Ambience',     wide: false },
+  { image: gallery13, title: 'Premium Residence',    wide: false },
 ]
 
 const ImmersiveGallery = () => (

@@ -100,7 +100,6 @@ const InvestmentExperience = () => (
             variants={statVariants}
             whileHover={{ y: -6 }}
           >
-            <p className="investment-experience-stat-id">{stat.id}</p>
             <h3 className="investment-experience-stat-value">{stat.value}</h3>
             <p className="investment-experience-stat-label">{stat.label}</p>
           </motion.article>

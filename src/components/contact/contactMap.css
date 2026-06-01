@@ -25,7 +25,7 @@
   height: 100%;
   border: none;
   display: block;
-  filter: sepia(0.55) saturate(0.15) brightness(1.09) contrast(0.82) hue-rotate(8deg);
+  filter: none;
 }
 
 /* Tonal overlay */

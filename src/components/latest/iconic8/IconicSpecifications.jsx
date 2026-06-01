@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import {
   Bath,
   Building2,
-  Cctv,
   ChefHat,
   DoorOpen,
+  Droplets,
   Layers3,
   PanelTop,
   Power,
@@ -50,52 +50,52 @@ const itemVariants = {
 const specificationItems = [
   {
     title: 'Structure',
-    copy: 'RCC frame, seismic Zone III, solar passive design',
+    copy: 'RCC wall frame with solid/AAC blockwork & plastering; BIS456-compliant structural design',
     icon: Building2,
   },
   {
     title: 'Flooring',
-    copy: 'Italian marble in living areas, teak in bedrooms',
+    copy: 'Exotic Italian marble in living, kitchen & lobby; engineered wood in master bedrooms; anti-skid vitrified tiles in baths & utility',
     icon: Layers3,
   },
   {
     title: 'Doors',
-    copy: 'Burma teak with brushed brass, hand-polished',
+    copy: '40mm double-veneered teak entrance door; African teak frames throughout; Alumak French doors with Saint Gobain clear glass',
     icon: DoorOpen,
   },
   {
     title: 'Windows',
-    copy: 'Aluminium with thermal break, double-glazed',
+    copy: 'Alumak aluminium frames with Saint Gobain clear float glass; frosted glass with exhaust fan provision in toilet ventilators',
     icon: PanelTop,
   },
   {
     title: 'Electrical',
-    copy: 'Legrand modular, smart-home ready',
+    copy: '3-phase supply with Legrand MCB & RCCB; Polycab/Finolex concealed wiring; split AC provision in living & all bedrooms',
     icon: Zap,
   },
   {
     title: 'Security',
-    copy: 'Biometric entry, perimeter sensors, 24-hour concierge',
+    copy: 'Yale digital door lock, video door phone & 24/7 CCTV surveillance with security guards at main entrance',
     icon: ShieldCheck,
   },
   {
-    title: 'CCTV',
-    copy: 'Hikvision 4K coverage, private monitoring room',
-    icon: Cctv,
+    title: 'Plumbing',
+    copy: 'CPVC concealed water lines (Astral/Ashirvad); CPVC/PVC external pipes (Supreme/Varun); masonry overhead tank & sump',
+    icon: Droplets,
   },
   {
-    title: 'Power',
-    copy: '100% backup, silent diesel generator',
+    title: 'Power Backup',
+    copy: 'D.G. backup with acoustic enclosure & AMF panel for all common amenities, lighting, motors & pumps',
     icon: Power,
   },
   {
     title: 'Kitchen',
-    copy: 'Bosch appliance suite, Quartz island, hidden pantry',
+    copy: 'Aquaguard point, exhaust fan & chimney socket; provision for washing machine & dishwasher; full appliance power sockets',
     icon: ChefHat,
   },
   {
     title: 'Bathrooms',
-    copy: 'Grohe, Kohler, Toto suite, marble throughout',
+    copy: 'Wall-mounted Catalona EWC; Grohe hot & cold shower mixer; countertop washbasin; vanity counter; false ceiling in all toilets',
     icon: Bath,
   },
 ]

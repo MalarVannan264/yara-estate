@@ -1,10 +1,14 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import floorPlanImage from '../../../assets/images/projects/iconic8/iconic8-floor-plan.png'
+import groundFloor from '../../../assets/images/projects/iconic8/ground.png'
+import floor2 from '../../../assets/images/projects/iconic8/2nd-floor.png'
+import floor3 from '../../../assets/images/projects/iconic8/3rd-floor.png'
+import floor4 from '../../../assets/images/projects/iconic8/4th-floor.png'
 import './iconicFloorPlan.css'
 
 const floors = {
   GROUND: {
+    image: groundFloor,
     roomLabel: 'ENTRY LOUNGE',
     title: 'The arrival sequence',
     description:
@@ -20,7 +24,8 @@ const floors = {
       { name: 'Powder Room', value: '48 SQ.FT.' },
     ],
   },
-  FIRST: {
+  '2ND FLOOR': {
+    image: floor2,
     roomLabel: 'MASTER BEDROOM',
     title: 'The east-facing suite',
     description:
@@ -36,7 +41,8 @@ const floors = {
       { name: 'Home Office', value: '120 SQ.FT.' },
     ],
   },
-  SECOND: {
+  '3RD FLOOR': {
+    image: floor3,
     roomLabel: 'FAMILY SUITE',
     title: 'The evening retreat',
     description:
@@ -52,7 +58,8 @@ const floors = {
       { name: 'Study Niche', value: '82 SQ.FT.' },
     ],
   },
-  TERRACE: {
+  '4TH FLOOR': {
+    image: floor4,
     roomLabel: 'SKY PAVILION',
     title: 'The open-air level',
     description:
@@ -110,7 +117,7 @@ const contentVariants = {
 }
 
 const IconicFloorPlan = () => {
-  const [activeTab, setActiveTab] = useState('FIRST')
+  const [activeTab, setActiveTab] = useState('GROUND')
   const activeFloor = floors[activeTab]
 
   return (
@@ -142,9 +149,9 @@ const IconicFloorPlan = () => {
             variants={imageVariants}
           >
             <img
-              alt="Iconic 8 floor plan"
+              alt={`Iconic 8 ${activeTab.toLowerCase()} floor plan`}
               className="iconic-floor-plan__image"
-              src={floorPlanImage}
+              src={activeFloor.image}
             />
           </motion.figure>
 

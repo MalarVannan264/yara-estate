@@ -35,6 +35,7 @@ const secondaryProjects = [
     image: eastCoastCard,
     link: '/collections',
     tone: 'light',
+    fullyReserved: true,
   },
   {
     title: 'AVANTE',
@@ -77,6 +78,21 @@ const PremiumResidential = () => (
         whileInView="visible"
         variants={fadeUp}
       >
+        <div className="premium-residential__featured-media">
+          <img alt={featuredProject.title} src={featuredProject.image} />
+
+          <div className="premium-residential__featured-media-footer">
+            <span className="premium-residential__floating-tag">ICONIC 8 · 01</span>
+
+            <Link
+              className="premium-residential__featured-cta"
+              to={featuredProject.link}
+            >
+              EXPLORE PROJECT <span aria-hidden="true">↗</span>
+            </Link>
+          </div>
+        </div>
+
         <div className="premium-residential__featured-content">
           <p className="premium-residential__project-label">{featuredProject.label}</p>
           <h3 className="premium-residential__featured-title">{featuredProject.title}</h3>
@@ -107,21 +123,6 @@ const PremiumResidential = () => (
             </div>
           </div>
         </div>
-
-        <div className="premium-residential__featured-media">
-          <img alt={featuredProject.title} src={featuredProject.image} />
-
-          <div className="premium-residential__featured-media-footer">
-            <span className="premium-residential__floating-tag">ICONIC 8 · 01</span>
-
-            <Link
-              className="premium-residential__featured-cta"
-              to={featuredProject.link}
-            >
-              EXPLORE PROJECT <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
-        </div>
       </motion.article>
 
       <motion.div
@@ -145,6 +146,11 @@ const PremiumResidential = () => (
                 className="premium-residential__card-image"
                 src={project.image}
               />
+              {project.fullyReserved && (
+                <span className="premium-residential__reserved-tag">
+                  Fully Reserved
+                </span>
+              )}
             </div>
 
             <div className="premium-residential__card-body">
