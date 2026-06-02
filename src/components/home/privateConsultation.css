@@ -85,7 +85,7 @@
 
 .private-consultation-contact-text {
   font-family: 'Geist', serif;
-  font-size: clamp(1.25rem, 1.25vw, 1.25rem);
+  font-size: clamp(0.93rem, 0.93vw, 0.93rem);
   font-weight: 200;
   line-height: 1.18;
   letter-spacing: 0em;
@@ -278,7 +278,7 @@
   }
 
   .private-consultation-contact-text {
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: clamp(0.93rem, 0.93vw, 0.93rem);
   }
 
   .private-consultation-card {
@@ -301,7 +301,7 @@
 
   .private-consultation-input,
   .private-consultation-select {
-    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    font-size: clamp(1rem, 1vw, 1rem);
   }
 
   .private-consultation-submit {

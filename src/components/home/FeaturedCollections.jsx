@@ -54,7 +54,7 @@ const imageRevealVariants = {
 const avanteDetails = [
   { label: 'Typology', value: 'Premium Apartments' },
   { label: 'Status', value: 'Phase II · 2026' },
-  { label: 'Location', value: 'Medavakkam' },
+  { label: 'Location', value: 'Adyar' },
   { label: 'Footprint', value: '3,200 – 4,800 sqft' },
 ]
 
