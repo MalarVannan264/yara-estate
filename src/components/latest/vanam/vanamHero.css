@@ -1,0 +1,347 @@
+/* ─────────────────────────────────────────────────────────
+   VanamHero — misty forest "coming soon" teaser hero
+   ───────────────────────────────────────────────────────── */
+
+.vanam-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #1b231b;
+}
+
+.vanam-hero__media,
+.vanam-hero__background-shell,
+.vanam-hero__background,
+.vanam-hero__overlay,
+.vanam-hero__noise {
+  position: absolute;
+  inset: 0;
+}
+
+.vanam-hero__media,
+.vanam-hero__background-shell,
+.vanam-hero__background {
+  will-change: transform;
+}
+
+.vanam-hero__background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: vanamHeroSlowZoom 18s ease-in-out infinite alternate;
+}
+
+/* ── Overlay ─────────────────────────────────────────────── */
+.vanam-hero__overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 16, 11, 0.42) 0%,
+      rgba(12, 16, 11, 0.28) 38%,
+      rgba(12, 16, 11, 0.62) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(12, 16, 11, 0.34) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(12, 16, 11, 0.34) 100%
+    );
+}
+
+.vanam-hero__overlay::after {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 42%, rgba(12, 16, 11, 0.1), transparent 38%);
+  content: '';
+}
+
+/* ── Grain noise ─────────────────────────────────────────── */
+.vanam-hero__noise {
+  z-index: 2;
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.2) 0 0.7px, transparent 0.9px),
+    radial-gradient(circle at 78% 26%, rgba(255, 255, 255, 0.16) 0 0.75px, transparent 0.95px),
+    radial-gradient(circle at 34% 72%, rgba(255, 255, 255, 0.18) 0 0.72px, transparent 0.92px),
+    radial-gradient(circle at 66% 78%, rgba(255, 255, 255, 0.14) 0 0.66px, transparent 0.88px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.12));
+  background-size: 168px 168px, 192px 192px, 184px 184px, 204px 204px, 100% 100%;
+  animation: vanamHeroGrain 11s steps(8) infinite;
+}
+
+/* ── Content ─────────────────────────────────────────────── */
+.vanam-hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1100px);
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding:
+    clamp(7rem, 10vw, 9rem)
+    clamp(1.5rem, 4.2vw, 4rem)
+    clamp(7rem, 11vw, 9.5rem);
+  text-align: center;
+}
+
+/* ── Eyebrow ─────────────────────────────────────────────── */
+.vanam-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.45rem);
+  margin: 0 0 clamp(2.4rem, 4vw, 3.4rem);
+  color: rgba(247, 243, 236, 0.78);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+}
+
+.vanam-hero__eyebrow::before,
+.vanam-hero__eyebrow::after {
+  width: clamp(2.4rem, 6vw, 3.6rem);
+  height: 1px;
+  background: rgba(247, 243, 236, 0.6);
+  content: '';
+}
+
+/* ── Title ───────────────────────────────────────────────── */
+.vanam-hero__title {
+  margin: 0;
+  max-width: 1100px;
+  color: #f6f1eb;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.6rem, 8vw, 7.5rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: 0.1em;
+  text-wrap: balance;
+  text-shadow: 0 18px 55px rgba(0, 0, 0, 0.32);
+}
+
+/* ── Rule ────────────────────────────────────────────────── */
+.vanam-hero__rule {
+  width: 64px;
+  height: 1px;
+  margin: clamp(1.6rem, 2.6vw, 2.2rem) 0 0;
+  background: linear-gradient(90deg, transparent, #b35a32, transparent);
+  transform-origin: center;
+}
+
+/* ── Subtitle ────────────────────────────────────────────── */
+.vanam-hero__subtitle {
+  max-width: 760px;
+  margin: clamp(1.6rem, 2.6vw, 2.2rem) 0 0;
+  color: #f6f1eb;
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+/* ── Description ─────────────────────────────────────────── */
+.vanam-hero__description {
+  max-width: 640px;
+  margin: clamp(1.1rem, 1.8vw, 1.5rem) 0 0;
+  color: rgba(246, 241, 235, 0.7);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.92rem, 1.15vw, 1.04rem);
+  font-weight: 400;
+  line-height: 1.78;
+  text-wrap: pretty;
+}
+
+/* ── Actions ─────────────────────────────────────────────── */
+.vanam-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(2rem, 3.2vw, 2.7rem);
+}
+
+.vanam-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 0 42px;
+  border: 1px solid rgba(247, 243, 236, 0.2);
+  background: rgba(108, 122, 99, 0.55);
+  color: #f6f1eb;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition:
+    transform 280ms ease,
+    background-color 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.vanam-hero__button:hover {
+  transform: translateY(-3px);
+  border-color: rgba(247, 243, 236, 0.4);
+  background: rgba(108, 122, 99, 0.72);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.vanam-hero__footer {
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  bottom: clamp(2rem, 3vw, 2.8rem);
+  left: clamp(1.5rem, 4vw, 3.5rem);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.vanam-hero__location,
+.vanam-hero__scroll {
+  margin: 0;
+  color: rgba(247, 243, 236, 0.68);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.vanam-hero__scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Keyframes ───────────────────────────────────────────── */
+@keyframes vanamHeroSlowZoom {
+  0% {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1.09) translate3d(0, -1.8%, 0);
+  }
+}
+
+@keyframes vanamHeroGrain {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0);
+  }
+
+  25% {
+    transform: translate3d(0.8%, -0.6%, 0);
+  }
+
+  50% {
+    transform: translate3d(-0.6%, 1.1%, 0);
+  }
+
+  75% {
+    transform: translate3d(1.2%, 0.4%, 0);
+  }
+
+  100% {
+    transform: translate3d(-0.8%, -0.4%, 0);
+  }
+}
+
+/* ── Responsive — 1024px ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .vanam-hero__title {
+    max-width: 900px;
+    font-size: clamp(3.2rem, 10vw, 6.2rem);
+  }
+
+  .vanam-hero__subtitle {
+    max-width: 620px;
+  }
+}
+
+/* ── Responsive — 768px ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .vanam-hero__content {
+    padding-top: 7.4rem;
+    padding-bottom: 8.5rem;
+  }
+
+  .vanam-hero__eyebrow {
+    gap: 0.85rem;
+    margin-bottom: 1.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.32em;
+  }
+
+  .vanam-hero__eyebrow::before,
+  .vanam-hero__eyebrow::after {
+    width: 2rem;
+  }
+
+  .vanam-hero__title {
+    max-width: 100%;
+    font-size: clamp(2.8rem, 13vw, 4.6rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+  }
+
+  .vanam-hero__subtitle {
+    max-width: 28rem;
+    font-size: 1.04rem;
+    line-height: 1.42;
+  }
+
+  .vanam-hero__description {
+    max-width: 28rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .vanam-hero__button {
+    width: min(100%, 23rem);
+  }
+
+  .vanam-hero__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* ── Responsive — 480px ──────────────────────────────────── */
+@media (max-width: 480px) {
+  .vanam-hero__title {
+    font-size: clamp(2.4rem, 14vw, 3.6rem);
+  }
+
+  .vanam-hero__subtitle {
+    font-size: 0.96rem;
+  }
+
+  .vanam-hero__button {
+    min-height: 52px;
+    padding: 0 1.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+}

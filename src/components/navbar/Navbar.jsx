@@ -20,7 +20,9 @@ const Navbar = () => {
     location.pathname === '/contact' ||
     location.pathname === '/collections' ||
     location.pathname === '/latest/avante' ||
-    location.pathname === '/latest/iconic-8'
+    location.pathname === '/latest/iconic-8' ||
+    location.pathname === '/latest/wellington' ||
+    location.pathname === '/latest/vanam'
 
   const isLatestActive = location.pathname.startsWith('/latest')
   const isSolidNavbar = !hasTransparentHeroRoute || isScrolled || isMobileOpen
@@ -122,6 +124,11 @@ const Navbar = () => {
                         >
                           <span className="yara-navbar__dot" />
                           {item.label}
+                          {item.badge && (
+                            <span className={`yara-navbar__badge yara-navbar__badge--${item.badge === 'Flagship' ? 'flagship' : 'soon'}`}>
+                              {item.badge}
+                            </span>
+                          )}
                         </NavLink>
                       ))}
                     </motion.div>
@@ -243,6 +250,11 @@ const Navbar = () => {
                   >
                     <span aria-hidden="true" className="yara-navbar__mobile-dot" />
                     {item.label}
+                    {item.badge && (
+                      <span className={`yara-navbar__badge yara-navbar__badge--${item.badge === 'Flagship' ? 'flagship' : 'soon'}`}>
+                        {item.badge}
+                      </span>
+                    )}
                   </NavLink>
                 ))}
               </div>

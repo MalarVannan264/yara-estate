@@ -1,0 +1,238 @@
+.vanam-dest {
+  --vanam-rust: #b35a32;
+  --vanam-dark-green: #2f3a2a;
+  width: 100%;
+  background: #f4efe3;
+}
+
+/* ── Split ── */
+.vanam-dest__split {
+  display: flex;
+  min-height: 740px;
+}
+
+.vanam-dest__content-panel {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  background: #f4efe3;
+  overflow: hidden;
+}
+
+.vanam-dest__content-inner {
+  width: 100%;
+  padding: 110px 80px 110px max(48px, calc((100vw - 1368px) / 2 + 24px));
+}
+
+.vanam-dest__eyebrow {
+  margin: 0;
+  color: var(--vanam-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.vanam-dest__heading {
+  margin: 24px 0 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 5.2vw, 5.2rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.vanam-dest__paragraph {
+  max-width: 520px;
+  margin: 32px 0 0;
+  color: #7a7568;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.76;
+}
+
+.vanam-dest__paragraph--lead {
+  color: #3a3530;
+  font-size: 1.04rem;
+  font-weight: 450;
+  margin-top: 44px;
+}
+
+.vanam-dest__stats {
+  display: flex;
+  gap: 56px;
+  margin-top: 64px;
+}
+
+.vanam-dest__stat-value {
+  margin: 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.vanam-dest__stat-label {
+  margin: 12px 0 0;
+  color: #9a9285;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ── Image panel ── */
+.vanam-dest__img-panel {
+  flex: 0 0 50%;
+  overflow: hidden;
+}
+
+.vanam-dest__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Ticker ── */
+.vanam-dest__ticker {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: #f4efe3;
+  border-top: 1px solid rgba(47, 58, 42, 0.13);
+}
+
+.vanam-dest__ticker-item {
+  padding: 48px 40px;
+  border-right: 1px solid rgba(47, 58, 42, 0.1);
+}
+
+.vanam-dest__ticker-item:first-child {
+  padding-left: max(48px, calc((100vw - 1368px) / 2 + 24px));
+}
+
+.vanam-dest__ticker-item:last-child {
+  border-right: none;
+}
+
+.vanam-dest__ticker-word {
+  margin: 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.vanam-dest__ticker-label {
+  margin: 10px 0 0;
+  color: #9a9285;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .vanam-dest__split {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .vanam-dest__content-panel {
+    flex: none;
+  }
+
+  .vanam-dest__content-inner {
+    padding: 88px 48px 80px 48px;
+  }
+
+  .vanam-dest__img-panel {
+    flex: none;
+    height: 480px;
+  }
+
+  .vanam-dest__ticker {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vanam-dest__ticker-item {
+    padding: 36px 32px;
+  }
+
+  .vanam-dest__ticker-item:first-child {
+    padding-left: 48px;
+  }
+
+  .vanam-dest__ticker-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .vanam-dest__ticker-item:nth-child(n+4) {
+    border-top: 1px solid rgba(47, 58, 42, 0.1);
+  }
+
+  .vanam-dest__ticker-item:nth-child(6) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .vanam-dest__content-inner {
+    padding: 72px 24px 64px 24px;
+  }
+
+  .vanam-dest__heading {
+    font-size: clamp(2.8rem, 11vw, 3.6rem);
+    margin-top: 18px;
+  }
+
+  .vanam-dest__paragraph--lead {
+    margin-top: 32px;
+    font-size: 0.98rem;
+  }
+
+  .vanam-dest__stats {
+    gap: 36px;
+    margin-top: 48px;
+  }
+
+  .vanam-dest__stat-value {
+    font-size: 1.8rem;
+  }
+
+  .vanam-dest__img-panel {
+    height: 320px;
+  }
+
+  .vanam-dest__ticker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vanam-dest__ticker-item {
+    padding: 28px 24px;
+  }
+
+  .vanam-dest__ticker-item:first-child {
+    padding-left: 24px;
+  }
+
+  .vanam-dest__ticker-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .vanam-dest__ticker-item:nth-child(n+3) {
+    border-top: 1px solid rgba(47, 58, 42, 0.1);
+  }
+
+  .vanam-dest__ticker-word {
+    font-size: 1.4rem;
+  }
+}

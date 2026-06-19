@@ -1,0 +1,170 @@
+.wellington-why {
+  --wellington-rust: #c1693c;
+  width: 100%;
+  padding: 130px 0 140px;
+  background: #1c140e;
+}
+
+.wellington-why__shell {
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+}
+
+.wellington-why__header {
+  display: grid;
+  grid-template-columns: minmax(0, 700px) minmax(0, 340px);
+  justify-content: space-between;
+  gap: 32px 64px;
+  align-items: start;
+}
+
+.wellington-why__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.wellington-why__eyebrow::before {
+  width: 44px;
+  height: 1px;
+  background: rgba(193, 105, 60, 0.7);
+  content: '';
+}
+
+.wellington-why__heading {
+  margin: 26px 0 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.wellington-why__heading-accent {
+  font-family: 'Playfair Display', serif;
+  color: var(--wellington-rust);
+  font-style: italic;
+}
+
+.wellington-why__description {
+  max-width: 340px;
+  margin: 6px 0 0;
+  color: rgba(247, 243, 236, 0.6);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.wellington-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.wellington-why__card {
+  min-height: 280px;
+  padding: 36px 32px;
+  background: rgba(247, 243, 236, 0.04);
+  transition:
+    background-color 240ms ease,
+    transform 240ms ease;
+}
+
+.wellington-why__card:hover {
+  background: rgba(247, 243, 236, 0.07);
+}
+
+.wellington-why__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wellington-rust);
+}
+
+.wellington-why__card-title {
+  margin: 28px 0 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.26;
+}
+
+.wellington-why__card-copy {
+  margin: 16px 0 0;
+  color: rgba(247, 243, 236, 0.58);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1180px) {
+  .wellington-why__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1080px) {
+  .wellington-why {
+    padding: 104px 0 112px;
+  }
+
+  .wellington-why__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .wellington-why__description {
+    max-width: 620px;
+  }
+
+  .wellington-why__grid {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wellington-why {
+    padding: 88px 0 96px;
+  }
+
+  .wellington-why__shell {
+    width: min(100% - 24px, 1320px);
+  }
+
+  .wellington-why__eyebrow {
+    gap: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+  }
+
+  .wellington-why__eyebrow::before {
+    width: 30px;
+  }
+
+  .wellington-why__heading {
+    margin-top: 22px;
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+  }
+
+  .wellington-why__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 44px;
+  }
+
+  .wellington-why__card {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+}

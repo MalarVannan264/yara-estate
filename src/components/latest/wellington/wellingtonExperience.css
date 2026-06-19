@@ -1,0 +1,152 @@
+.wellington-experience {
+  --wellington-rust: #b35a32;
+  --wellington-dark: #241a13;
+  background: #ece4d3;
+  padding: 130px 0 140px;
+}
+
+.wellington-experience__shell {
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+}
+
+.wellington-experience__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wellington-experience__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.wellington-experience__eyebrow::before,
+.wellington-experience__eyebrow::after {
+  width: 48px;
+  height: 1px;
+  background: rgba(179, 90, 50, 0.7);
+  content: '';
+}
+
+.wellington-experience__heading {
+  margin: 34px 0 0;
+  color: var(--wellington-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.wellington-experience__heading-accent {
+  font-family: 'Playfair Display', serif;
+  color: var(--wellington-rust);
+  font-style: italic;
+}
+
+.wellington-experience__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px;
+  margin-top: 84px;
+}
+
+.wellington-experience__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.wellington-experience__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wellington-rust);
+}
+
+.wellington-experience__number {
+  margin: 22px 0 0;
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+}
+
+.wellington-experience__title {
+  margin: 18px 0 0;
+  color: var(--wellington-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.wellington-experience__copy {
+  max-width: 280px;
+  margin: 16px 0 0;
+  color: #6b5c50;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.68;
+}
+
+@media (max-width: 1120px) {
+  .wellington-experience {
+    padding: 104px 0 112px;
+  }
+
+  .wellington-experience__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 56px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wellington-experience {
+    padding: 88px 0 96px;
+  }
+
+  .wellington-experience__shell {
+    width: min(100% - 24px, 1320px);
+  }
+
+  .wellington-experience__eyebrow {
+    gap: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+  }
+
+  .wellington-experience__eyebrow::before,
+  .wellington-experience__eyebrow::after {
+    width: 30px;
+  }
+
+  .wellington-experience__heading {
+    margin-top: 26px;
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+  }
+
+  .wellington-experience__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 56px;
+  }
+
+  .wellington-experience__copy {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,212 @@
+.wellington-masterplan {
+  --wellington-rust: #b35a32;
+  --wellington-dark: #241a13;
+  width: 100%;
+  padding: 130px 0 140px;
+  background: #f7f1e2;
+}
+
+.wellington-masterplan__shell {
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+}
+
+.wellington-masterplan__header {
+  display: grid;
+  grid-template-columns: minmax(0, 700px) minmax(0, 340px);
+  justify-content: space-between;
+  gap: 32px 64px;
+  align-items: start;
+}
+
+.wellington-masterplan__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.wellington-masterplan__eyebrow::before {
+  width: 44px;
+  height: 1px;
+  background: rgba(179, 90, 50, 0.7);
+  content: '';
+}
+
+.wellington-masterplan__heading {
+  margin: 26px 0 0;
+  color: var(--wellington-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+.wellington-masterplan__heading-accent {
+  font-family: 'Playfair Display', serif;
+  color: var(--wellington-rust);
+  font-style: italic;
+}
+
+.wellington-masterplan__description {
+  max-width: 340px;
+  margin: 6px 0 0;
+  color: #6b5c50;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.wellington-masterplan__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 48px;
+  margin-top: 76px;
+  align-items: stretch;
+}
+
+.wellington-masterplan__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: transparent;
+}
+
+.wellington-masterplan__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.wellington-masterplan__legend {
+  padding: 44px 40px;
+  background: #1d1611;
+  color: #f5efe7;
+}
+
+.wellington-masterplan__legend-label {
+  margin: 0;
+  color: rgba(245, 239, 231, 0.56);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.wellington-masterplan__legend-heading {
+  margin: 14px 0 0;
+  color: #f5efe7;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.wellington-masterplan__legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wellington-masterplan__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wellington-masterplan__legend-swatch {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+}
+
+.wellington-masterplan__legend-name {
+  flex: 1;
+  min-width: 0;
+  color: #f5efe7;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.wellington-masterplan__legend-number {
+  color: rgba(245, 239, 231, 0.48);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 1080px) {
+  .wellington-masterplan {
+    padding: 104px 0 112px;
+  }
+
+  .wellington-masterplan__header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .wellington-masterplan__description {
+    max-width: 620px;
+  }
+
+  .wellington-masterplan__body {
+    grid-template-columns: 1fr;
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wellington-masterplan {
+    padding: 88px 0 96px;
+  }
+
+  .wellington-masterplan__shell {
+    width: min(100% - 24px, 1320px);
+  }
+
+  .wellington-masterplan__eyebrow {
+    gap: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+  }
+
+  .wellington-masterplan__eyebrow::before {
+    width: 30px;
+  }
+
+  .wellington-masterplan__heading {
+    margin-top: 22px;
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+  }
+
+  .wellington-masterplan__body {
+    gap: 32px;
+    margin-top: 44px;
+  }
+
+  .wellington-masterplan__legend {
+    padding: 36px 28px;
+  }
+
+  .wellington-masterplan__legend-list {
+    gap: 22px;
+    margin-top: 32px;
+  }
+}

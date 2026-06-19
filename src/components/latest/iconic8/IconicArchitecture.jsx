@@ -53,20 +53,22 @@ const stats = [
 
 const IconicArchitecture = () => (
   <section className="iconic-architecture">
-    <motion.div
-      className="iconic-architecture__panel iconic-architecture__panel--visual"
-      initial="hidden"
-      viewport={{ once: true, amount: 0.25 }}
-      whileInView="visible"
-      variants={imageVariants}
-    >
-      <img
-        alt="Iconic 8 logo panel"
-        className="iconic-architecture__logo-panel"
-        src={iconicLogoPanel}
-      />
+    <div className="iconic-architecture__panel iconic-architecture__panel--visual">
+      <motion.div
+        className="iconic-architecture__visual-reveal"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.25 }}
+        whileInView="visible"
+        variants={imageVariants}
+      >
+        <img
+          alt="Iconic 8 logo panel"
+          className="iconic-architecture__logo-panel"
+          src={iconicLogoPanel}
+        />
+      </motion.div>
       <div aria-hidden="true" className="iconic-architecture__visual-glow" />
-    </motion.div>
+    </div>
 
     <div className="iconic-architecture__panel iconic-architecture__panel--content">
       <motion.div

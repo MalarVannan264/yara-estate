@@ -14,6 +14,8 @@ export const navigationLinks = [
 export const latestLinks = [
   { label: 'Iconic 8', to: '/latest/iconic-8' },
   { label: 'Avante', to: '/latest/avante' },
+  { label: 'Wellington', to: '/latest/wellington', badge: 'Flagship' },
+  { label: 'Vanam', to: '/latest/vanam', badge: 'Coming Soon' },
 ]
 
 export const heroMetrics = [

@@ -1,230 +1,176 @@
+/* ── Avante Unit B  —  50/50 split: content LEFT, image RIGHT ── */
+
 .avante-unit-b {
-  --avante-dark: #22251c;
+  display: flex;
+  align-items: stretch;
   width: 100%;
-  padding: 120px 0;
-  background: var(--avante-dark);
+  min-height: 720px;
+  background: #232d1b;
 }
 
-.avante-unit-b__shell {
+/* ── Content panel ────────────────────────────────────────────── */
+
+.avante-unit-b__content-panel {
+  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
-  gap: 52px;
-  width: min(100% - 48px, 1280px);
-  margin: 0 auto;
+  justify-content: center;
+  padding: 100px 64px 100px 80px;
 }
 
-.avante-unit-b__header {
-  min-width: 0;
-}
-
-.avante-unit-b__content {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
-  gap: 44px 80px;
-  align-items: start;
-  min-width: 0;
-}
+/* ── Eyebrow ──────────────────────────────────────────────────── */
 
 .avante-unit-b__eyebrow {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   margin: 0;
   color: #c8a86b;
   font-family: 'Geist', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
 }
 
 .avante-unit-b__eyebrow::before {
-  width: 62px;
+  flex-shrink: 0;
+  width: 56px;
   height: 1px;
-  background: rgba(200, 168, 107, 0.88);
+  background: #c8a86b;
   content: '';
 }
 
+/* ── Heading ──────────────────────────────────────────────────── */
+
 .avante-unit-b__heading {
-  margin: 42px 0 0;
+  margin: 28px 0 0;
   color: #f7f3ec;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-size: clamp(2.6rem, 3.6vw, 3.8rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.02em;
+  line-height: 1.06;
+  letter-spacing: 0.01em;
 }
+
+/* ── Description ──────────────────────────────────────────────── */
 
 .avante-unit-b__description {
-  max-width: 760px;
-  margin: 0;
-  color: rgba(247, 243, 236, 0.84);
+  margin: 22px 0 0;
+  max-width: 520px;
+  color: rgba(247, 243, 236, 0.82);
   font-family: 'Geist', sans-serif;
-  font-size: 1.02rem;
-  line-height: 1.88;
+  font-size: 0.98rem;
+  line-height: 1.82;
 }
 
+/* ── Stats ────────────────────────────────────────────────────── */
+
 .avante-unit-b__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px;
-  margin-top: 44px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 36px;
   padding: 28px 0;
   border-top: 1px solid rgba(247, 243, 236, 0.12);
   border-bottom: 1px solid rgba(247, 243, 236, 0.12);
 }
 
 .avante-unit-b__stat {
-  min-width: 0;
+  flex: 1 1 0%;
+  padding: 0 20px;
+  border-right: 1px solid rgba(247, 243, 236, 0.10);
+}
+
+.avante-unit-b__stat:first-child {
+  padding-left: 0;
+}
+
+.avante-unit-b__stat:last-child {
+  border-right: none;
 }
 
 .avante-unit-b__stat-value {
   margin: 0;
   color: #f7f3ec;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 .avante-unit-b__stat-label {
-  margin: 10px 0 0;
-  color: rgba(200, 168, 107, 0.86);
+  margin: 8px 0 0;
+  color: rgba(200, 168, 107, 0.82);
   font-family: 'Geist', sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
+/* ── Highlights ───────────────────────────────────────────────── */
+
 .avante-unit-b__highlights {
-  margin-top: 46px;
+  margin-top: 32px;
 }
 
 .avante-unit-b__highlights-title {
-  margin: 0;
+  margin: 0 0 14px;
   color: #c8a86b;
   font-family: 'Geist', sans-serif;
-  font-size: 0.76rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
 }
 
 .avante-unit-b__highlights-list {
-  margin: 22px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .avante-unit-b__highlight {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 18px;
   color: rgba(247, 243, 236, 0.82);
   font-family: 'Geist', sans-serif;
-  font-size: 1rem;
-  line-height: 1.82;
-}
-
-.avante-unit-b__highlight + .avante-unit-b__highlight {
-  margin-top: 16px;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 .avante-unit-b__highlight::before {
   position: absolute;
-  top: 0.78rem;
   left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 999px;
-  background: #c8a86b;
-  content: '';
+  top: 0;
+  color: #c8a86b;
+  font-size: 1.1em;
+  line-height: 1.6;
+  content: '·';
 }
 
-.avante-unit-b__visual {
-  margin: 0;
+/* ── Image panel ──────────────────────────────────────────────── */
+
+.avante-unit-b__image-panel {
+  flex: 0 0 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background: transparent;
-  grid-column: unset;
-  order: unset;
+  padding: 80px 48px;
+  background: #1b2415;
 }
 
 .avante-unit-b__image {
   display: block;
   width: 100%;
+  max-width: 580px;
   height: auto;
   object-fit: contain;
-  background: transparent;
-  box-shadow: none;
-  filter: none;
-  transform-origin: center center;
-  will-change: transform;
-}
-
-@media (max-width: 900px) {
-  .avante-unit-b {
-    padding: 104px 0;
-  }
-
-  .avante-unit-b__shell {
-    gap: 38px;
-  }
-
-  .avante-unit-b__content {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .avante-unit-b {
-    padding: 84px 0 92px;
-  }
-
-  .avante-unit-b__shell {
-    width: min(100% - 32px, 1280px);
-    gap: 28px;
-  }
-
-  .avante-unit-b__eyebrow {
-    gap: 14px;
-    font-size: 0.68rem;
-    letter-spacing: 0.26em;
-  }
-
-  .avante-unit-b__eyebrow::before {
-    width: 38px;
-  }
-
-  .avante-unit-b__heading {
-    margin-top: 30px;
-    font-size: clamp(2.9rem, 10vw, 4.6rem);
-    line-height: 1.02;
-  }
-
-  .avante-unit-b__description {
-    font-size: 0.96rem;
-    line-height: 1.76;
-  }
-
-  .avante-unit-b__stats {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin-top: 34px;
-    padding: 22px 0;
-  }
-
-  .avante-unit-b__highlights {
-    margin-top: 34px;
-  }
-
-  .avante-unit-b__highlight {
-    font-size: 0.96rem;
-    line-height: 1.74;
-  }
+  filter: drop-shadow(0 32px 64px rgba(0, 0, 0, 0.28));
 }

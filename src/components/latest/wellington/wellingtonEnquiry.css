@@ -1,0 +1,248 @@
+.wellington-enquiry {
+  --wellington-rust: #b35a32;
+  --wellington-dark: #241a13;
+  background: #f3ecdb;
+  color: var(--wellington-dark);
+  padding: 130px 0;
+}
+
+.wellington-enquiry__inner {
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+}
+
+.wellington-enquiry__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 72px;
+}
+
+.wellington-enquiry__content {
+  padding: 20px 0 0;
+}
+
+.wellington-enquiry__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.wellington-enquiry__eyebrow::before {
+  width: 44px;
+  height: 1px;
+  background: rgba(179, 90, 50, 0.7);
+  content: '';
+}
+
+.wellington-enquiry__heading {
+  margin: 30px 0 0;
+  color: var(--wellington-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: 0.02em;
+}
+
+.wellington-enquiry__heading-accent {
+  font-family: 'Playfair Display', serif;
+  color: var(--wellington-rust);
+  font-style: italic;
+}
+
+.wellington-enquiry__rule {
+  width: 84px;
+  height: 1px;
+  margin: 32px 0;
+  background: rgba(179, 90, 50, 0.4);
+}
+
+.wellington-enquiry__paragraph {
+  max-width: 440px;
+  margin: 0;
+  color: #6b5c50;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.wellington-enquiry__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wellington-enquiry__meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--wellington-dark);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.wellington-enquiry__meta-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--wellington-rust);
+}
+
+.wellington-enquiry__card {
+  padding: 48px 56px 52px;
+  border: 1px solid rgba(179, 90, 50, 0.32);
+  background: #ffffff;
+}
+
+.wellington-enquiry__card-title {
+  margin: 0;
+  color: var(--wellington-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.wellington-enquiry__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+}
+
+.wellington-enquiry__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid rgba(179, 90, 50, 0.32);
+}
+
+.wellington-enquiry__field + .wellington-enquiry__field {
+  margin-top: 26px;
+}
+
+.wellington-enquiry__label {
+  color: var(--wellington-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.wellington-enquiry__input {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--wellington-dark);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  transition: color 220ms ease;
+}
+
+.wellington-enquiry__input::placeholder {
+  color: #9a8a7b;
+}
+
+.wellington-enquiry__field:focus-within {
+  border-bottom-color: var(--wellington-rust);
+}
+
+.wellington-enquiry__submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 34px;
+  border: 0;
+  padding: 22px 28px;
+  background: var(--wellington-rust);
+  color: #f7f3ec;
+  cursor: pointer;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.wellington-enquiry__submit span {
+  margin: 0 auto;
+}
+
+.wellington-enquiry__submit:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+.wellington-enquiry__success {
+  margin: 20px 0 0;
+  color: #6b5c50;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1080px) {
+  .wellington-enquiry__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .wellington-enquiry__content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .wellington-enquiry {
+    padding: 96px 0;
+  }
+
+  .wellington-enquiry__inner {
+    width: min(100% - 24px, 1320px);
+  }
+
+  .wellington-enquiry__eyebrow {
+    gap: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+  }
+
+  .wellington-enquiry__eyebrow::before {
+    width: 30px;
+  }
+
+  .wellington-enquiry__heading {
+    margin-top: 24px;
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+  }
+
+  .wellington-enquiry__rule {
+    margin: 24px 0;
+  }
+
+  .wellington-enquiry__card {
+    padding: 32px 22px 36px;
+  }
+
+  .wellington-enquiry__form {
+    margin-top: 26px;
+  }
+}

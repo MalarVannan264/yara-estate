@@ -140,16 +140,16 @@ const PremiumResidential = () => (
             whileHover={{ y: -6 }}
             transition={{ duration: 0.38 }}
           >
-            <div className="premium-residential__card-image-wrap">
+            <div className={`premium-residential__card-image-wrap${project.fullyReserved ? ' premium-residential__card-image-wrap--reserved' : ''}`}>
               <img
                 alt={project.title}
                 className="premium-residential__card-image"
                 src={project.image}
               />
               {project.fullyReserved && (
-                <span className="premium-residential__reserved-tag">
-                  Fully Reserved
-                </span>
+                <div className="premium-residential__reserved-tag">
+                  <span className="premium-residential__reserved-label">Fully Reserved</span>
+                </div>
               )}
             </div>
 
@@ -160,9 +160,11 @@ const PremiumResidential = () => (
 
               <div className="premium-residential__card-footer">
                 <p className="premium-residential__card-location">{project.location}</p>
-                <Link className="premium-residential__card-link" to={project.link}>
-                  VIEW <span aria-hidden="true">↗</span>
-                </Link>
+                {!project.fullyReserved && (
+                  <Link className="premium-residential__card-link" to={project.link}>
+                    VIEW <span aria-hidden="true">↗</span>
+                  </Link>
+                )}
               </div>
             </div>
           </motion.article>

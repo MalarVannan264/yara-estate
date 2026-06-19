@@ -1,227 +1,176 @@
+/* ── Avante Unit A  —  50/50 split: image LEFT, content RIGHT ── */
+
 .avante-unit-showcase {
-  width: 100%;
-  padding: 120px 0;
-  background: #fbfaf7;
-}
-
-.avante-unit-showcase__shell {
   display: flex;
-  flex-direction: column;
-  gap: 52px;
-  width: min(100% - 48px, 1280px);
-  margin: 0 auto;
+  align-items: stretch;
+  width: 100%;
+  min-height: 720px;
 }
 
-.avante-unit-showcase__header {
-  min-width: 0;
-}
+/* ── Image panel ──────────────────────────────────────────────── */
 
-.avante-unit-showcase__visual {
-  margin: 0;
+.avante-unit-showcase__image-panel {
+  flex: 0 0 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background: #fbf7f3;
+  padding: 80px 48px;
+  background: #eee8d8;
 }
 
 .avante-unit-showcase__image {
   display: block;
   width: 100%;
+  max-width: 580px;
   height: auto;
   object-fit: contain;
-  background: transparent;
-  box-shadow: none;
-  filter: none;
-  transform-origin: center center;
-  will-change: transform;
+  filter: drop-shadow(0 32px 64px rgba(24, 51, 35, 0.10));
 }
 
-.avante-unit-showcase__content {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
-  gap: 44px 80px;
-  align-items: start;
-  min-width: 0;
+/* ── Content panel ────────────────────────────────────────────── */
+
+.avante-unit-showcase__content-panel {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 80px 100px 64px;
+  background: #f5f0e8;
 }
+
+/* ── Eyebrow ──────────────────────────────────────────────────── */
 
 .avante-unit-showcase__eyebrow {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   margin: 0;
   color: #c8a86b;
   font-family: 'Geist', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
 }
 
 .avante-unit-showcase__eyebrow::before {
-  width: 62px;
+  flex-shrink: 0;
+  width: 56px;
   height: 1px;
-  background: rgba(200, 168, 107, 0.88);
+  background: #c8a86b;
   content: '';
 }
 
+/* ── Heading ──────────────────────────────────────────────────── */
+
 .avante-unit-showcase__heading {
-  margin: 42px 0 0;
+  margin: 28px 0 0;
   color: #183323;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-size: clamp(2.6rem, 3.6vw, 3.8rem);
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.02em;
+  line-height: 1.06;
+  letter-spacing: 0.01em;
 }
+
+/* ── Description ──────────────────────────────────────────────── */
 
 .avante-unit-showcase__description {
-  max-width: 760px;
-  margin: 0;
-  color: #5f715f;
+  margin: 22px 0 0;
+  max-width: 520px;
+  color: #5c6b5a;
   font-family: 'Geist', sans-serif;
-  font-size: 1.02rem;
-  line-height: 1.88;
+  font-size: 0.98rem;
+  line-height: 1.82;
 }
 
+/* ── Stats ────────────────────────────────────────────────────── */
+
 .avante-unit-showcase__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px;
-  margin-top: 44px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 36px;
   padding: 28px 0;
   border-top: 1px solid rgba(24, 51, 35, 0.12);
   border-bottom: 1px solid rgba(24, 51, 35, 0.12);
 }
 
 .avante-unit-showcase__stat {
-  min-width: 0;
+  flex: 1 1 0%;
+  padding: 0 20px;
+  border-right: 1px solid rgba(24, 51, 35, 0.10);
+}
+
+.avante-unit-showcase__stat:first-child {
+  padding-left: 0;
+}
+
+.avante-unit-showcase__stat:last-child {
+  border-right: none;
 }
 
 .avante-unit-showcase__stat-value {
   margin: 0;
   color: #183323;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 .avante-unit-showcase__stat-label {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #8f8474;
   font-family: 'Geist', sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
+/* ── Highlights ───────────────────────────────────────────────── */
+
 .avante-unit-showcase__highlights {
-  margin-top: 46px;
+  margin-top: 32px;
 }
 
 .avante-unit-showcase__highlights-title {
-  margin: 0;
+  margin: 0 0 14px;
   color: #c8a86b;
   font-family: 'Geist', sans-serif;
-  font-size: 0.76rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
 }
 
 .avante-unit-showcase__highlights-list {
-  margin: 22px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .avante-unit-showcase__highlight {
   position: relative;
-  padding-left: 1rem;
-  color: #5f715f;
+  padding-left: 18px;
+  color: #5c6b5a;
   font-family: 'Geist', sans-serif;
-  font-size: 1rem;
-  line-height: 1.82;
-}
-
-.avante-unit-showcase__highlight + .avante-unit-showcase__highlight {
-  margin-top: 16px;
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 .avante-unit-showcase__highlight::before {
   position: absolute;
-  top: 0.78rem;
   left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 999px;
-  background: #8f8474;
-  content: '';
-}
-
-@media (max-width: 900px) {
-  .avante-unit-showcase {
-    padding: 104px 0;
-  }
-
-  .avante-unit-showcase__shell {
-    gap: 38px;
-  }
-
-  .avante-unit-showcase__content {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .avante-unit-showcase {
-    padding: 84px 0 92px;
-  }
-
-  .avante-unit-showcase__shell {
-    width: min(100% - 32px, 1280px);
-    gap: 28px;
-  }
-
-  .avante-unit-showcase__eyebrow {
-    gap: 14px;
-    font-size: 0.68rem;
-    letter-spacing: 0.26em;
-  }
-
-  .avante-unit-showcase__eyebrow::before {
-    width: 38px;
-  }
-
-  .avante-unit-showcase__heading {
-    margin-top: 30px;
-    font-size: clamp(2.9rem, 10vw, 4.6rem);
-    line-height: 1.02;
-  }
-
-  .avante-unit-showcase__description {
-    font-size: 0.96rem;
-    line-height: 1.76;
-  }
-
-  .avante-unit-showcase__stats {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin-top: 34px;
-    padding: 22px 0;
-  }
-
-  .avante-unit-showcase__highlights {
-    margin-top: 34px;
-  }
-
-  .avante-unit-showcase__highlight {
-    font-size: 0.96rem;
-    line-height: 1.74;
-  }
+  top: 0;
+  color: #c8a86b;
+  font-size: 1.1em;
+  line-height: 1.6;
+  content: '·';
 }

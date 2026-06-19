@@ -280,21 +280,51 @@
   background: #d8cab8;
 }
 
+/* Dark overlay on the image when fully reserved */
+.premium-residential__card-image-wrap--reserved::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(10, 14, 8, 0.52);
+  content: '';
+}
+
+/* Reserved tag — full-size overlay container, centers the badge */
 .premium-residential__reserved-tag {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
-  padding: 6px 14px;
-  background: rgba(247, 241, 234, 0.92);
-  color: #6b4f3a;
-  font-family: 'Geist', sans-serif;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
+}
+
+/* The badge itself */
+.premium-residential__reserved-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px;
+  border: 1px solid rgba(200, 168, 107, 0.48);
+  background: rgba(10, 14, 8, 0.78);
+  color: #c8a86b;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.premium-residential__reserved-label::before,
+.premium-residential__reserved-label::after {
+  flex-shrink: 0;
+  width: 22px;
+  height: 1px;
+  background: rgba(200, 168, 107, 0.48);
+  content: '';
 }
 
 .premium-residential__card-image {

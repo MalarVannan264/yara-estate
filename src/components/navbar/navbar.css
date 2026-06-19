@@ -132,7 +132,7 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  min-width: 220px;
+  min-width: 252px;
   padding: 14px 0;
   transform: translateX(-50%) translateY(12px);
   border: 1px solid rgba(0, 0, 0, 0.06);
@@ -170,6 +170,30 @@
   border-radius: 999px;
   background: var(--color-gold);
   flex-shrink: 0;
+}
+
+.yara-navbar__badge {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.yara-navbar__badge--flagship {
+  background: rgba(179, 90, 50, 0.1);
+  color: #b35a32;
+  border: 1px solid rgba(179, 90, 50, 0.22);
+}
+
+.yara-navbar__badge--soon {
+  background: rgba(107, 122, 94, 0.1);
+  color: #6b7a5e;
+  border: 1px solid rgba(107, 122, 94, 0.22);
 }
 
 /* ── Desktop CTA ─────────────────────────────────────────── */

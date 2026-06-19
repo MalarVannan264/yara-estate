@@ -1,19 +1,25 @@
 .iconic-architecture {
-  display: grid;
+  display: flex;
+  align-items: stretch;
   width: 100%;
   min-height: 760px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   background: transparent;
 }
 
 .iconic-architecture__panel {
   position: relative;
+  flex: 1 1 0%;
   min-width: 0;
 }
 
 .iconic-architecture__panel--visual {
   overflow: hidden;
   background: #2a1608;
+}
+
+.iconic-architecture__visual-reveal {
+  position: absolute;
+  inset: 0;
 }
 
 .iconic-architecture__logo-panel {
@@ -144,7 +150,7 @@
 
 @media (max-width: 1080px) {
   .iconic-architecture {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     min-height: auto;
   }
 

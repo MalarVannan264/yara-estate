@@ -2,16 +2,17 @@
   --avante-dark: #22251c;
   position: relative;
   z-index: 5;
-  display: grid;
+  display: flex;
+  align-items: stretch;
   width: 100%;
   min-height: 760px;
   margin-top: 0px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   background: transparent;
 }
 
 .avante-philosophy__panel {
   position: relative;
+  flex: 1 1 0%;
   min-width: 0;
 }
 
@@ -20,6 +21,7 @@
   background: var(--avante-dark);
 }
 
+.avante-philosophy__visual-reveal,
 .avante-philosophy__visual-texture,
 .avante-philosophy__visual-glow {
   position: absolute;
@@ -136,7 +138,7 @@
 @media (max-width: 1080px) {
   .avante-philosophy {
     margin-top: -72px;
-    grid-template-columns: 1fr;
+    flex-direction: column;
     min-height: auto;
   }
 

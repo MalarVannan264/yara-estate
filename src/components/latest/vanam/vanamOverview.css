@@ -1,0 +1,207 @@
+.vanam-overview {
+  --vanam-rust: #b35a32;
+  --vanam-dark-green: #2f3a2a;
+  --vanam-sage: #6b7a5e;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 760px;
+  background: transparent;
+}
+
+.vanam-overview__panel {
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.vanam-overview__panel--visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #3f4a38;
+}
+
+.vanam-overview__visual-reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vanam-overview__overlay-panel {
+  width: min(70%, 640px);
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.7s ease;
+}
+
+.vanam-overview__panel--visual:hover .vanam-overview__overlay-panel {
+  transform: scale(1.03);
+}
+
+.vanam-overview__panel--content {
+  display: flex;
+  align-items: center;
+  background: #f4efe3;
+  box-shadow: 0 28px 42px rgba(47, 58, 42, 0.08);
+}
+
+.vanam-overview__content-inner {
+  width: min(100%, 720px);
+  margin: 0;
+  padding: 78px 82px;
+}
+
+.vanam-overview__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: var(--vanam-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.vanam-overview__eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: var(--vanam-rust);
+  content: '';
+}
+
+.vanam-overview__heading {
+  margin: 36px 0 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+}
+
+.vanam-overview__rule {
+  width: 64px;
+  height: 1px;
+  margin: 36px 0 0;
+  background: var(--vanam-rust);
+}
+
+.vanam-overview__paragraph {
+  max-width: 560px;
+  margin: 30px 0 0;
+  color: #241f1c;
+  font-family: 'Geist', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.vanam-overview__paragraph--accent {
+  color: var(--vanam-sage);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.18rem;
+  line-height: 1.6;
+}
+
+.vanam-overview__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 56px;
+}
+
+.vanam-overview__fact-value {
+  margin: 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.vanam-overview__fact-label {
+  margin: 12px 0 0;
+  color: #7a7568;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1080px) {
+  .vanam-overview {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .vanam-overview__panel--visual {
+    min-height: 420px;
+    padding: 48px 0;
+  }
+
+  .vanam-overview__content-inner {
+    width: min(100%, 860px);
+    padding: 72px 48px 84px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vanam-overview__panel--visual {
+    min-height: 340px;
+  }
+
+  .vanam-overview__overlay-panel {
+    width: min(78%, 420px);
+  }
+
+  .vanam-overview__content-inner {
+    padding: 56px 24px 64px;
+  }
+
+  .vanam-overview__eyebrow {
+    gap: 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.26em;
+  }
+
+  .vanam-overview__eyebrow::before {
+    width: 24px;
+  }
+
+  .vanam-overview__heading {
+    margin-top: 28px;
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+  }
+
+  .vanam-overview__rule {
+    margin-top: 28px;
+  }
+
+  .vanam-overview__paragraph {
+    margin-top: 24px;
+    font-size: 0.96rem;
+    line-height: 1.74;
+  }
+
+  .vanam-overview__paragraph--accent {
+    font-size: 1.06rem;
+  }
+
+  .vanam-overview__facts {
+    gap: 32px;
+    margin-top: 40px;
+  }
+
+  .vanam-overview__fact-value {
+    font-size: 1.8rem;
+  }
+}

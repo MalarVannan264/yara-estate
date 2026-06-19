@@ -1,0 +1,269 @@
+.vanam-arch {
+  --vanam-rust: #b35a32;
+  --vanam-dark-green: #2f3a2a;
+  width: 100%;
+  padding: 130px 0 120px;
+  background: #ece9df;
+}
+
+.vanam-arch__shell {
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.vanam-arch__header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.vanam-arch__eyebrow {
+  margin: 0;
+  color: var(--vanam-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.vanam-arch__heading {
+  margin: 28px 0 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.vanam-arch__sub {
+  max-width: 640px;
+  margin: 32px auto 0;
+  color: #7a7568;
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.76;
+}
+
+/* ── Features ── */
+.vanam-arch__features {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 88px;
+  border-top: 1px solid rgba(47, 58, 42, 0.14);
+}
+
+.vanam-arch__feature {
+  padding: 40px 32px 40px 32px;
+  border-right: 1px solid rgba(47, 58, 42, 0.14);
+}
+
+.vanam-arch__feature:first-child {
+  padding-left: 0;
+}
+
+.vanam-arch__feature:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.vanam-arch__feature-num {
+  display: block;
+  color: var(--vanam-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.vanam-arch__feature-title {
+  margin: 20px 0 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.18rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.vanam-arch__feature-desc {
+  margin: 18px 0 0;
+  color: #7a7568;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ── Villa Concepts ── */
+.vanam-arch__concepts-header {
+  margin-top: 100px;
+  margin-bottom: 36px;
+}
+
+.vanam-arch__concepts-label {
+  color: var(--vanam-dark-green);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.vanam-arch__villas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.vanam-arch__villa {
+  background: #f7f4ee;
+  overflow: hidden;
+}
+
+.vanam-arch__villa-img-wrap {
+  overflow: hidden;
+  height: 300px;
+}
+
+.vanam-arch__villa-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.vanam-arch__villa:hover .vanam-arch__villa-img {
+  transform: scale(1.04);
+}
+
+.vanam-arch__villa-body {
+  padding: 30px 28px 36px;
+}
+
+.vanam-arch__villa-tag {
+  margin: 0;
+  color: var(--vanam-rust);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+
+.vanam-arch__villa-name {
+  margin: 10px 0 0;
+  color: var(--vanam-dark-green);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.vanam-arch__villa-rule {
+  width: 36px;
+  height: 1.5px;
+  margin: 18px 0 0;
+  background: var(--vanam-rust);
+}
+
+.vanam-arch__villa-desc {
+  margin: 18px 0 0;
+  color: #7a7568;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.72;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .vanam-arch__features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vanam-arch__feature {
+    padding: 36px 28px 36px 0;
+  }
+
+  .vanam-arch__feature:nth-child(3) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .vanam-arch__feature:nth-child(4) {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .vanam-arch__villas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .vanam-arch {
+    padding: 96px 0 100px;
+  }
+
+  .vanam-arch__shell {
+    width: min(100% - 24px, 1320px);
+  }
+
+  .vanam-arch__heading {
+    font-size: clamp(2.4rem, 10vw, 3.2rem);
+    margin-top: 22px;
+  }
+
+  .vanam-arch__sub {
+    font-size: 0.95rem;
+  }
+
+  .vanam-arch__features {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
+  }
+
+  .vanam-arch__feature {
+    padding: 28px 20px 28px 20px;
+  }
+
+  .vanam-arch__feature:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .vanam-arch__feature:nth-child(even) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .vanam-arch__feature:nth-child(3) {
+    border-right: 1px solid rgba(47, 58, 42, 0.14);
+    padding-right: 20px;
+  }
+
+  .vanam-arch__feature:nth-child(5) {
+    grid-column: 1 / -1;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .vanam-arch__concepts-header {
+    margin-top: 72px;
+  }
+
+  .vanam-arch__villas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vanam-arch__villa-img-wrap {
+    height: 240px;
+  }
+
+  .vanam-arch__villa-name {
+    font-size: 1.6rem;
+  }
+}

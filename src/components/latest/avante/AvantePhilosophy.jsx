@@ -39,27 +39,29 @@ const imageVariants = {
 
 const AvantePhilosophy = () => (
   <section className="avante-philosophy">
-    <motion.div
-      className="avante-philosophy__panel avante-philosophy__panel--visual"
-      initial="hidden"
-      viewport={{ once: true, amount: 0.25 }}
-      whileInView="visible"
-      variants={imageVariants}
-    >
-      <div
-        aria-hidden="true"
-        className="avante-philosophy__visual-texture"
-        style={{
-          backgroundImage: `linear-gradient(rgba(34, 37, 28, 0.72), rgba(34, 37, 28, 0.88)), url(${avanteHeroTexture})`,
-        }}
-      />
-      <img
-        alt="Avante logo panel"
-        className="avante-logo-panel"
-        src={avanteLogoPanel}
-      />
+    <div className="avante-philosophy__panel avante-philosophy__panel--visual">
+      <motion.div
+        className="avante-philosophy__visual-reveal"
+        initial="hidden"
+        viewport={{ once: true, amount: 0.25 }}
+        whileInView="visible"
+        variants={imageVariants}
+      >
+        <div
+          aria-hidden="true"
+          className="avante-philosophy__visual-texture"
+          style={{
+            backgroundImage: `linear-gradient(rgba(34, 37, 28, 0.72), rgba(34, 37, 28, 0.88)), url(${avanteHeroTexture})`,
+          }}
+        />
+        <img
+          alt="Avante logo panel"
+          className="avante-logo-panel"
+          src={avanteLogoPanel}
+        />
+      </motion.div>
       <div aria-hidden="true" className="avante-philosophy__visual-glow" />
-    </motion.div>
+    </div>
 
     <div className="avante-philosophy__panel avante-philosophy__panel--content">
       <motion.div
@@ -76,8 +78,7 @@ const AvantePhilosophy = () => (
         <motion.h2 className="avante-philosophy__heading" variants={itemVariants}>
           An address above
           <br />
-          al
-          to cherish.
+          all to cherish.
         </motion.h2>
 
         <motion.p className="avante-philosophy__paragraph" variants={itemVariants}>

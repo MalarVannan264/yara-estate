@@ -1,0 +1,175 @@
+.wellington-signature {
+  --wellington-rust: #c1693c;
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #14110d;
+}
+
+.wellington-signature__bg,
+.wellington-signature__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.wellington-signature__bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate3d(var(--signature-move-x), var(--signature-move-y), 0)
+    scale(var(--signature-scale, 1.03));
+  transform-origin: center center;
+  transition: transform 220ms ease-out;
+  will-change: transform;
+}
+
+.wellington-signature__overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 17, 13, 0.05) 0%,
+      rgba(20, 17, 13, 0.18) 38%,
+      rgba(20, 17, 13, 0.66) 76%,
+      rgba(20, 17, 13, 0.9) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(20, 17, 13, 0.56) 0%,
+      rgba(20, 17, 13, 0.1) 38%,
+      transparent 62%
+    );
+}
+
+.wellington-signature__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  align-items: end;
+  column-gap: 64px;
+  min-height: 100vh;
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.wellington-signature__eyebrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  color: rgba(247, 243, 236, 0.9);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.wellington-signature__eyebrow::before {
+  width: 44px;
+  height: 1px;
+  background: rgba(247, 243, 236, 0.7);
+  content: '';
+}
+
+.wellington-signature__heading {
+  margin: 22px 0 0;
+  color: #f7f3ec;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+}
+
+.wellington-signature__heading-accent {
+  font-family: 'Playfair Display', serif;
+  color: var(--wellington-rust);
+  font-style: italic;
+}
+
+.wellington-signature__details {
+  display: block;
+}
+
+.wellington-signature__paragraph {
+  max-width: 640px;
+  margin: 0 0 18px;
+  color: rgba(247, 243, 236, 0.88);
+  font-family: 'Geist', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.wellington-signature__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wellington-signature__list-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(247, 243, 236, 0.92);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.wellington-signature__list-item svg {
+  flex-shrink: 0;
+  color: var(--wellington-rust);
+}
+
+@media (max-width: 1080px) {
+  .wellington-signature__content {
+    grid-template-columns: 1fr;
+    align-items: start;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wellington-signature {
+    min-height: auto;
+  }
+
+  .wellington-signature__content {
+    min-height: auto;
+    width: min(100% - 24px, 1320px);
+    padding: 120px 0 56px;
+  }
+
+  .wellington-signature__eyebrow {
+    gap: 12px;
+    font-size: 0.66rem;
+    letter-spacing: 0.24em;
+  }
+
+  .wellington-signature__eyebrow::before {
+    width: 30px;
+  }
+
+  .wellington-signature__heading {
+    margin-top: 18px;
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+  }
+
+  .wellington-signature__paragraph {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .wellington-signature__list-item {
+    font-size: 0.94rem;
+  }
+}
