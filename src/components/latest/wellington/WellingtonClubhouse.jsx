@@ -72,7 +72,7 @@ const itemVariants = {
 
 const stats = [
   { value: '20+', label: 'CURATED AMENITIES' },
-  { value: '3', label: 'POOL TYPES' },
+  { value: '3', label: 'COURT TYPES' },
   { value: '12', label: 'INDOOR ACTIVITIES' },
 ]
 
@@ -133,7 +133,7 @@ const WellingtonClubhouse = () => (
             src={clubhouseImage}
           />
           <div className="wellington-clubhouse__image-caption">
-            <p className="wellington-clubhouse__image-tag">40,000 SQ.FT</p>
+            {/* <p className="wellington-clubhouse__image-tag">40,000 SQ.FT</p> */}
             <p className="wellington-clubhouse__image-title">Premium Clubhouse</p>
           </div>
         </motion.figure>

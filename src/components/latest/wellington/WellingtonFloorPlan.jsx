@@ -1,62 +1,94 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import floorplanImage from '../../../assets/images/projects/wellington/floorplan-bp.jpg'
+import plan3810TypeAGround from '../../../assets/images/projects/wellington/3810-type-a-ground.png'
+import plan3810TypeBFirst from '../../../assets/images/projects/wellington/3810-type-b-first.png'
+import plan3810TypeBSecond from '../../../assets/images/projects/wellington/3810-type-b-second.png'
+import plan4232TypeBGround from '../../../assets/images/projects/wellington/4232-type-b-ground.png'
+import plan4232TypeBFirst from '../../../assets/images/projects/wellington/4232-type-b-first.png'
+import plan4232TypeBSecond from '../../../assets/images/projects/wellington/4232-type-b-second.png'
+import plan4287TypeCGround from '../../../assets/images/projects/wellington/4287-type-c-ground.png'
+import plan4287TypeCFirst from '../../../assets/images/projects/wellington/4287-type-c-first.png'
+import plan4287TypeCSecond from '../../../assets/images/projects/wellington/4287-type-c-second.png'
+import plan4670TypeDGround from '../../../assets/images/projects/wellington/4670-type-d-ground.png'
+import plan4670TypeDFirst from '../../../assets/images/projects/wellington/4670-type-d-first.png'
+import plan4670TypeDSecond from '../../../assets/images/projects/wellington/4670-type-d-second.png'
 import './wellingtonFloorPlan.css'
 
 const floors = ['GROUND', 'FIRST', 'SECOND']
 
 const villaTypes = {
-  '2747': {
+  '3810': {
     type: 'TYPE A',
-    sqft: '2747 Sq.Ft',
+    sqft: '3810 Sq.Ft',
     title: '4 BHK Villa',
     specs: [
-      { label: 'Built-up Area', value: '2,747 sq.ft' },
-      { label: 'Plot Size', value: '2,200 sq.ft' },
+      { label: 'Plot Area', value: '2,609 sq.ft' },
+      { label: 'Common Area', value: '1,056 sq.ft' },
       { label: 'Bedrooms', value: '4' },
       { label: 'Bathrooms', value: '4' },
       { label: 'Parking', value: '2 Cars' },
       { label: 'Floors', value: 'G + 2' },
     ],
+    plans: {
+      GROUND: plan3810TypeAGround,
+      FIRST: plan3810TypeBFirst,
+      SECOND: plan3810TypeBSecond,
+    },
   },
-  '3200': {
+  '4232': {
     type: 'TYPE B',
-    sqft: '3200 Sq.Ft',
+    sqft: '4232 Sq.Ft',
     title: '4 BHK Premium Villa',
     specs: [
-      { label: 'Built-up Area', value: '3,200 sq.ft' },
-      { label: 'Plot Size', value: '2,400 sq.ft' },
-      { label: 'Bedrooms', value: '4 + Study' },
+      { label: 'Plot Area', value: '2,676 sq.ft' },
+      { label: 'Common Area', value: '1,085 sq.ft' },
+      { label: 'Bedrooms', value: '4' },
       { label: 'Bathrooms', value: '5' },
       { label: 'Parking', value: '2 Cars' },
       { label: 'Floors', value: 'G + 2' },
     ],
+    plans: {
+      GROUND: plan4232TypeBGround,
+      FIRST: plan4232TypeBFirst,
+      SECOND: plan4232TypeBSecond,
+    },
   },
-  '4000': {
+  '4287': {
     type: 'TYPE C',
-    sqft: '4000 Sq.Ft',
+    sqft: '4287 Sq.Ft',
     title: '4 BHK Grand Villa',
     specs: [
-      { label: 'Built-up Area', value: '4,000 sq.ft' },
-      { label: 'Plot Size', value: '3,000 sq.ft' },
+      { label: 'Plot Area', value: '2,752 sq.ft' },
+      { label: 'Common Area', value: '1,105 sq.ft' },
       { label: 'Bedrooms', value: '4 + Study + Den' },
+      { label: 'Bathrooms', value: '5' },
+      { label: 'Parking', value: '2 Cars' },
+      { label: 'Floors', value: 'G + 2' },
+    ],
+    plans: {
+      GROUND: plan4287TypeCGround,
+      FIRST: plan4287TypeCFirst,
+      SECOND: plan4287TypeCSecond,
+    },
+  },
+  '4670': {
+    type: 'TYPE D',
+    sqft: '4670 Sq.Ft',
+    title: '4 BHK Signature Villa',
+    specs: [
+      { label: 'Plot Area', value: '3,392 sq.ft' },
+      { label: 'Common Area', value: '1,376 sq.ft' },
+      { label: 'Bedrooms', value: '4' },
       { label: 'Bathrooms', value: '6' },
       { label: 'Parking', value: '2 Cars' },
       { label: 'Floors', value: 'G + 2' },
     ],
-  },
-  '5100': {
-    type: 'TYPE D',
-    sqft: '5100 Sq.Ft',
-    title: '5 BHK Signature Villa',
-    specs: [
-      { label: 'Built-up Area', value: '5,100 sq.ft' },
-      { label: 'Plot Size', value: '3,600 sq.ft' },
-      { label: 'Bedrooms', value: '5 + Study' },
-      { label: 'Bathrooms', value: '6' },
-      { label: 'Parking', value: '3 Cars' },
-      { label: 'Floors', value: 'G + 2' },
-    ],
+    plans: {
+      GROUND: plan4670TypeDGround,
+      FIRST: plan4670TypeDFirst,
+      SECOND: plan4670TypeDSecond,
+    },
   },
 }
 
@@ -87,7 +119,7 @@ const contentVariants = {
 }
 
 const WellingtonFloorPlan = () => {
-  const [activeSize, setActiveSize] = useState('3200')
+  const [activeSize, setActiveSize] = useState(sizeOptions[0])
   const [activeFloor, setActiveFloor] = useState('GROUND')
 
   const villa = villaTypes[activeSize]
@@ -178,7 +210,7 @@ const WellingtonFloorPlan = () => {
                 <img
                   alt={`${villa.title} ${activeFloor.toLowerCase()} floor plan`}
                   className="wellington-floorplan__image"
-                  src={floorplanImage}
+                  src={villa.plans[activeFloor]}
                 />
               </motion.figure>
             </AnimatePresence>
