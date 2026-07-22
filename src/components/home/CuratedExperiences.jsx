@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import premiumResidential from '../../assets/images/homepage/premium-residential.jpg'
-import retreatLiving from '../../assets/images/homepage/retreat-living.jpg'
-import luxuryCommercial from '../../assets/images/homepage/luxury-commercial.jpg'
+import premiumResidential from '../../assets/images/homepage/premium-residential.webp'
+import retreatLiving from '../../assets/images/homepage/retreat-living.webp'
+import luxuryCommercial from '../../assets/images/homepage/luxury-commercial.webp'
 import './curatedExperiences.css'
 
 const headerVariants = {

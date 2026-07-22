@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import avanteBuilding from '../../../assets/images/projects/avante/avante-building.jpg'
-import avanteMap from '../../../assets/images/projects/avante/avante-map.jpg'
+import avanteBuilding from '../../../assets/images/projects/avante/avante-building.webp'
+import avanteMap from '../../../assets/images/projects/avante/avante-map.webp'
 import './avanteLocation.css'
 
 const headerVariants = {

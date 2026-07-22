@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { animate, motion, useMotionValue } from 'framer-motion'
-import gallery1 from '../../../assets/images/projects/avante/gallery1.jpg'
-import gallery2 from '../../../assets/images/projects/avante/gallery2.jpg'
-import gallery3 from '../../../assets/images/projects/avante/gallery3.jpg'
+import gallery1 from '../../../assets/images/projects/avante/gallery1.webp'
+import gallery2 from '../../../assets/images/projects/avante/gallery2.webp'
+import gallery3 from '../../../assets/images/projects/avante/gallery3.webp'
 import './avanteGallery.css'
 
 const SLIDE_GAP = 20

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useCallback, useEffect, useRef } from 'react'
-import terraceImage from '../../../assets/images/projects/avante/terrace-experience.jpg'
+import terraceImage from '../../../assets/images/projects/avante/terrace-experience.webp'
 import './avanteTerraceExperience.css'
 
 const containerVariants = {

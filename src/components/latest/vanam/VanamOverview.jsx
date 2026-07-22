@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import vanamOverlayPanel from '../../../assets/images/projects/vanam/vanam-overlay-panel.jpg'
+import vanamOverlayPanel from '../../../assets/images/projects/vanam/vanam-overlay-panel.webp'
 import './vanamOverview.css'
 
 const textVariants = {

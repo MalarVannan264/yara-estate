@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import interior1 from '../../../assets/images/projects/wellington/interior1.jpg'
-import interior2 from '../../../assets/images/projects/wellington/interior2.jpg'
-import interior3 from '../../../assets/images/projects/wellington/interior3.jpg'
-import interior4 from '../../../assets/images/projects/wellington/interior4.jpg'
-import interior5 from '../../../assets/images/projects/wellington/interior5.jpg'
-import interior6 from '../../../assets/images/projects/wellington/interior6.jpg'
+import interior1 from '../../../assets/images/projects/wellington/interior1.webp'
+import interior2 from '../../../assets/images/projects/wellington/interior2.webp'
+import interior3 from '../../../assets/images/projects/wellington/interior3.webp'
+import interior4 from '../../../assets/images/projects/wellington/interior4.webp'
+import interior5 from '../../../assets/images/projects/wellington/interior5.webp'
+import interior6 from '../../../assets/images/projects/wellington/interior6.webp'
 import './wellingtonInteriors.css'
 
 const headerVariants = {

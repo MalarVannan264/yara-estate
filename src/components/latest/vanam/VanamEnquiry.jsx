@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import finalBg from '../../../assets/images/projects/vanam/final-bg.jpg'
+import finalBg from '../../../assets/images/projects/vanam/final-bg.webp'
 import './vanamEnquiry.css'
 
 const easeOut = [0.22, 1, 0.36, 1]

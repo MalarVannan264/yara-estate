@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import avanteCard from '../../../assets/images/collections/avante-card.jpg'
-import eastCoastCard from '../../../assets/images/collections/east-coast-card.jpg'
-import iconic8Card from '../../../assets/images/collections/iconic8-card.jpg'
+import avanteCard from '../../../assets/images/collections/avante-card.webp'
+import eastCoastCard from '../../../assets/images/collections/east-coast-card.webp'
+import iconic8Card from '../../../assets/images/collections/iconic8-card.webp'
 import { fadeUp, staggerContainer } from '../../../utils/motion'
 import './premiumResidential.css'
 

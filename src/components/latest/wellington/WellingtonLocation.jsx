@@ -8,7 +8,7 @@ import {
   ShoppingBag,
   UtensilsCrossed,
 } from 'lucide-react'
-import locationMap from '../../../assets/images/projects/wellington/location-bg.png'
+import locationMap from '../../../assets/images/projects/wellington/location-bg.webp'
 import './wellingtonLocation.css'
 
 const headerVariants = {

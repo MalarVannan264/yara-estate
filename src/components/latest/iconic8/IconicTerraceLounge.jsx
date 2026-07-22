@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useCallback, useEffect, useRef } from 'react'
-import terraceLoungeImage from '../../../assets/images/projects/iconic8/iconic8-terrace-lounge.jpg'
+import terraceLoungeImage from '../../../assets/images/projects/iconic8/iconic8-terrace-lounge.webp'
 import './iconicTerraceLounge.css'
 
 const containerVariants = {

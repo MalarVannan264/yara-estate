@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import iconicKitchenImage from '../../../assets/images/projects/iconic8/iconic8-kitchen.jpg'
+import iconicKitchenImage from '../../../assets/images/projects/iconic8/iconic8-kitchen.webp'
 import './iconicKitchenExperience.css'
 
 const tags = [

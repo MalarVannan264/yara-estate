@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import avanteMain from '../../assets/images/projects/avante/avante-main.jpg'
-import iconic8Main from '../../assets/images/projects/iconic8/iconic8-main.jpg'
+import avanteMain from '../../assets/images/projects/avante/avante-main.webp'
+import iconic8Main from '../../assets/images/projects/iconic8/iconic8-main.webp'
 import './featuredCollections.css'
 
 const headerVariants = {

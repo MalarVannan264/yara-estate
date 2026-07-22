@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import avanteImg from '../../assets/images/contact/project1.jpg'
-import iconic8Img from '../../assets/images/contact/project2.jpg'
+import avanteImg from '../../assets/images/contact/project1.webp'
+import iconic8Img from '../../assets/images/contact/project2.webp'
 import './visitDevelopments.css'
 
 const projects = [

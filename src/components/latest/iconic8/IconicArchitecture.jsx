@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import iconicLogoPanel from '../../../assets/images/projects/iconic8/iconic8-logo-panel.jpg'
+import iconicLogoPanel from '../../../assets/images/projects/iconic8/iconic8-logo-panel.webp'
 import './iconicArchitecture.css'
 
 const textVariants = {

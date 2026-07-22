@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import img1 from '../../../assets/images/projects/vanam/img1.jpg'
-import img2 from '../../../assets/images/projects/vanam/img2.jpg'
-import img3 from '../../../assets/images/projects/vanam/img3.jpg'
+import img1 from '../../../assets/images/projects/vanam/img1.webp'
+import img2 from '../../../assets/images/projects/vanam/img2.webp'
+import img3 from '../../../assets/images/projects/vanam/img3.webp'
 import './vanamArchitecture.css'
 
 const easeOut = [0.22, 1, 0.36, 1]

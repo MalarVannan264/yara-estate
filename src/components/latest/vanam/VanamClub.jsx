@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import featuredImg from '../../../assets/images/projects/vanam/featured-img.jpg'
+import featuredImg from '../../../assets/images/projects/vanam/featured-img.webp'
 import './vanamClub.css'
 
 const easeOut = [0.22, 1, 0.36, 1]

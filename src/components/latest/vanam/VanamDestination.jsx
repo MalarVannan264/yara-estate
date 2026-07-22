@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import yercaudImg from '../../../assets/images/projects/vanam/yercaud-img.jpg'
+import yercaudImg from '../../../assets/images/projects/vanam/yercaud-img.webp'
 import './vanamDestination.css'
 
 const easeOut = [0.22, 1, 0.36, 1]

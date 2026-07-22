@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import avanteHeroTexture from '../../../assets/images/projects/avante/avante-hero.jpg'
-import avanteLogoPanel from '../../../assets/images/projects/avante/avante-logo-panel.jpg'
+import avanteHeroTexture from '../../../assets/images/projects/avante/avante-hero.webp'
+import avanteLogoPanel from '../../../assets/images/projects/avante/avante-logo-panel.webp'
 import './avantePhilosophy.css'
 
 const textVariants = {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import masterplanImage from '../../../assets/images/projects/wellington/masterplan-bp.jpg'
+import masterplanImage from '../../../assets/images/projects/wellington/masterplan-bp.webp'
 import './wellingtonMasterplan.css'
 
 const headerVariants = {

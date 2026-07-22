@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import diningImage from '../../../assets/images/projects/iconic8/iconic8-dining.jpg'
+import diningImage from '../../../assets/images/projects/iconic8/iconic8-dining.webp'
 import './iconicDiningExperience.css'
 
 const textVariants = {

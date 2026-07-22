@@ -21,7 +21,7 @@ import {
   Waves,
   Wind,
 } from 'lucide-react'
-import clubhouseImage from '../../../assets/images/projects/wellington/ambitions-bg.jpg'
+import clubhouseImage from '../../../assets/images/projects/wellington/ambitions-bg.webp'
 import './wellingtonClubhouse.css'
 
 const headerVariants = {

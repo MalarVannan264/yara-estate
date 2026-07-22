@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
-import iconicHeroImage from '../../../assets/images/projects/iconic8/iconic8-hero.jpg'
+import iconicHeroImage from '../../../assets/images/projects/iconic8/iconic8-hero.webp'
 import { easeOutExpo } from '../../../utils/motion'
 import './iconicHero.css'
 

@@ -1,9 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
-import groundFloor from '../../../assets/images/projects/iconic8/ground.png'
-import floor2 from '../../../assets/images/projects/iconic8/2nd-floor.png'
-import floor3 from '../../../assets/images/projects/iconic8/3rd-floor.png'
-import floor4 from '../../../assets/images/projects/iconic8/4th-floor.png'
+import groundFloor from '../../../assets/images/projects/iconic8/ground.webp'
+import floor2 from '../../../assets/images/projects/iconic8/2nd-floor.webp'
+import floor3 from '../../../assets/images/projects/iconic8/3rd-floor.webp'
+import floor4 from '../../../assets/images/projects/iconic8/4th-floor.webp'
 import './iconicFloorPlan.css'
 
 const floors = {

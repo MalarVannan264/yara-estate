@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
-import avanteFloorPlan from '../../../assets/images/projects/avante/avante-floorplan.png'
+import avanteFloorPlan from '../../../assets/images/projects/avante/avante-floorplan.webp'
 import './avanteFloorPlan.css'
 
 const headerVariants = {

@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown, Clock3, Mail, MapPin, Phone } from 'lucide-react'
-import consultationImg from '../../assets/images/contact/contact1.jpg'
+import consultationImg from '../../assets/images/contact/contact1.webp'
 import './contactExperience.css'
 
 const infoCards = [

@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import lifestyleImage from '../../../assets/images/projects/wellington/lifestyle-bg.jpg'
+import lifestyleImage from '../../../assets/images/projects/wellington/lifestyle-bg.webp'
 import { easeOutExpo } from '../../../utils/motion'
 import './wellingtonLifestyle.css'
 

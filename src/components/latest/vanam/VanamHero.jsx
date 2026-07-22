@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
-import vanamHeroImage from '../../../assets/images/projects/vanam/vanam-hero.jpg'
+import vanamHeroImage from '../../../assets/images/projects/vanam/vanam-hero.webp'
 import { easeOutExpo } from '../../../utils/motion'
 import './vanamHero.css'
 

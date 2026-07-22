@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import iconicMap from '../../../assets/images/projects/iconic8/iconic8-map.jpg'
+import iconicMap from '../../../assets/images/projects/iconic8/iconic8-map.webp'
 import './iconicLocation.css'
 
 const textVariants = {

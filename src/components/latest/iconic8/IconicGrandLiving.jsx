@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import grandLivingImage from '../../../assets/images/projects/iconic8/iconic8-grand-living.jpg'
+import grandLivingImage from '../../../assets/images/projects/iconic8/iconic8-grand-living.webp'
 import './iconicGrandLiving.css'
 
 const tags = [

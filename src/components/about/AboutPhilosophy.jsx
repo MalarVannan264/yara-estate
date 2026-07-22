@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import Container from '../common/Container'
-import mainImage from '../../assets/images/about/philosophy-main.jpg'
-import overlayImage from '../../assets/images/about/philosophy-overlay.jpg'
+import mainImage from '../../assets/images/about/philosophy-main.webp'
+import overlayImage from '../../assets/images/about/philosophy-overlay.webp'
 import { easeOutExpo } from '../../utils/motion'
 import './aboutPhilosophy.css'
 

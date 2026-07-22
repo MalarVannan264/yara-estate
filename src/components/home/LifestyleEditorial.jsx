@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useCallback, useEffect, useRef } from 'react'
-import lifestyleImage from '../../assets/images/homepage/lifestyle.jpg'
+import lifestyleImage from '../../assets/images/homepage/lifestyle.webp'
 import './lifestyleEditorial.css'
 
 const contentVariants = {

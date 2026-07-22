@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import wellingtonLogoPanel from '../../../assets/images/projects/wellington/wellington-logo-panel.jpg'
+import wellingtonLogoPanel from '../../../assets/images/projects/wellington/wellington-logo-panel.webp'
 import './wellingtonOverview.css'
 
 const textVariants = {

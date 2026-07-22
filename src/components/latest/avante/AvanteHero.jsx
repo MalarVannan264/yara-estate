@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
-import avanteHeroImage from '../../../assets/images/projects/avante/avante-hero.jpg'
+import avanteHeroImage from '../../../assets/images/projects/avante/avante-hero.webp'
 import { easeOutExpo } from '../../../utils/motion'
 import './avanteHero.css'
 

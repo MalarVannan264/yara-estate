@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import visionImage from '../../../assets/images/projects/vanam/vision-bg.jpg'
+import visionImage from '../../../assets/images/projects/vanam/vision-bg.webp'
 import './vanamVision.css'
 
 const headerVariants = {

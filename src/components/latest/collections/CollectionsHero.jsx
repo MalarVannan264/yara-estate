@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import collectionsHeroBg from '../../../assets/images/collections/collections-hero-bg.jpg'
+import collectionsHeroBg from '../../../assets/images/collections/collections-hero-bg.webp'
 import { easeOutExpo } from '../../../utils/motion'
 import './collectionsHero.css'
 

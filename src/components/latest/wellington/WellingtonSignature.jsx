@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { useCallback, useEffect, useRef } from 'react'
-import signatureImage from '../../../assets/images/projects/wellington/signature-bg.jpg'
+import signatureImage from '../../../assets/images/projects/wellington/signature-bg.webp'
 import './wellingtonSignature.css'
 
 const containerVariants = {

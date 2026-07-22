@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import unitBImage from '../../../assets/images/projects/avante/unit-b.png'
+import unitBImage from '../../../assets/images/projects/avante/unit-b.webp'
 import './avanteUnitB.css'
 
 const easeOut = [0.22, 1, 0.36, 1]
