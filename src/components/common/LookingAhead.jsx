@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useCallback, useEffect, useRef } from 'react'
-import futureBg from '../../assets/images/common/future-bg.jpg'
+import futureBg from '../../assets/images/common/future-bg.webp'
 import { easeOutExpo } from '../../utils/motion'
 import './lookingAhead.css'
 
