@@ -135,7 +135,7 @@
   font-size: clamp(2.2rem, 3.4vw, 3.3rem);
   font-weight: 500;
   line-height: 1.04;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
 }
 
 .iconic-floor-plan__card-rule,
@@ -181,7 +181,7 @@
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 500;
   line-height: 0.94;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
 }
 
 .iconic-floor-plan__stat-label {

@@ -136,7 +136,7 @@
   margin: 2.25rem 0 0;
   color: #17120f;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.15rem, 2.6vw, 3.05rem);
+  font-size: clamp(2.15rem, 1.5vw, 3.05rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.045em;

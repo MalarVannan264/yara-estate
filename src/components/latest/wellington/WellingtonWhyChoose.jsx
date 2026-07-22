@@ -79,7 +79,7 @@ const reasons = [
   {
     icon: Building2,
     title: 'Luxury Clubhouse',
-    copy: 'A 40,000 sq.ft hospitality-grade family hub.',
+    copy: 'A Premium sq.ft hospitality-grade family hub.',
   },
   {
     icon: TrendingUp,

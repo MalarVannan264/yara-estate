@@ -183,7 +183,7 @@
   font-size: clamp(2rem, 2.2vw, 2.4rem);
   font-weight: 500;
   line-height: 1.08;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
 }
 
 .about-who__card-description {

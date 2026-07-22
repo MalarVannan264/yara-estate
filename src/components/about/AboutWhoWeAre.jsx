@@ -44,6 +44,7 @@ const cards = [
     icon: Compass,
     title: 'Architecture First',
     description: 'Thoughtful spatial planning and timeless architectural design.',
+    featured: true,
   },
   {
     number: '02',

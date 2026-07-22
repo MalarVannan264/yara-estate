@@ -101,7 +101,7 @@
   font-size: clamp(2.4rem, 4vw, 3.5rem);
   font-weight: 500;
   line-height: 1.04;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
 }
 
 .iconic-enquiry__form {

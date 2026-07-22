@@ -99,7 +99,7 @@
   font-size: clamp(3rem, 4vw, 4.3rem);
   font-weight: 500;
   line-height: 0.92;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
   transition:
     transform 260ms ease,
     color 260ms ease;

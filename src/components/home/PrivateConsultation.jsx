@@ -39,9 +39,8 @@ const initialFormData = {
 const projectOptions = [
   'Iconic 8',
   'Avante',
-  'Premium Residential',
-  'Retreat Living',
-  'Luxury Commercial',
+  'Vanam',
+  'Wellington',
 ]
 
 const timeOptions = [

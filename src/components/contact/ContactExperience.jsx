@@ -117,8 +117,8 @@ const ContactExperience = () => {
                   <select className="ce-input ce-select" id="ce-project">
                     <option value="iconic8">Iconic 8</option>
                     <option value="avante">Avante</option>
-                    <option value="east-coast">East Coast</option>
-                    <option value="collections">All Collections</option>
+                    <option value="east-coast">Vanam</option>
+                    <option value="wellington">Wellington</option>
                   </select>
                   <ChevronDown
                     aria-hidden="true"

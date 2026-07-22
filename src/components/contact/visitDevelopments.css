@@ -188,7 +188,7 @@
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.4rem, 5vw, 5.5rem);
   font-weight: 400;
-  letter-spacing: -0.04em;                     /* px → em */
+  letter-spacing: 0em;                     /* px → em */
   line-height: 1;
   color: #f4eee7;
 }

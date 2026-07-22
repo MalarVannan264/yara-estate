@@ -164,7 +164,7 @@
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 500;
   line-height: 0.98;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
 }
 
 .featured-project-subtitle {

@@ -4,7 +4,8 @@ import AboutProcess from '../components/about/AboutProcess'
 import AboutSelectedWorks from '../components/about/AboutSelectedWorks'
 import AboutTrust from '../components/about/AboutTrust'
 import AboutWhoWeAre from '../components/about/AboutWhoWeAre'
-import PortfolioCTA from '../components/common/PortfolioCTA'
+import LookingAhead from '../components/common/LookingAhead'
+
 
 const About = () => (
   <>
@@ -14,7 +15,7 @@ const About = () => (
     <AboutSelectedWorks />
     <AboutProcess />
     <AboutTrust />
-    <PortfolioCTA />
+    <LookingAhead />
   </>
 )
 

@@ -19,7 +19,7 @@ const featuredProject = {
     'Elevated Lifestyle Spaces',
   ],
   location: 'ECR, Chennai',
-  units: '24 Villas',
+  units: '8 Villas',
   year: '2026',
   image: iconic8Card,
   link: '/latest/iconic-8',

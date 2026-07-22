@@ -273,7 +273,7 @@
   font-size: clamp(2.2rem, 3.4vw, 3.8rem);
   font-weight: 500;
   line-height: 0.92;
-  letter-spacing: -0.04em;
+  letter-spacing: 0em;
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
