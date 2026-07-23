@@ -110,7 +110,10 @@ const AvanteHero = () => {
           BOUTIQUE RESIDENCES — ADYAR
         </motion.p>
 
-        <motion.h1 className="avante-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="avante-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           The Height
           <br />
           of Living.

@@ -133,7 +133,7 @@ const AboutWhoWeAre = () => (
               <div className="about-who__card-icon">
                 <Icon aria-hidden="true" size={30} strokeWidth={1.7} />
               </div>
-              <h3 className="about-who__card-title">{card.title}</h3>
+              <h3 className="about-who__card-title text-5xl font-normal md:text-5xl lg:text-6xl">{card.title}</h3>
               <p className="about-who__card-description">{card.description}</p>
               <span aria-hidden="true" className="about-who__card-line" />
             </motion.article>

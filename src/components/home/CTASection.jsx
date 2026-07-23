@@ -15,7 +15,7 @@ const CTASection = () => (
       >
         <motion.div className="space-y-5" variants={fadeUp}>
           <p className="eyebrow text-brand-gold-soft">Positioning</p>
-          <h2 className="font-display text-5xl leading-[0.96] text-white sm:text-6xl">
+          <h2 className="font-display text-5xl font-normal leading-[0.96] text-white md:text-5xl lg:text-6xl">
             More Than a Property.
           </h2>
           <p className="max-w-md text-sm leading-7 text-white/80 sm:text-base">

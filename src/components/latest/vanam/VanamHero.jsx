@@ -119,7 +119,10 @@ const VanamHero = () => {
           COMING SOON
         </motion.p>
 
-        <motion.h1 className="vanam-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="vanam-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           YARA VANAM
         </motion.h1>
 

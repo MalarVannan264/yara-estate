@@ -116,7 +116,10 @@ const IconicHero = () => {
           ONLY EIGHT RESIDENCES — NEELANKARAI
         </motion.p>
 
-        <motion.h1 className="iconic-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="iconic-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           ICONIC 8
         </motion.h1>
 

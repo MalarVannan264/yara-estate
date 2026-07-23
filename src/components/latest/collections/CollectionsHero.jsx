@@ -131,7 +131,10 @@ const CollectionsHero = () => {
           CURATED DEVELOPMENTS — VOLUME I
         </motion.p>
 
-        <motion.h1 className="collections-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="collections-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           Spaces Crafted for
           <br />
           Elevated Living.

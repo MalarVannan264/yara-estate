@@ -43,7 +43,7 @@ const ContactExperience = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="ce-heading ce-anim ce-anim--2">
+            <h2 className="ce-heading ce-anim ce-anim--2 text-5xl font-normal md:text-5xl lg:text-6xl">
               Every Exceptional<br />
               Space Begins With<br />
               a Conversation.

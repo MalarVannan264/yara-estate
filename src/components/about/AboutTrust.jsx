@@ -170,7 +170,7 @@ const AboutTrust = () => (
               </div>
 
               <div className="about-trust__card-body">
-                <h3 className="about-trust__card-title">{card.title}</h3>
+                <h3 className="about-trust__card-title text-5xl font-normal md:text-5xl lg:text-6xl">{card.title}</h3>
                 <p className="about-trust__card-description">{card.description}</p>
               </div>
             </motion.article>

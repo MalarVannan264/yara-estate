@@ -73,7 +73,7 @@ const ImmersiveGallery = () => (
       >
         <div className="immersive-gallery-header-copy">
           <p className="immersive-gallery-eyebrow">FROM THE PORTFOLIO</p>
-          <h2 className="immersive-gallery-heading">
+          <h2 className="immersive-gallery-heading text-5xl font-normal md:text-5xl lg:text-6xl">
             A Cinematic Index of
             <br />
             Light, Stone, and Stillness.

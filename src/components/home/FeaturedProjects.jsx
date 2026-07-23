@@ -41,7 +41,7 @@ const FeaturedProjects = () => (
       >
         <motion.div variants={fadeUp}>
           <p className="eyebrow">Featured projects</p>
-          <h2 className="editorial-title max-w-xl">A Portfolio of Quiet Landmarks.</h2>
+          <h2 className="editorial-title max-w-xl text-5xl font-normal md:text-5xl lg:text-6xl">A Portfolio of Quiet Landmarks.</h2>
         </motion.div>
         <motion.p className="copy-muted max-w-2xl lg:justify-self-end" variants={fadeUp}>
           The homepage base structure now supports alternating project narratives, clean

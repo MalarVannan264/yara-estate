@@ -102,7 +102,7 @@ const PrivateConsultation = () => {
         >
           <motion.div className="private-consultation-copy" variants={textVariants}>
             <p className="private-consultation-eyebrow">PRIVATE CONSULTATION</p>
-            <h2 className="private-consultation-heading">
+            <h2 className="private-consultation-heading text-5xl font-normal md:text-5xl lg:text-6xl">
               Begin Your YARA Journey.
             </h2>
             <p className="private-consultation-paragraph">

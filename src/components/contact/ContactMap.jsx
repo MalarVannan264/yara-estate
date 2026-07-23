@@ -65,7 +65,7 @@ const ContactMap = () => {
           <span className="cmap-card__eyebrow">Private Location</span>
         </div>
 
-        <h2 className="cmap-card__heading">
+        <h2 className="cmap-card__heading text-5xl font-normal md:text-5xl lg:text-6xl">
           Visit Our<br />
           Luxury Studio
         </h2>

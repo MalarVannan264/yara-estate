@@ -54,7 +54,7 @@ const AboutPhilosophy = () => (
         >
           <p className="philosophy-eyebrow">OUR PHILOSOPHY</p>
 
-          <h2 className="philosophy-heading">
+          <h2 className="philosophy-heading text-5xl font-normal md:text-5xl lg:text-6xl">
             Luxury Begins
             <br />
             with Vision.

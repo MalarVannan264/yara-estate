@@ -41,7 +41,7 @@ const VisitDevelopments = () => {
           <span className="vd-eyebrow__line" aria-hidden="true" />
         </div>
 
-        <h2 className="vd-heading vd-anim vd-anim--2">
+        <h2 className="vd-heading vd-anim vd-anim--2 text-5xl font-normal md:text-5xl lg:text-6xl">
           Visit our developments&nbsp;— boutique<br />
           residences across Chennai.
         </h2>

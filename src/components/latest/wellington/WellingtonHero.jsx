@@ -117,7 +117,10 @@ const WellingtonHero = () => {
           YARA ESTATES PRESENTS
         </motion.p>
 
-        <motion.h1 className="wellington-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="wellington-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           Villas at Wellington
         </motion.h1>
 

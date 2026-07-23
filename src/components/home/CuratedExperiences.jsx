@@ -100,7 +100,7 @@ const CuratedExperiences = () => (
       >
         <div className="curated-experiences-header-left">
           <p className="curated-experiences-eyebrow">CURATED EXPERIENCES</p>
-          <h2 className="curated-experiences-heading">
+          <h2 className="curated-experiences-heading text-5xl font-normal md:text-5xl lg:text-6xl">
             Three Distinct Expressions
             <br />
             of Luxury Living.

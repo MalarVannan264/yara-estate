@@ -126,7 +126,7 @@
   max-width: 980px;
   color: #f6f1eb;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3.6rem, 5vw, 6rem);
+  font-size: clamp(3.6rem, 4vw, 6rem);
   font-weight: 500;
   line-height: 0.94;
   letter-spacing: 0.02em;

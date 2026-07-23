@@ -35,7 +35,7 @@ const LuxuryCategories = () => (
       >
         <motion.div variants={fadeUp}>
           <p className="eyebrow">Categories</p>
-          <h2 className="editorial-title max-w-xl">
+          <h2 className="editorial-title max-w-xl text-5xl font-normal md:text-5xl lg:text-6xl">
             Three Distinct Expressions of Luxury Living.
           </h2>
         </motion.div>

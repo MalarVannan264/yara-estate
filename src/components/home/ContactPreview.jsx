@@ -17,7 +17,7 @@ const ContactPreview = () => (
       >
         <motion.div className="space-y-6" variants={fadeUp}>
           <p className="eyebrow">Contact preview</p>
-          <h2 className="editorial-title max-w-lg">Begin Your YARA Journey.</h2>
+          <h2 className="editorial-title max-w-lg text-5xl font-normal md:text-5xl lg:text-6xl">Begin Your YARA Journey.</h2>
           <p className="copy-muted max-w-md">
             The final homepage block now reflects the premium consultation pattern from
             the reference while staying frontend-only for now.

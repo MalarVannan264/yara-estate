@@ -20,7 +20,7 @@ const ContactStudio = () => (
       >
         <motion.div className="space-y-6" variants={fadeUp}>
           <p className="eyebrow">Contact studio</p>
-          <h2 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl">
+          <h2 className="text-balance text-5xl font-normal leading-tight md:text-5xl lg:text-6xl">
             Begin with a private briefing, a gallery appointment, or a curated site visit.
           </h2>
           <p className="copy-muted max-w-xl">

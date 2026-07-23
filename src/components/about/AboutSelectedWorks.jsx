@@ -66,7 +66,7 @@ const projects = [
       'A refined residential experience blending modern tropical architecture with elegant interior sophistication.',
     details: [
       { label: 'LOCATION', value: 'ECR, Chennai' },
-      { label: 'UNITS', value: '5 Apartments' },
+      { label: 'UNITS', value: '10 Apartments' },
       { label: 'STATUS', value: 'Now Selling' },
     ],
     href: '/latest/avante',
@@ -161,7 +161,7 @@ const AboutSelectedWorks = () => (
                 <p>{project.label}</p>
               </div>
 
-              <h3 className="about-selected-works__project-name">{project.name}</h3>
+              <h3 className="about-selected-works__project-name text-5xl font-normal md:text-5xl lg:text-6xl">{project.name}</h3>
               <p className="about-selected-works__subtitle">{project.subtitle}</p>
               <p className="about-selected-works__description">{project.description}</p>
 

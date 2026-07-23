@@ -15,7 +15,7 @@ const IntroSection = () => (
       >
         <motion.div className="space-y-6" variants={fadeUp}>
           <p className="eyebrow">Brand introduction</p>
-          <h2 className="editorial-title max-w-xl">Luxury Begins with Vision.</h2>
+          <h2 className="editorial-title max-w-xl text-5xl font-normal md:text-5xl lg:text-6xl">Luxury Begins with Vision.</h2>
           <p className="copy-muted max-w-md">
             The homepage now follows a lighter editorial direction inspired by the
             reference, with premium whitespace, serif-led headings, and structured image

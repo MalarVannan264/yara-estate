@@ -100,7 +100,7 @@ const WhyYARA = () => (
         variants={headerVariants}
       >
         <p className="why-yara-eyebrow">THE YARA DIFFERENCE</p>
-        <h2 className="why-yara-heading">Crafted Beyond Real Estate.</h2>
+        <h2 className="why-yara-heading text-5xl font-normal md:text-5xl lg:text-6xl">Crafted Beyond Real Estate.</h2>
         <p className="why-yara-description">
           YARA creates destinations that combine architecture, lifestyle,
           appreciation, and the quiet luxury of emotional living.

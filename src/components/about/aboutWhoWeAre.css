@@ -45,12 +45,12 @@
 
 .about-who__title {
   margin: 0;
-  max-width: 9ch;
+  /* max-width: 9ch; */
   color: #111111;
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+  font-size: clamp(2.8rem, 3vw, 4.2rem);
   font-weight: 500;
-  line-height: 0.96;
+  line-height: auto;
   letter-spacing: 0.02em;
   text-wrap: balance;
 }

@@ -75,7 +75,7 @@ const FeaturedCollections = () => (
       >
         <div className="featured-collections-header-left">
           <p className="featured-collections-eyebrow">FEATURED COLLECTIONS</p>
-          <h2 className="featured-collections-heading">
+          <h2 className="featured-collections-heading text-5xl font-normal md:text-5xl lg:text-6xl">
             A Portfolio of
             <br />
             Quiet Landmarks.

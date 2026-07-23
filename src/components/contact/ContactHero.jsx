@@ -101,7 +101,10 @@ const ContactHero = () => {
           PRIVATE CONSULTATION — CHENNAI
         </motion.p>
 
-        <motion.h1 className="contact-hero__title" variants={headingVariants}>
+        <motion.h1
+          className="contact-hero__title text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           Let&apos;s Create Your Next
           <br />
           Living Experience.

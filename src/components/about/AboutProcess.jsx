@@ -139,7 +139,7 @@ const AboutProcess = () => (
                 <Icon aria-hidden="true" size={35} strokeWidth={1.55} />
               </div>
 
-              <h3 className="about-process__card-title">{step.title}</h3>
+              <h3 className="about-process__card-title text-5xl font-normal md:text-5xl lg:text-6xl">{step.title}</h3>
               <p className="about-process__card-description">{step.description}</p>
               <span aria-hidden="true" className="about-process__card-line" />
             </motion.article>

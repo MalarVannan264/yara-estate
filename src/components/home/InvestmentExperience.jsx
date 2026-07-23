@@ -70,7 +70,7 @@ const InvestmentExperience = () => (
       >
         <div className="investment-experience-heading-group">
           <p className="investment-experience-eyebrow">INVESTMENT EXPERIENCE</p>
-          <h2 className="investment-experience-heading">
+          <h2 className="investment-experience-heading text-5xl font-normal md:text-5xl lg:text-6xl">
             Built for
             <br />
             Generational Value.

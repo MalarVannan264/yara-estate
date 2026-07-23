@@ -91,7 +91,7 @@ const LocationsSection = () => (
       >
         <div className="locations-section-header-left">
           <p className="locations-section-eyebrow">CHENNAI · PREMIUM ADDRESSES</p>
-          <h2 className="locations-section-heading">Where YARA Builds.</h2>
+          <h2 className="locations-section-heading text-5xl font-normal md:text-5xl lg:text-6xl">Where YARA Builds.</h2>
         </div>
 
         <p className="locations-section-description">

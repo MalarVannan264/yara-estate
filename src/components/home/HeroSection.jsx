@@ -101,7 +101,10 @@ const HeroSection = () => {
           YARA ESTATES · CHENNAI
         </motion.p>
 
-        <motion.h1 variants={headingVariants}>
+        <motion.h1
+          className="text-5xl font-normal md:text-5xl lg:text-6xl"
+          variants={headingVariants}
+        >
           Curated Spaces for
           <br />
           Elevated Living.
