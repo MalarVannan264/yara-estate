@@ -174,3 +174,47 @@
   line-height: 1.6;
   content: '·';
 }
+
+@media (max-width: 767px) {
+  .avante-unit-showcase {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .avante-unit-showcase__image-panel,
+  .avante-unit-showcase__content-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .avante-unit-showcase__image-panel {
+    padding: 40px 20px;
+  }
+
+  .avante-unit-showcase__content-panel {
+    padding: 56px 24px 64px;
+  }
+
+  .avante-unit-showcase__stats {
+    margin-top: 28px;
+    padding: 22px 0;
+  }
+
+  .avante-unit-showcase__stat {
+    padding: 0 10px;
+  }
+
+  .avante-unit-showcase__stat:first-child {
+    padding-left: 0;
+  }
+
+  .avante-unit-showcase__stat-value {
+    font-size: 1.45rem;
+  }
+
+  .avante-unit-showcase__stat-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+}
