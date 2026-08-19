@@ -18,6 +18,19 @@ const heroVariants = {
   },
 }
 
+const dividerVariants = {
+  hidden: { scaleX: 0, opacity: 0.6 },
+  visible: {
+    scaleX: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: easeOutExpo,
+      delay: 0.35,
+    },
+  },
+}
+
 const eyebrowVariants = {
   hidden: { opacity: 0, y: 18 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOutExpo } },
@@ -110,6 +123,13 @@ const InfinityHero = () => {
           <span className="infinity-hero__title-line">YARA </span>
           <span className="infinity-hero__title-dominant">INFINITY</span>
         </motion.h1>
+
+        <motion.div
+          className="infinity-hero__divider"
+          initial={prefersReducedMotion ? false : 'hidden'}
+          animate="visible"
+          variants={dividerVariants}
+        />
 
         <motion.p className="infinity-hero__subtitle" variants={copyVariants}>
           A New Landmark for Business

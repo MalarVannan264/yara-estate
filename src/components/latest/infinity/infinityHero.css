@@ -158,6 +158,14 @@
   text-shadow: 0 18px 55px rgba(0, 0, 0, 0.26);
 }
 
+.infinity-hero__divider {
+  width: clamp(5rem, 12vw, 9rem);
+  height: 1px;
+  margin-top: clamp(1.5rem, 2.5vw, 2.2rem);
+  background: rgba(185, 162, 122, 0.9);
+  transform-origin: center;
+}
+
 .infinity-hero__subtitle{
     margin: 25px;
     max-width: 980px;
