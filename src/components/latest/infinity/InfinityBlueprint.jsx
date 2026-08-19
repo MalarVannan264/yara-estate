@@ -44,11 +44,10 @@ const tabVariants = {
 }
 
 const imageVariants = {
-  hidden: { opacity: 0, y: 12, scale: 0.992 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: { duration: 0.45, ease: easeOutExpo },
   },
 }
@@ -95,6 +94,27 @@ const InfinityBlueprint = () => {
           variants={tabVariants}
         >
           <div className="infinity-blueprint__viewer">
+            <div
+              className="infinity-blueprint__tabs"
+              role="tablist"
+              aria-label="Infinity blueprint plans"
+            >
+              {blueprintPlans.map((plan) => (
+                <button
+                  key={plan.id}
+                  aria-selected={activePlanId === plan.id}
+                  className={`infinity-blueprint__tab ${
+                    activePlanId === plan.id ? 'is-active' : ''
+                  }`}
+                  onClick={() => setActivePlanId(plan.id)}
+                  role="tab"
+                  type="button"
+                >
+                  {plan.label}
+                </button>
+              ))}
+            </div>
+
             <AnimatePresence mode="wait">
               <motion.figure
                 key={activePlan.id}
@@ -112,27 +132,6 @@ const InfinityBlueprint = () => {
                 />
               </motion.figure>
             </AnimatePresence>
-          </div>
-
-          <div
-            className="infinity-blueprint__tabs"
-            role="tablist"
-            aria-label="Infinity blueprint plans"
-          >
-            {blueprintPlans.map((plan) => (
-              <button
-                key={plan.id}
-                aria-selected={activePlanId === plan.id}
-                className={`infinity-blueprint__tab ${
-                  activePlanId === plan.id ? 'is-active' : ''
-                }`}
-                onClick={() => setActivePlanId(plan.id)}
-                role="tab"
-                type="button"
-              >
-                {plan.label}
-              </button>
-            ))}
           </div>
         </motion.div>
       </div>

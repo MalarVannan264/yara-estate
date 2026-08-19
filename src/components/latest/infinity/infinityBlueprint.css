@@ -10,9 +10,9 @@
 }
 
 .infinity-blueprint__shell {
-  width: min(100% - 48px, 1200px);
+  width: min(100% - 48px, 1320px);
   margin: 0 auto;
-  padding: 120px 0;
+  padding: clamp(108px, 10vw, 148px) 0 128px;
 }
 
 .infinity-blueprint__intro {
@@ -23,44 +23,40 @@
   margin: 0;
   color: var(--infinity-cream);
   font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 4.3vw, 5.2rem);
+  font-size: clamp(48px, 4.5vw, 68px);
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 0.96;
 }
 
 .infinity-blueprint__description {
-  max-width: 700px;
-  margin: clamp(1.5rem, 2vw, 2.2rem) auto 0;
+  max-width: 550px;
+  margin: 36px auto 0;
   color: var(--infinity-soft-cream);
   font-family: 'Geist', sans-serif;
-  font-size: clamp(0.78rem, 0.95vw, 0.92rem);
+  font-size: 0.88rem;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.8;
 }
 
 .infinity-blueprint__composition {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 220px);
-  align-items: center;
-  gap: clamp(1.25rem, 2vw, 2rem);
-  width: min(100%, 1180px);
-  margin: clamp(3.25rem, 5vw, 5rem) auto 0;
+  width: min(100%, 1200px);
+  margin: 68px auto 0;
 }
 
 .infinity-blueprint__viewer {
   width: 100%;
-  padding: 0.7rem;
-  border: 1px solid var(--infinity-frame);
-  background: rgba(17, 66, 98, 0.14);
+  margin-top: 62px;
 }
 
 .infinity-blueprint__frame {
-  margin: 0;
+  margin-top: 24px;
   width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
   background: #f4efe3;
-  border: 1px solid rgba(217, 228, 240, 0.18);
+  border: 1px solid var(--infinity-frame);
   overflow: hidden;
 }
 
@@ -74,49 +70,54 @@
 
 .infinity-blueprint__tabs {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.5rem;
-  width: 100%;
+  width: min(900px, 75vw);
+  height: 42px;
+  margin: 0 auto;
+  border: 1px solid rgba(245, 240, 230, 0.34);
 }
 
 .infinity-blueprint__tab {
   appearance: none;
+  flex: 1 1 0;
+  min-width: 0;
   border: 0;
+  border-right: 1px solid rgba(245, 240, 230, 0.24);
   background: transparent;
   color: var(--infinity-cream);
   cursor: pointer;
   font-family: 'Geist', sans-serif;
-  font-size: clamp(0.72rem, 0.82vw, 0.88rem);
+  font-size: clamp(0.56rem, 0.68vw, 0.68rem);
   font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.4;
-  padding: clamp(0.9rem, 1vw, 1.2rem) clamp(0.8rem, 1vw, 1rem);
-  text-align: left;
-  transition: background-color 220ms ease, color 220ms ease, transform 220ms ease;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 360ms ease, color 360ms ease;
 }
 
-.infinity-blueprint__tab.is-active {
-  background: var(--infinity-blue-soft);
-  border: 1px solid rgba(245, 240, 230, 0.08);
+.infinity-blueprint__tab:last-child {
+  border-right: 0;
+}
+
+.infinity-blueprint__tab:hover:not(.is-active) {
+  background: rgba(245, 240, 230, 0.08);
   color: #fff;
 }
 
+.infinity-blueprint__tab:focus-visible {
+  outline: 1px solid var(--infinity-cream);
+  outline-offset: -4px;
+}
+
+.infinity-blueprint__tab.is-active {
+  background: var(--infinity-cream);
+  color: var(--infinity-blue);
+}
+
 @media (max-width: 1024px) {
-  .infinity-blueprint__composition {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
   .infinity-blueprint__tabs {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
-  }
-
-  .infinity-blueprint__tab {
-    text-align: center;
-    padding: 0.9rem 0.7rem;
+    width: min(900px, 86vw);
   }
 }
 
@@ -137,29 +138,31 @@
   }
 
   .infinity-blueprint__composition {
-    margin-top: 2.75rem;
+    margin-top: 3.75rem;
   }
 
   .infinity-blueprint__viewer {
-    padding: 0.5rem;
+    margin-top: 48px;
   }
 
   .infinity-blueprint__tabs {
     display: flex;
-    flex-direction: row;
-    gap: 0.6rem;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
-    scrollbar-width: none;
-  }
-
-  .infinity-blueprint__tabs::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
   }
 
   .infinity-blueprint__tab {
-    flex-shrink: 0;
-    min-width: 12rem;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(245, 240, 230, 0.24);
     text-align: left;
+    padding: 0 1rem;
+  }
+
+  .infinity-blueprint__tab:last-child {
+    border-bottom: 0;
   }
 }
