@@ -78,7 +78,7 @@ const InfinitySpecifications = () => {
           {specifications.map(({ Icon, label }) => (
             <motion.article className="infinity-specifications__item" key={label} variants={cardVariants}>
               <Icon aria-hidden="true" className="infinity-specifications__icon" size={28} strokeWidth={1.7} />
-              <h3>{label}</h3>
+              <h4>{label}</h4>
             </motion.article>
           ))}
         </motion.div>

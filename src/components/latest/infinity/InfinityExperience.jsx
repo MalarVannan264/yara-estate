@@ -150,9 +150,7 @@ const InfinityExperience = () => {
             animate={hasAnimated ? 'visible' : 'hidden'}
             variants={bodyCopyVariants}
           >
-            YARA Infinity is a limited commercial address shaped by proportion,
-            privacy and material honesty. Interiors open outward to landscaped
-            edges; plans are drawn for quiet movement and long light.
+            YARA Infinity is a boutique commercial address shaped by proportion, privacy and lush materials. Interiors open outward to expansive views; plans are drawn for quiet movement and long light.
           </motion.p>
 
           <motion.p

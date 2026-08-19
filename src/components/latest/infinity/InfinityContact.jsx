@@ -121,7 +121,7 @@ const InfinityContact = () => {
             </h2>
 
             <p className="infinity-contact__paragraph">
-              INFINITY is shared one office at a time, with a dedicated representative
+              Infinity is shared one office at a time, with a dedicated representative
               who will personally walk you through the space, its exceptional materials,
               and its distinguished address.
             </p>

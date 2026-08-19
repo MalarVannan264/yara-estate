@@ -56,9 +56,7 @@ const InfinityLocation = () => {
 
           <h2 className="infinity-location__heading">
             At the centre
-            <br />
             of everything you
-            <br />
             love.
           </h2>
 
