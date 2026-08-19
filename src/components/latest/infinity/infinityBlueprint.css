@@ -41,22 +41,25 @@
 }
 
 .infinity-blueprint__composition {
-  width: min(100%, 1200px);
+  width: min(100%, 1100px);
   margin: 68px auto 0;
 }
 
 .infinity-blueprint__viewer {
   width: 100%;
-  margin-top: 62px;
+  margin-top: 60px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--infinity-frame);
 }
 
 .infinity-blueprint__frame {
-  margin-top: 24px;
+  margin: 0;
   width: 100%;
-  padding: 10px;
+  padding: clamp(18px, 3vw, 42px);
   box-sizing: border-box;
   background: #f4efe3;
-  border: 1px solid var(--infinity-frame);
+  border: 1px solid rgba(17, 66, 98, 0.24);
   overflow: hidden;
 }
 
@@ -143,6 +146,7 @@
 
   .infinity-blueprint__viewer {
     margin-top: 48px;
+    padding: 6px;
   }
 
   .infinity-blueprint__tabs {
@@ -164,5 +168,9 @@
 
   .infinity-blueprint__tab:last-child {
     border-bottom: 0;
+  }
+
+  .infinity-blueprint__frame {
+    padding: 14px;
   }
 }

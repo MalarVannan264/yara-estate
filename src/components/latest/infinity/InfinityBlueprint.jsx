@@ -93,27 +93,28 @@ const InfinityBlueprint = () => {
           whileInView="visible"
           variants={tabVariants}
         >
+          <div
+            className="infinity-blueprint__tabs"
+            role="tablist"
+            aria-label="Infinity blueprint plans"
+          >
+            {blueprintPlans.map((plan) => (
+              <button
+                key={plan.id}
+                aria-selected={activePlanId === plan.id}
+                className={`infinity-blueprint__tab ${
+                  activePlanId === plan.id ? 'is-active' : ''
+                }`}
+                onClick={() => setActivePlanId(plan.id)}
+                role="tab"
+                type="button"
+              >
+                {plan.label}
+              </button>
+            ))}
+          </div>
+
           <div className="infinity-blueprint__viewer">
-            <div
-              className="infinity-blueprint__tabs"
-              role="tablist"
-              aria-label="Infinity blueprint plans"
-            >
-              {blueprintPlans.map((plan) => (
-                <button
-                  key={plan.id}
-                  aria-selected={activePlanId === plan.id}
-                  className={`infinity-blueprint__tab ${
-                    activePlanId === plan.id ? 'is-active' : ''
-                  }`}
-                  onClick={() => setActivePlanId(plan.id)}
-                  role="tab"
-                  type="button"
-                >
-                  {plan.label}
-                </button>
-              ))}
-            </div>
 
             <AnimatePresence mode="wait">
               <motion.figure
