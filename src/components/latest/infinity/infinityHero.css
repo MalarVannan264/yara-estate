@@ -1,0 +1,375 @@
+.infinity-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #071A2B;
+}
+
+.infinity-hero__media,
+.infinity-hero__background-shell,
+.infinity-hero__background,
+.infinity-hero__overlay,
+.infinity-hero__noise {
+  position: absolute;
+  inset: 0;
+}
+
+.infinity-hero__media,
+.infinity-hero__background-shell,
+.infinity-hero__background {
+  will-change: transform;
+}
+
+.infinity-hero__background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: infinityHeroSlowZoom 16s ease-in-out infinite alternate;
+}
+
+/* ── Overlay ─────────────────────────────────────────────── */
+.infinity-hero__overlay {
+  z-index: 1;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(17, 66, 98, 0.279),
+      rgba(17, 66, 98, 0.349),
+      #114262
+    ),
+    linear-gradient(
+      to top right,
+      rgba(17, 66, 98, 0.704) 0%,
+      transparent 100%
+    );
+}
+
+.infinity-hero__overlay::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      rgba(17, 66, 98, 0.474),
+      transparent 32%
+    ),
+    linear-gradient(
+      to top right,
+      #114262 0%,
+      transparent 100%
+    );
+}
+
+
+/* ── Grain noise ─────────────────────────────────────────── */
+.infinity-hero__noise {
+  z-index: 2;
+  opacity: 0.10;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 18% 22%,
+      rgba(255, 255, 255, 0.16) 0 0.7px,
+      transparent 0.9px
+    ),
+    radial-gradient(
+      circle at 78% 26%,
+      rgba(255, 255, 255, 0.12) 0 0.75px,
+      transparent 0.95px
+    ),
+    radial-gradient(
+      circle at 34% 72%,
+      rgba(255, 255, 255, 0.14) 0 0.72px,
+      transparent 0.92px
+    ),
+    radial-gradient(
+      circle at 66% 78%,
+      rgba(255, 255, 255, 0.10) 0 0.66px,
+      transparent 0.88px
+    );
+
+  background-size:
+    168px 168px,
+    192px 192px,
+    184px 184px,
+    204px 204px;
+
+  animation: infinityHeroGrain 11s steps(8) infinite;
+}
+/* ── Content ─────────────────────────────────────────────── */
+.infinity-hero__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1200px);
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding:
+    clamp(6rem, 10vw, 9rem)
+    clamp(1.5rem, 4.2vw, 4rem)
+    clamp(6rem, 11vw, 9.5rem);
+  text-align: center;
+}
+
+/* ── Eyebrow ─────────────────────────────────────────────── */
+.infinity-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.45rem);
+  margin: 0 0 clamp(1.3rem, 2vw, 1.8rem);
+  color: #B9A27A;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+}
+
+.infinity-hero__eyebrow::before,
+.infinity-hero__eyebrow::after {
+  width: clamp(3.5rem, 9vw, 6.5rem);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185,162,122,0.85), transparent);
+  content: '';
+}
+
+/* ── Title ───────────────────────────────────────────────── */
+.infinity-hero__title {
+  margin: 0;
+  max-width: 980px;
+  color: #F4F0E8;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.6rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+  text-shadow: 0 18px 55px rgba(0, 0, 0, 0.26);
+}
+
+.infinity-hero__subtitle{
+    margin: 25px;
+    max-width: 980px;
+    color: #F4F0E8;
+    font-family: 'Geist', sans-serif;
+    font-size: clamp(1.5rem, 2.1vw, 1.08rem);
+    font-weight: 400;
+    line-height: auto;
+    letter-spacing: 0.03em;
+    text-wrap: balance;
+    text-shadow: 0 18px 55px rgba(0, 0, 0, 0.26);
+}
+
+/* ── Description ─────────────────────────────────────────── */
+.infinity-hero__description {
+  max-width: 760px;
+  margin: clamp(1.2rem, 2.2vw, 2rem) 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.82;
+}
+
+/* ── Actions ─────────────────────────────────────────────── */
+.infinity-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: clamp(1.6rem, 3.4vw, 2.2rem);
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.infinity-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 34px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #F4F0E8;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 280ms ease,
+    background-color 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    color 280ms ease,
+    backdrop-filter 280ms ease;
+}
+
+.infinity-hero__button span {
+  display: inline-flex;
+  margin-left: 0.6rem;
+}
+
+.infinity-hero__button:hover { transform: translateY(-3px); }
+
+.infinity-hero__button--primary {
+  background: #176599;
+  color: #f4f0e8;
+  box-shadow: 0 20px 45px rgba(23,101,153,0.12);
+}
+
+.infinity-hero__button--primary:hover { background: #1f74a8; }
+
+.infinity-hero__button--secondary {
+  border-color: rgba(244,240,232,0.14);
+  background: rgba(255,255,255,0.02);
+  color: #F4F0E8;
+  backdrop-filter: blur(8px);
+}
+
+.infinity-hero__button--secondary:hover {
+  border-color: rgba(244,240,232,0.36);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.infinity-hero__footer {
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  bottom: clamp(2rem, 3vw, 2.8rem);
+  left: clamp(1.5rem, 4vw, 3.5rem);
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #A8B0B5;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.infinity-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 50px;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.28);
+  color: #F4F0E8;
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+}
+
+.infinity-hero__tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #176599;
+  box-shadow: 0 0 0 0 rgba(23,101,153,0.32);
+  animation: infinityTagPulse 2.8s ease-in-out infinite;
+}
+
+.infinity-hero__scroll {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 12px;
+  color: #B9A27A;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.infinity-hero__scroll-line {
+  display: inline-block;
+  width: 1px;
+  height: 64px;
+  background: linear-gradient(
+    180deg,
+    rgba(23,101,153,0) 0%,
+    rgba(23,101,153,0.55) 36%,
+    rgba(23,101,153,0.9) 100%
+  );
+  transform-origin: top center;
+  animation: infinityScrollLine 2.3s ease-in-out infinite;
+}
+
+/* ── Keyframes ───────────────────────────────────────────── */
+@keyframes infinityHeroSlowZoom {
+  0% { transform: scale(1.03) translate3d(0, 0, 0); }
+  100% { transform: scale(1.08) translate3d(0, -1.6%, 0); }
+}
+
+@keyframes infinityHeroGrain {
+  0% { transform: translate3d(-1.5%, -1%, 0); }
+  25% { transform: translate3d(0.8%, -0.6%, 0); }
+  50% { transform: translate3d(-0.6%, 1.1%, 0); }
+  75% { transform: translate3d(1.2%, 0.4%, 0); }
+  100% { transform: translate3d(-0.8%, -0.4%, 0); }
+}
+
+@keyframes infinityTagPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(23,101,153,0.22); opacity: 0.85; }
+  50% { box-shadow: 0 0 0 8px rgba(23,101,153,0); opacity: 1; }
+}
+
+@keyframes infinityScrollLine {
+  0%, 100% { transform: scaleY(0.72); opacity: 0.66; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+/* ── Responsive — 1024px ─────────────────────────────────── */
+@media (max-width: 1024px) {
+  .infinity-hero__title { font-size: clamp(3.2rem, 8vw, 6.8rem); }
+  .infinity-hero__description { max-width: 680px; }
+}
+
+/* ── Responsive — 768px ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .infinity-hero__content { padding-top: 7.4rem; padding-bottom: 8.5rem; }
+  .infinity-hero__eyebrow { gap: 0.85rem; font-size: 0.64rem; letter-spacing: 0.3em; }
+  .infinity-hero__eyebrow::before, .infinity-hero__eyebrow::after { width: clamp(2rem, 10vw, 3rem); }
+  .infinity-hero__title { max-width: 100%; font-size: clamp(3.2rem, 12vw, 6rem); line-height: 0.92; }
+  .infinity-hero__description { max-width: 33rem; font-size: 0.96rem; line-height: 1.74; }
+  .infinity-hero__actions { width: 100%; flex-direction: column; }
+  .infinity-hero__button { width: min(100%, 23rem); }
+  .infinity-hero__footer { flex-direction: column; align-items: flex-start; gap: 18px; }
+}
+
+/* ── Responsive — 540px ─────────────────────────────────── */
+@media (max-width: 540px) {
+  .infinity-hero { min-height: 100svh; }
+  .infinity-hero__content { min-height: 100svh; padding-right: 1.1rem; padding-left: 1.1rem; }
+  .infinity-hero__title { font-size: clamp(3.2rem, 17vw, 5rem); }
+  .infinity-hero__button { min-height: 56px; padding: 0 1.5rem; font-size: 0.71rem; letter-spacing: 0.24em; }
+}
+
+/* ── Responsive — 480px (Ultra Mobile) ──────────────────── */
+@media (max-width: 480px) {
+  .infinity-hero { min-height: 100svh; }
+  .infinity-hero__overlay { background: linear-gradient(to top, rgba(17,66,98,0.9) 0%, rgba(17,66,98,0.36), rgba(17,66,98,0.16)); }
+  .infinity-hero__content { padding: clamp(4.5rem, 8vw, 5.5rem) clamp(1rem, 3vw, 1.1rem) clamp(5rem, 8vw, 6rem); }
+  .infinity-hero__eyebrow { gap: 0.7rem; margin-bottom: clamp(1rem, 1.5vw, 1.3rem); font-size: 0.6rem; letter-spacing: 0.25em; }
+  .infinity-hero__title { font-size: clamp(2.8rem, 16vw, 4.4rem); line-height: 0.88; letter-spacing: 0.01em; }
+  .infinity-hero__description { max-width: 100%; margin-top: clamp(1rem, 1.5vw, 1.3rem); font-size: 0.88rem; line-height: 1.68; }
+  .infinity-hero__actions { gap: 0.8rem; margin-top: clamp(1.4rem, 2.5vw, 1.8rem); }
+  .infinity-hero__button { min-height: 52px; padding: 0 1.2rem; font-size: 0.68rem; letter-spacing: 0.2em; }
+  .infinity-hero__footer { right: clamp(1rem, 3vw, 1.5rem); bottom: clamp(1.5rem, 2.5vw, 2rem); left: clamp(1rem, 3vw, 1.5rem); gap: 12px; }
+}

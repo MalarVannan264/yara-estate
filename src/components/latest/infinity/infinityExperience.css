@@ -1,0 +1,195 @@
+.infinity-experience {
+  --infinity-blue: #114262;
+  --infinity-ink: #114262;
+  --infinity-cream: #f1f7fb;
+  --infinity-gold: #c9b182;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: 100%;
+  min-height: clamp(700px, 52vw, 900px);
+  overflow: hidden;
+  background: var(--infinity-cream);
+}
+
+.infinity-experience__panel {
+  position: relative;
+  min-width: 0;
+}
+
+.infinity-experience__panel--visual {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--infinity-blue);
+}
+
+.infinity-experience__logo-wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: min(100%, 30rem);
+  padding: clamp(2rem, 5vw, 5rem);
+}
+
+.infinity-experience__logo {
+  display: block;
+  width: min(100%, clamp(220px, 25vw, 440px));
+  height: auto;
+  filter: none;
+}
+
+.infinity-experience__panel--content {
+  display: flex;
+  align-items: center;
+  background: var(--infinity-cream);
+}
+
+.infinity-experience__content-inner {
+  width: min(100%, 46rem);
+  padding: clamp(4rem, 7vw, 8rem) clamp(3rem, 7vw, 7.5rem) clamp(4rem, 7vw, 7rem);
+}
+
+.infinity-experience__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.9rem, 1.4vw, 1.35rem);
+  margin: 0;
+  color: var(--infinity-gold);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.7rem, 0.78vw, 0.82rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.infinity-experience__eyebrow::before {
+  width: clamp(2.75rem, 4vw, 4rem);
+  height: 1px;
+  background: rgba(201, 177, 130, 0.9);
+  content: '';
+}
+
+.infinity-experience__heading {
+  margin: clamp(2.5rem, 3vw, 4rem) 0 0;
+  color: var(--infinity-ink);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 4.2vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+  max-width: 560px;
+}
+
+.infinity-experience__divider {
+  width: clamp(4.5rem, 5vw, 6rem);
+  height: 1px;
+  margin-top: clamp(2.25rem, 2.75vw, 3.25rem);
+  background: rgba(201, 177, 130, 0.9);
+}
+
+.infinity-experience__body-copy {
+  max-width: 620px;
+  margin: clamp(2.2rem, 2.8vw, 3.2rem) 0 0;
+  color: rgba(23, 77, 109, 0.9);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(1rem, 1.12vw, 1.17rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.78;
+}
+
+.infinity-experience__editorial-copy {
+  max-width: 620px;
+  margin: clamp(2.5rem, 4vw, 5rem) 0 0;
+  color: var(--infinity-ink);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.35rem, 1.9vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+}
+
+@media (max-width: 1080px) {
+  .infinity-experience {
+    grid-template-columns: 1fr 1fr;
+    min-height: 680px;
+  }
+
+  .infinity-experience__content-inner {
+    width: min(100%, 40rem);
+    padding-left: clamp(2.25rem, 5vw, 4rem);
+    padding-right: clamp(2.25rem, 5vw, 4rem);
+  }
+
+  .infinity-experience__heading {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .infinity-experience {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .infinity-experience__panel--visual {
+    min-height: clamp(18rem, 46vh, 26rem);
+  }
+
+  .infinity-experience__logo-wrap {
+    width: min(100%, 18rem);
+  }
+
+  .infinity-experience__content-inner {
+    width: min(100%, 42rem);
+    padding: 3.5rem 2rem 4rem;
+  }
+
+  .infinity-experience__eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+  }
+
+  .infinity-experience__heading {
+    max-width: none;
+    font-size: clamp(2.7rem, 11vw, 4.8rem);
+    line-height: 0.98;
+  }
+
+  .infinity-experience__divider {
+    margin-top: 2rem;
+  }
+
+  .infinity-experience__body-copy {
+    margin-top: 1.9rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .infinity-experience__editorial-copy {
+    margin-top: 2.1rem;
+    font-size: clamp(1.25rem, 5vw, 1.8rem);
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 420px) {
+  .infinity-experience__content-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .infinity-experience__heading {
+    font-size: clamp(2.3rem, 12vw, 3.5rem);
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .infinity-experience__logo-wrap {
+    transform: none !important;
+  }
+}

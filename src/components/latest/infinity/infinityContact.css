@@ -1,0 +1,218 @@
+.infinity-contact {
+  --infinity-contact-bg: #f1f7fc;
+  --infinity-contact-blue: #114262;
+  --infinity-contact-cream: #f5f0e6;
+  --infinity-contact-gold: #d2b16f;
+  --infinity-contact-gold-soft: rgba(210, 177, 111, 0.42);
+  --infinity-contact-text: #5e7066;
+  --infinity-contact-label: rgba(245, 240, 230, 0.78);
+  --infinity-contact-placeholder: rgba(245, 240, 230, 0.38);
+  --infinity-contact-rule: rgba(210, 177, 111, 0.46);
+  width: 100%;
+  background: var(--infinity-contact-bg);
+  color: var(--infinity-contact-blue);
+}
+
+.infinity-contact__shell {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.infinity-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+  align-items: start;
+  gap: clamp(2.5rem, 4vw, 5rem);
+}
+
+.infinity-contact__intro {
+  max-width: 620px;
+  padding-top: clamp(1rem, 1.6vw, 2rem);
+}
+
+.infinity-contact__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  color: var(--infinity-contact-gold);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.72rem, 0.85vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.infinity-contact__eyebrow-line {
+  display: block;
+  width: 64px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.infinity-contact__heading {
+  margin: clamp(2.6rem, 3.5vw, 4.2rem) 0 0;
+  color: var(--infinity-contact-blue);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 4vw, 4.3rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.96;
+}
+
+.infinity-contact__paragraph {
+  max-width: 600px;
+  margin: clamp(2.1rem, 2.8vw, 3rem) 0 0;
+  color: var(--infinity-contact-text);
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(1rem, 1.08vw, 1.04rem);
+  font-weight: 400;
+  line-height: 1.72;
+}
+
+.infinity-contact__panel {
+  background: var(--infinity-contact-blue);
+  color: var(--infinity-contact-cream);
+  padding: clamp(2.4rem, 3.2vw, 3.8rem);
+}
+
+.infinity-contact__panel-title {
+  margin: 0;
+  color: var(--infinity-contact-cream);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 2.4vw, 2.7rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+.infinity-contact__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(2rem, 2.4vw, 2.8rem);
+}
+
+.infinity-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--infinity-contact-rule);
+}
+
+.infinity-contact__field + .infinity-contact__field {
+  margin-top: 2rem;
+}
+
+.infinity-contact__label {
+  color: var(--infinity-contact-label);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.infinity-contact__input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--infinity-contact-cream);
+  font-family: 'Geist', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  padding: 0;
+}
+
+.infinity-contact__input::placeholder {
+  color: var(--infinity-contact-placeholder);
+}
+
+.infinity-contact__field:focus-within {
+  border-bottom-color: rgba(245, 240, 230, 0.7);
+}
+
+.infinity-contact__error {
+  color: #f5d3d3;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.infinity-contact__submit {
+  margin-top: 2.2rem;
+  width: 100%;
+  min-height: 4.3rem;
+  border: 0;
+  background: var(--infinity-contact-gold);
+  color: var(--infinity-contact-blue);
+  cursor: pointer;
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: transform 240ms ease, filter 240ms ease, background-color 240ms ease;
+}
+
+.infinity-contact__submit:hover,
+.infinity-contact__submit:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.infinity-contact__success {
+  margin: 1.3rem 0 0;
+  color: rgba(245, 240, 230, 0.9);
+  font-family: 'Geist', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .infinity-contact__grid {
+    grid-template-columns: 1fr;
+    gap: 2.7rem;
+  }
+
+  .infinity-contact__intro,
+  .infinity-contact__panel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .infinity-contact__shell {
+    width: min(100% - 1.3rem, 640px);
+    padding-top: 4.5rem;
+    padding-bottom: 4.8rem;
+  }
+
+  .infinity-contact__heading {
+    font-size: clamp(2.75rem, 12vw, 4.2rem);
+    line-height: 0.98;
+  }
+
+  .infinity-contact__paragraph {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .infinity-contact__panel {
+    padding: 2rem 1.35rem 2.1rem;
+  }
+
+  .infinity-contact__panel-title {
+    font-size: 2.15rem;
+  }
+
+  .infinity-contact__submit {
+    min-height: 3.8rem;
+    letter-spacing: 0.14em;
+  }
+}

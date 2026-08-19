@@ -19,10 +19,11 @@ const Navbar = () => {
     location.pathname === '/about' ||
     location.pathname === '/contact' ||
     location.pathname === '/collections' ||
-    location.pathname === '/latest/avante' ||
-    location.pathname === '/latest/iconic-8' ||
-    location.pathname === '/latest/wellington' ||
-    location.pathname === '/latest/vanam'
+  location.pathname === '/latest/avante' ||
+  location.pathname === '/latest/iconic-8' ||
+  location.pathname === '/latest/infinity' ||
+  location.pathname === '/latest/wellington' ||
+  location.pathname === '/latest/vanam'
 
   const isLatestActive = location.pathname.startsWith('/latest')
   const isSolidNavbar = !hasTransparentHeroRoute || isScrolled || isMobileOpen

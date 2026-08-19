@@ -3,6 +3,7 @@ import CuratedExperiences from '../components/home/CuratedExperiences'
 import FeaturedCollections from '../components/home/FeaturedCollections'
 import HeroSection from '../components/home/HeroSection'
 import ImmersiveGallery from '../components/home/ImmersiveGallery'
+// import InfinityExperience from '../components/latest/infinity/InfinityExperience'
 import InvestmentExperience from '../components/home/InvestmentExperience'
 import LifestyleEditorial from '../components/home/LifestyleEditorial'
 import LocationsSection from '../components/home/LocationsSection'
@@ -12,6 +13,7 @@ import WhyYARA from '../components/home/WhyYARA'
 const Home = () => (
   <>
     <HeroSection />
+    {/* <InfinityExperience /> */}
     <AboutPhilosophy />
     <FeaturedCollections />
     <CuratedExperiences />

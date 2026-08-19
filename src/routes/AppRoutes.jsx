@@ -8,6 +8,7 @@ import Iconic8 from '../pages/latest/Iconic8'
 import Avante from '../pages/latest/Avante'
 import Wellington from '../pages/latest/Wellington'
 import Vanam from '../pages/latest/Vanam'
+import Infinity from '../pages/latest/Infinity'
 
 const routeConfig = [
   {
@@ -24,6 +25,7 @@ const routeConfig = [
           { index: true, element: <Navigate replace to="iconic-8" /> },
           { path: 'iconic-8', element: <Iconic8 /> },
           { path: 'avante', element: <Avante /> },
+              { path: 'infinity', element: <Infinity /> },
           { path: 'wellington', element: <Wellington /> },
           { path: 'vanam', element: <Vanam /> },
         ],
